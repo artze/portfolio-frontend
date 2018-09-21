@@ -4,25 +4,48 @@
             <v-flex lg6>
                 <h1 class="main-header">Search Wiki</h1>
                 <input type="text" class="search-bar" placeholder="Search here" autofocus v-model="searchQuery" @keyup="search" />
-                <p class="random" @click="randomArticle">Get Random Article</p>
+                <p class="text-center">
+                    <span class="random" @click="randomArticle">Get Random Article</span>
+                </p>
             </v-flex>
         </v-layout>
     </v-container>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     data() {
         return {
-            searchQuery: ''
+            searchQuery: '',
+            results: [],
+            timerArr: []
         }
     },
     methods: {
         randomArticle() {
             console.log('random')
+            let win = window.open('https://en.wikipedia.org/wiki/Special:Random', '_blank')
+            win.focus()
         },
         search() {
             console.log('search')
+            this.results = []
+            for(var i = 0; i < this.timerArr.length; i++) {
+                clearTimeout(this.timerArr[i])
+            }
+            this.timerArr.push(setTimeout(() => {
+                axios.get('https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&generator=search&prop=extracts&exintro=1&explaintext=1&exsentences=2&gsrsearch=' + encodeURIComponent(this.searchQuery))
+                    .then((res) => {
+                        for(let key in res.data.query.pages) {
+                            this.results.push(res.data.query.pages[key])
+                        }
+                    })
+                    .catch((res) => {
+                        console.log(res)
+                    })
+            }, 700))
         }
     }
 }
@@ -35,10 +58,12 @@ export default {
     margin-bottom: 1em;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .random {
     opacity: 0.6;
-    margin-top: 1em;
-    text-align: center;
     font-size: 15px;
 }
 
@@ -50,7 +75,7 @@ export default {
 
 .search-bar {
     padding-left: 1em;
-    margin-top: 2em;
+    margin: 2em 0em;
     border-radius: 0;
     height: 3em;
     border: 1px solid #c7c6c6;
