@@ -9,13 +9,22 @@
                 </p>
             </v-flex>
         </v-layout>
+        <v-layout justify-center>
+            <v-flex lg6>
+                <result-box v-for="result in results" :result=result :key="result.title"></result-box>
+            </v-flex>
+        </v-layout>
     </v-container>
 </template>
 
 <script>
 import axios from 'axios'
+import ResultBox from './ResultBox'
 
 export default {
+    components: {
+        'result-box': ResultBox
+    },
     data() {
         return {
             searchQuery: '',
@@ -25,12 +34,10 @@ export default {
     },
     methods: {
         randomArticle() {
-            console.log('random')
             let win = window.open('https://en.wikipedia.org/wiki/Special:Random', '_blank')
             win.focus()
         },
         search() {
-            console.log('search')
             this.results = []
             for(var i = 0; i < this.timerArr.length; i++) {
                 clearTimeout(this.timerArr[i])
