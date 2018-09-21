@@ -9,13 +9,42 @@
                 <h3>Fullstack Web Developer</h3>
             </v-flex>
         </v-layout>
-        <v-layout style="height: 100vh" justify-center>
-            <v-flex lg6>
-                <h2 style="text-align: center; margin-top: 5em; font-family: Raleway">
-                    Projects section coming soon
-                </h2>
-            </v-flex>
-        </v-layout>
+        <div style="height: 100vh">
+            <v-layout justify-center>
+                <v-flex lg6>
+                    <h2 style="text-align: center; margin-top: 3em; font-family: Raleway">
+                        Projects section
+                    </h2>
+                </v-flex>
+            </v-layout>
+            <v-layout justify-center class="mt-5">
+                <v-flex lg8>
+                    <v-layout justify-start wrap>
+                        <v-flex lg4>
+                            <v-card class="project-card">
+                                <v-card-title primary-title class="justify-center">
+                                    <router-link to="/quote-machine" tag="h3" class="project-card-title-text">Quote Machine</router-link>
+                                </v-card-title>
+                            </v-card>
+                        </v-flex>
+                        <v-flex lg4>
+                            <v-card class="project-card">
+                                <v-card-title primary-title class="justify-center">
+                                    <router-link to="/" tag="h3" class="project-card-title-text">Project 1</router-link>
+                                </v-card-title>
+                            </v-card>
+                        </v-flex>
+                        <v-flex lg4>
+                            <v-card class="project-card">
+                                <v-card-title primary-title class="justify-center">
+                                    <router-link to="/" tag="h3" class="project-card-title-text">Project 2</router-link>
+                                </v-card-title>
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+                </v-flex>
+            </v-layout>
+        </div>
     </div>
 </template>
 
@@ -42,7 +71,7 @@ export default {
   }
   100% {
     transform: translateX(0);
-  } 
+  }
 }
 
 #landing-background {
@@ -77,5 +106,19 @@ export default {
     font-size: 2em;
     text-align: left;
     animation: 2s ease-out 0s 1 slideFromRight;
+}
+
+.project-card {
+    margin: 0px 15px;
+}
+
+.project-card-title-text {
+    font-family: Raleway;
+    font-weight: 500;
+}
+
+.project-card-title-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 </style>
