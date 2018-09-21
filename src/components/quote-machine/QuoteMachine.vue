@@ -61,7 +61,7 @@ export default {
                 })
         },
         tweet() {
-            window.open('https://twitter.com/intent/tweet' + '?' + 'hashtags=quote&' + 'text="' + encodeURI(this.quoteObj.quote.body) + '"' + encodeURI(' ' + this.quoteObj.quote.author));
+            window.open('https://twitter.com/intent/tweet' + '?' + 'hashtags=quote&' + 'text="' + encodeURI(this.quoteObj.quote.body) + '"' + encodeURI(' ' + this.quoteObj.quote.author))
         }
     },
     mounted() {
