@@ -4,10 +4,10 @@
             <v-flex lg4 class="quote-box">
                 <p class="quote-text quote" :class="selectedTheme">
                     <span id="quotemarks">“</span>
-                    a quick brown fox jumps over the lazy dog.
+                    {{ quoteObj.quote.body }}
                 </p>
                 <p class="text-right quote-text" v-bind:class="selectedTheme">
-                    -author
+                    -{{quoteObj.quote.author}}
                 </p>
                 <div class="btn-area">
                     <button class="btn-custom btn-twitter pull-left"
@@ -28,6 +28,7 @@
 
 <script>
 import '@fortawesome/fontawesome-free/css/all.css'
+import axios from 'axios'
 
 export default {
     data() {
@@ -51,14 +52,20 @@ export default {
         },
         getQuote() {
             this.changeColor()
-            console.log('get quote')
+            axios.get('https://favqs.com/api/qotd')
+                .then((res) => {
+                    this.quoteObj = res.data
+                })
+                .catch((res) => {
+                    console.log(res)
+                })
         },
         tweet() {
-            console.log('tweet')
+            window.open('https://twitter.com/intent/tweet' + '?' + 'hashtags=quote&' + 'text="' + encodeURI(this.quoteObj.quote.body) + '"' + encodeURI(' ' + this.quoteObj.quote.author));
         }
     },
     mounted() {
-        this.changeColor()
+        this.getQuote()
     }
 }
 </script>
