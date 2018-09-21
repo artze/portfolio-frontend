@@ -12,8 +12,9 @@
         <v-layout style="height: 100vh" justify-center>
             <v-flex lg6>
                 <h2 style="text-align: center; margin-top: 5em; font-family: Raleway">
-                    Projects section coming soon
+                    Projects section
                 </h2>
+                <router-link to="/quote-machine">Quote Machine</router-link>
             </v-flex>
         </v-layout>
     </div>
@@ -42,7 +43,7 @@ export default {
   }
   100% {
     transform: translateX(0);
-  } 
+  }
 }
 
 #landing-background {
