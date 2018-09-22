@@ -67,7 +67,7 @@ export default {
 
 @keyframes slideFromRight {
    0% {
-    transform: translateX(10%);
+    transform: translateX(8%);
   }
   100% {
     transform: translateX(0);
@@ -82,7 +82,6 @@ export default {
 }
 
 .landing-content {
-    /* border: 1px solid black; */
     text-align: right;
     padding: 0em 1.5em;
     animation: 2s ease-out 0s 1 fadeIntoView;
@@ -97,7 +96,7 @@ export default {
     font-family: Raleway;
     font-size: 5em;
     text-align: left;
-    animation: 2s ease-out 0s 1 slideFromRight;
+    animation: 1s ease-out 0s 1 slideFromRight;
 }
 
 .landing-content h3 {
@@ -105,7 +104,7 @@ export default {
     font-weight: 200;
     font-size: 2em;
     text-align: left;
-    animation: 2s ease-out 0s 1 slideFromRight;
+    animation: 1s ease-out 0s 1 slideFromRight;
 }
 
 .project-card {
