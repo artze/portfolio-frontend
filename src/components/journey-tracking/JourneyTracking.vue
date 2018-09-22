@@ -3,7 +3,7 @@
         <app-header></app-header>
         <v-layout>
             <v-flex lg6>
-                Journey Selection Content
+                <stepper-section></stepper-section>
             </v-flex>
             <v-flex lg6 id="map">
             </v-flex>
@@ -12,13 +12,15 @@
 </template>
 
 <script>
-import Header from './Header'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
+import Header from './Header'
+import StepperSection from './StepperSection'
 
 export default {
     components: {
-        'app-header': Header
+        'app-header': Header,
+        'stepper-section': StepperSection
     },
     data() {
         return {
