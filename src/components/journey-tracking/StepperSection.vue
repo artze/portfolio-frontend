@@ -14,11 +14,13 @@
                     dense
                     label="Device Name"
                     :items="deviceArr"
-                    v-model="userInput.device"></v-select>
+                    v-model="userInput.device"
+                    :error-messages="step1.selectFieldErrorMessage"
+                    @input="resetStep1SelectField"></v-select>
                 <v-btn
                     dark
                     color="deep-purple darken-4"
-                    @click="currentStep = 2">Next</v-btn>
+                    @click="step1Next">Next</v-btn>
             </v-stepper-content>
             <v-stepper-content step="2">
                 <h3>Select Date Range</h3>
@@ -61,7 +63,22 @@ export default {
                 device: '',
                 dateFrom: '',
                 dateTo: ''
+            },
+            step1: {
+                selectFieldErrorMessage: []
             }
+        }
+    },
+    methods: {
+        step1Next() {
+            if(!this.userInput.device) {
+                this.step1.selectFieldErrorMessage = 'Please select a device'
+            } else {
+                this.currentStep = 2
+            }
+        },
+        resetStep1SelectField() {
+            this.step1.selectFieldErrorMessage = []
         }
     }
 }
