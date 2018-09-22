@@ -11,10 +11,10 @@
             <v-stepper-content step="1">
                 <h3>Select Device</h3>
                 <v-select
-                    solo
                     dense
-                    label="Click to select"
-                    :items="deviceArr"></v-select>
+                    label="Device Name"
+                    :items="deviceArr"
+                    v-model="userInput.device"></v-select>
                 <v-btn
                     dark
                     color="deep-purple darken-4"
@@ -22,6 +22,18 @@
             </v-stepper-content>
             <v-stepper-content step="2">
                 <h3>Select Date Range</h3>
+                <v-layout>
+                    <v-flex lg6 class="mr-3">
+                        <datepicker
+                            label="From"
+                            @dateSelected="userInput.dateFrom = $event"></datepicker>
+                    </v-flex>
+                    <v-flex lg6 class="ml-3">
+                        <datepicker
+                            label="To"
+                            @dateSelected="userInput.dateTo = $event"></datepicker>
+                    </v-flex>
+                </v-layout>
                 <v-btn
                     dark
                     color="deep-purple darken-4"
@@ -35,11 +47,21 @@
 </template>
 
 <script>
+import Datepicker from './shared/Datepicker'
+
 export default {
+    components: {
+        'datepicker': Datepicker
+    },
     data() {
         return {
             currentStep: 1,
-            deviceArr: ['Device A', 'Device B', 'Device C']
+            deviceArr: ['Device A', 'Device B', 'Device C'],
+            userInput: {
+                device: '',
+                dateFrom: '',
+                dateTo: ''
+            }
         }
     }
 }
