@@ -14,6 +14,7 @@
             slot="activator"
             :label="label"
             v-model="dateDisplay"
+            :error-messages="errorMessages"
             readonly></v-text-field>
         <v-date-picker v-model="date" @input="selectDate(date)" no-title scrollable>
     </v-date-picker>
@@ -37,7 +38,7 @@ export default {
             }
         }
     },
-    props: ['label', 'dateReset'],
+    props: ['label', 'dateReset', 'errorMessages'],
     mixins: [parseDate],
     watch: {
         dateReset() {

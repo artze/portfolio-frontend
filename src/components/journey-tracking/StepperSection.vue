@@ -28,18 +28,20 @@
                     <v-flex lg6 class="mr-3">
                         <datepicker
                             label="From"
-                            @dateSelected="userInput.dateFrom = $event"></datepicker>
+                            @dateSelected="userInput.dateFrom = $event"
+                            :errorMessages="step2.dateFromErrorMessage"></datepicker>
                     </v-flex>
                     <v-flex lg6 class="ml-3">
                         <datepicker
                             label="To"
-                            @dateSelected="userInput.dateTo = $event"></datepicker>
+                            @dateSelected="userInput.dateTo = $event"
+                            :errorMessages="step2.dateToErrorMessage"></datepicker>
                     </v-flex>
                 </v-layout>
                 <v-btn
                     dark
                     color="deep-purple darken-4"
-                    @click="currentStep = 3">Next</v-btn>
+                    @click="step2Next">Next</v-btn>
             </v-stepper-content>
             <v-stepper-content step="3">
                 <h3>Select Journey</h3>
@@ -66,7 +68,19 @@ export default {
             },
             step1: {
                 selectFieldErrorMessage: []
+            },
+            step2: {
+                dateFromErrorMessage: [],
+                dateToErrorMessage: []
             }
+        }
+    },
+    computed: {
+        computedDateFrom() {
+            return this.userInput.dateFrom
+        },
+        computedDateTo() {
+            return this.userInput.dateTo
         }
     },
     methods: {
@@ -79,6 +93,23 @@ export default {
         },
         resetStep1SelectField() {
             this.step1.selectFieldErrorMessage = []
+        },
+        step2Next() {
+            if(!this.userInput.dateFrom) {
+                this.step2.dateFromErrorMessage = 'Please enter a date'
+            } else if(!this.userInput.dateTo) {
+                this.step2.dateToErrorMessage = 'Please enter a date'
+            } else {
+                this.currentStep = 3
+            }
+        }
+    },
+    watch: {
+        computedDateFrom() {
+            this.step2.dateFromErrorMessage = []
+        },
+        computedDateTo() {
+            this.step2.dateToErrorMessage = []
         }
     }
 }
