@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar dark dense color="deep-purple darken-4">
+    <v-toolbar dark color="deep-purple darken-4" height="48px">
         <v-toolbar-title class="title-text">Journey Tracking</v-toolbar-title>
     </v-toolbar>
 </template>
