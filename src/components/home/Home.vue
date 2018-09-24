@@ -37,7 +37,7 @@
                         <v-flex lg4>
                             <v-card class="project-card">
                                 <v-card-title primary-title class="justify-center">
-                                    <router-link to="/journey-tracking" tag="h3" class="project-card-title-text">Journey Tracking</router-link>
+                                    <router-link to="/journey-tracker" tag="h3" class="project-card-title-text">Journey Tracker</router-link>
                                 </v-card-title>
                             </v-card>
                         </v-flex>

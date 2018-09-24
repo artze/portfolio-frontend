@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import Home from '../components/home/Home'
 import QuoteMachine from '../components/quote-machine/QuoteMachine'
 import WikiViewer from '../components/wiki-viewer/WikiViewer'
-import JourneyTracking from '../components/journey-tracking/JourneyTracking'
+import JourneyTracker from '../components/journey-tracker/JourneyTracker'
 
 Vue.use(Router)
 
@@ -23,8 +23,8 @@ export default new Router({
             component: WikiViewer
         },
         {
-            path: '/journey-tracking',
-            component: JourneyTracking
+            path: '/journey-tracker',
+            component: JourneyTracker
         }
     ]
 })
