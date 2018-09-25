@@ -7,3 +7,11 @@ export const parseDate = {
         }
     }
 }
+
+export const parseDateFilter = {
+    filters: {
+        parseDateFilter(date) {
+            return moment(date).format('DD MMM YYYY')
+        }
+    }
+}

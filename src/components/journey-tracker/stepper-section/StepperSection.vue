@@ -23,7 +23,8 @@
             </v-stepper-content>
             <v-stepper-content step="3">
                 <journey-list
-                    :dateArrayForJourneyList="dateArrayForJourneyList"></journey-list>
+                    :dateArrayForJourneyList="dateArrayForJourneyList"
+                    @journeySelected="registerSelectedJourney($event)"></journey-list>
             </v-stepper-content>
         </v-stepper-items>
     </v-stepper>
@@ -49,7 +50,8 @@ export default {
                 startDate: '',
                 endDate: ''
             },
-            queryResults: []
+            queryResults: [],
+            selectedJourney: ''
         }
     },
     computed: {
@@ -69,6 +71,13 @@ export default {
                 .then((res) => {
                     this.queryResults = res.data
                 })
+        },
+        registerSelectedJourney(event) {
+            for(let i = 0; i < this.queryResults.length; i++) {
+                if(Object.keys(this.queryResults[i])[0] === event) {
+                    this.selectedJourney = this.queryResults[i][Object.keys(this.queryResults[i])[0]]
+                }
+            }
         }
     }
 }
