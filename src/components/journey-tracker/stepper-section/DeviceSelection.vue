@@ -18,11 +18,13 @@
 </template>
 
 <script>
+import axios from '../../../axios-custom'
+
 export default {
     props: ['currentStep'],
     data() {
         return {
-            deviceArr: ['Device A', 'Device B', 'Device C'],
+            deviceArr: [],
             selectFieldErrorMessage: [],
             selectedDevice: ''
         }
@@ -43,7 +45,16 @@ export default {
         resetErrorMessage() {
             this.selectFieldErrorMessage = []
             this.$emit('deviceSelected', this.selectedDevice)
+        },
+        getTrackerDevices() {
+            axios.get('/journey-tracker/tracker-devices')
+                .then((res) => {
+                    this.deviceArr = res.data
+                })
         }
+    },
+    mounted() {
+        this.getTrackerDevices()
     }
 }
 </script>
