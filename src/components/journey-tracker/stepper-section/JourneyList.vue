@@ -3,9 +3,11 @@
         <p>Select Journey</p>
         <v-data-table :headers="headers" :items="dateArrayForJourneyList" hide-actions>
             <template slot="items" slot-scope="props">
-                <td @click="emitSelectedJourney(props.item.date)" class="cursor-pointer">
-                    {{ props.item.date | parseDateFilter }}
-                </td>
+                <tr>
+                    <td @click="emitSelectedJourney(props.item.date)" class="cursor-pointer">
+                        {{ props.item.date | parseDateFilter }}
+                    </td>
+                </tr>
             </template>
         </v-data-table>
         <!-- <v-list>
