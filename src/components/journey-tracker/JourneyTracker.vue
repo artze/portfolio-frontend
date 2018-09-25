@@ -14,7 +14,7 @@
 
 <script>
 import Header from './Header'
-import StepperSection from './StepperSection'
+import StepperSection from './stepper-section/StepperSection'
 import MapSection from './MapSection'
 
 export default {
