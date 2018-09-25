@@ -65,6 +65,7 @@ export default {
                     selectedEndDate: this.selectedEndDate
                 })
                 this.$emit('stepChanged', this.incrementStep)
+                this.$emit('querySubmitted')
             }
         }
     }

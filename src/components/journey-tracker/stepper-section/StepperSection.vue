@@ -18,10 +18,11 @@
                 <date-selection
                     :currentStep="currentStep"
                     @datesSelected="registerDates($event)"
-                    @stepChanged="currentStep = $event"></date-selection>
+                    @stepChanged="currentStep = $event"
+                    @querySubmitted="getQueryResults"></date-selection>
             </v-stepper-content>
             <v-stepper-content step="3">
-                <p>Select Journey</p>
+                <journey-list></journey-list>
             </v-stepper-content>
         </v-stepper-items>
     </v-stepper>
@@ -30,11 +31,14 @@
 <script>
 import DeviceSelection from './DeviceSelection'
 import DateSelection from './DateSelection'
+import JourneyList from './JourneyList'
+import axios from '../../../axios-custom'
 
 export default {
     components: {
         'device-selection': DeviceSelection,
-        'date-selection': DateSelection
+        'date-selection': DateSelection,
+        'journey-list': JourneyList
     },
     data() {
         return {
@@ -43,13 +47,20 @@ export default {
                 device: '',
                 startDate: '',
                 endDate: ''
-            }
+            },
+            queryResults: []
         }
     },
     methods: {
         registerDates(event) {
             this.userInput.startDate = event.selectedStartDate
             this.userInput.endDate = event.selectedEndDate
+        },
+        getQueryResults() {
+            axios.post('/journey-tracker/query', this.userInput)
+                .then((res) => {
+                    this.queryResults = res.data
+                })
         }
     }
 }
