@@ -21,7 +21,7 @@
                     @stepChanged="currentStep = $event"></date-selection>
             </v-stepper-content>
             <v-stepper-content step="3">
-                <h3>Select Journey</h3>
+                <p>Select Journey</p>
             </v-stepper-content>
         </v-stepper-items>
     </v-stepper>

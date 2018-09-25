@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Select Device</h3>
+        <p>Select a device</p>
         <v-select
             dense
             label="Device Name"
@@ -8,10 +8,12 @@
             v-model="selectedDevice"
             :error-messages="selectFieldErrorMessage"
             @input="resetErrorMessage"></v-select>
-        <v-btn
-            dark
-            color="deep-purple darken-4"
-            @click="nextStep">Next</v-btn>
+        <v-layout justify-end>
+            <v-btn
+                dark
+                color="deep-purple darken-4"
+                @click="nextStep">Next</v-btn>
+        </v-layout>
     </div>
 </template>
 

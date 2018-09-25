@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Select Date Range</h3>
+        <p>View journeys between these dates:</p>
         <v-layout>
             <v-flex lg6 class="mr-3">
                 <datepicker
@@ -15,10 +15,12 @@
                     :errorMessages="endDateErrorMessage"></datepicker>
             </v-flex>
         </v-layout>
-        <v-btn
-            dark
-            color="deep-purple darken-4"
-            @click="nextStep">Next</v-btn>
+        <v-layout justify-end>
+            <v-btn
+                dark
+                color="deep-purple darken-4"
+                @click="nextStep">Next</v-btn>
+        </v-layout>
     </div>
 </template>
 
