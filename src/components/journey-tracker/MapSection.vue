@@ -13,9 +13,33 @@ export default {
             map: ''
         }
     },
+    computed: {
+        latArr() {
+            return this.selectedJourneyCoordArr.map((coords) => {
+                return coords[0]
+            })
+        },
+        lonArr() {
+            return this.selectedJourneyCoordArr.map((coords) => {
+                return coords[1]
+            })
+        },
+        minLat() {
+            return Math.min(...this.latArr)
+        },
+        minLon() {
+            return Math.min(...this.lonArr)
+        },
+        maxLat() {
+            return Math.max(...this.latArr)
+        },
+        maxLon() {
+            return Math.max(...this.lonArr)
+        }
+    },
     methods: {
         addMapTiles() {
-            this.map.setView([55.668335, 12.569443], 15)
+            this.map.setView([0, 0], 15)
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                 maxZoom: 18,
@@ -36,7 +60,7 @@ export default {
                 .setStyle({weight: 6})
                 .addTo(this.map)
             this.selectedJourneyCoordArr.forEach((coord) => {
-                L.circle(coord, {
+                L.circleMarker(coord, {
                     radius: 4,
                     weight: 1,
                     color: '#000000',
@@ -45,6 +69,7 @@ export default {
                 })
                     .addTo(this.map)
             })
+            this.map.fitBounds([[this.minLat, this.minLon], [this.maxLat, this.maxLon]])
         }
     },
     mounted() {
