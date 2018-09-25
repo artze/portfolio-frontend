@@ -51,7 +51,7 @@ export default {
                 endDate: ''
             },
             queryResults: [],
-            selectedJourney: ''
+            selectedJourneyCoordArr: ''
         }
     },
     computed: {
@@ -75,9 +75,14 @@ export default {
         registerSelectedJourney(event) {
             for(let i = 0; i < this.queryResults.length; i++) {
                 if(Object.keys(this.queryResults[i])[0] === event) {
-                    this.selectedJourney = this.queryResults[i][Object.keys(this.queryResults[i])[0]]
+                    this.selectedJourneyCoordArr = this.queryResults[i][Object.keys(this.queryResults[i])[0]]
                 }
             }
+        }
+    },
+    watch: {
+        selectedJourneyCoordArr() {
+            this.$emit('journeySelectionChanged', this.selectedJourneyCoordArr)
         }
     }
 }
