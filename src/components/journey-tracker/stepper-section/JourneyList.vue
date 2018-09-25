@@ -4,7 +4,7 @@
         <v-data-table :headers="headers" :items="dateArrayForJourneyList" hide-actions>
             <template slot="items" slot-scope="props">
                 <tr>
-                    <td @click="emitSelectedJourney(props.item.date)" class="cursor-pointer">
+                    <td @click="emitSelectedJourney(props)" class="cursor-pointer" :class="{'selected-row': checkSelected(props.index)}">
                         {{ props.item.date | parseDateFilter }}
                     </td>
                 </tr>
@@ -32,12 +32,21 @@ export default {
     mixins: [parseDateFilter],
     data() {
         return {
-            headers: [{ text: 'Journey date', value: 'date' }]
+            headers: [{ text: 'Journey date', value: 'date' }],
+            selectedJourneyIndex: null
         }
     },
     methods: {
-        emitSelectedJourney(date) {
-            this.$emit('journeySelected', date)
+        emitSelectedJourney(props) {
+            this.selectedJourneyIndex = props.index
+            this.$emit('journeySelected', props.item.date)
+        },
+        checkSelected(index) {
+            if(index === this.selectedJourneyIndex) {
+                return true
+            } else {
+                return false
+            }
         }
     }
 }
@@ -46,5 +55,9 @@ export default {
 <style scoped>
 .cursor-pointer {
     cursor: pointer;
+}
+
+.selected-row {
+    background-color: #EDE7F6;
 }
 </style>
