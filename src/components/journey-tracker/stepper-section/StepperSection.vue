@@ -22,7 +22,8 @@
                     @querySubmitted="getQueryResults"></date-selection>
             </v-stepper-content>
             <v-stepper-content step="3">
-                <journey-list></journey-list>
+                <journey-list
+                    :dateArrayForJourneyList="dateArrayForJourneyList"></journey-list>
             </v-stepper-content>
         </v-stepper-items>
     </v-stepper>
@@ -49,6 +50,13 @@ export default {
                 endDate: ''
             },
             queryResults: []
+        }
+    },
+    computed: {
+        dateArrayForJourneyList() {
+            return this.queryResults.map((result) => {
+                return { date: Object.keys(result)[0] }
+            })
         }
     },
     methods: {
