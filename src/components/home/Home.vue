@@ -1,15 +1,26 @@
 <template>
     <div>
-        <v-layout id="landing-background" justify-center align-center>
-            <v-flex lg4 class="landing-content" >
-                <img src="../../assets/images/coloredsquares.jpg">
-            </v-flex>
-            <v-flex lg5 class="landing-content" >
-                <h1>artze</h1>
-                <h3>Fullstack Web Developer</h3>
-            </v-flex>
+        <v-layout column id="landing-background">
+            <v-layout justify-end>
+                <v-btn>links</v-btn>
+                <v-btn>links</v-btn>
+            </v-layout>
+            <v-layout align-center justify-center>
+                <v-flex lg4 class="landing-content" >
+                    <img src="../../assets/images/coloredsquares.jpg">
+                </v-flex>
+                <v-flex lg5 class="landing-content" >
+                    <h1>artze</h1>
+                    <h3>Fullstack Web Developer</h3>
+                </v-flex>
+            </v-layout>
+            <v-layout justify-center align-end>
+                <v-btn icon large outline href="#projects-section">
+                    <v-icon x-large>expand_more</v-icon>
+                </v-btn>
+            </v-layout>
         </v-layout>
-        <div style="height: 100vh">
+        <div id="projects-section" style="height: 100vh">
             <v-layout justify-center>
                 <v-flex lg6>
                     <h2 style="text-align: center; margin-top: 3em; font-family: Raleway">
