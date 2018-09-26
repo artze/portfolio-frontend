@@ -57,7 +57,7 @@ export default {
         },
         addCirclesAndPolyline() {
             this.clearMapMarkings()
-            let polyline = L.polyline(this.selectedJourneyCoordArr, {color: 'blue'})
+            let polyline = L.polyline(this.selectedJourneyCoordArr, {color: '#303F9F'})
                 .setStyle({weight: 6})
                 .addTo(this.map)
             this.selectedJourneyCoordArr.forEach((coord) => {
