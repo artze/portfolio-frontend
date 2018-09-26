@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Select a device</p>
+        <p>View journeys recorded by a tracking device:</p>
         <v-select
             dense
             label="Device Name"

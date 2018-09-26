@@ -1,6 +1,7 @@
 <template>
     <div>
         <p>View journeys between these dates:</p>
+        <span class="caption font-italic">Demo tip: please select between 1 Jan 2018 to 30 Sep 2018</span>
         <v-layout>
             <v-flex lg6 class="mr-3">
                 <datepicker
