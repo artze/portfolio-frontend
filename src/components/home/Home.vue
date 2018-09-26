@@ -2,8 +2,8 @@
     <div>
         <v-layout column id="landing-background">
             <v-layout justify-end>
-                <v-btn flat @click="scrollToProjectsSection">Projects</v-btn>
-                <v-btn flat>links</v-btn>
+                <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
+                <v-btn flat class="link-btn">Contact</v-btn>
             </v-layout>
             <v-layout align-center justify-center>
                 <v-flex lg4 class="landing-content" >
@@ -137,5 +137,10 @@ export default {
 .project-card-title-text:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.link-btn {
+    font-family: Raleway;
+    text-transform: none;
 }
 </style>
