@@ -2,8 +2,8 @@
     <div>
         <v-layout column id="landing-background">
             <v-layout justify-end>
-                <v-btn>links</v-btn>
-                <v-btn>links</v-btn>
+                <v-btn flat @click="scrollToProjectsSection">Projects</v-btn>
+                <v-btn flat>links</v-btn>
             </v-layout>
             <v-layout align-center justify-center>
                 <v-flex lg4 class="landing-content" >
@@ -15,12 +15,12 @@
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
-                <v-btn icon large outline href="#projects-section">
+                <v-btn icon large outline @click="scrollToProjectsSection">
                     <v-icon x-large>expand_more</v-icon>
                 </v-btn>
             </v-layout>
         </v-layout>
-        <div id="projects-section" style="height: 100vh">
+        <div style="height: 100vh" ref="projectsSection">
             <v-layout justify-center>
                 <v-flex lg6>
                     <h2 style="text-align: center; margin-top: 3em; font-family: Raleway">
@@ -61,6 +61,13 @@
 
 <script>
 export default {
+    methods: {
+        scrollToProjectsSection() {
+            this.$refs.projectsSection.scrollIntoView({
+                behavior: 'smooth'
+            })
+        }
+    }
 }
 </script>
 
