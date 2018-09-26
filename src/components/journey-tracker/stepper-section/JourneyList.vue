@@ -10,7 +10,7 @@
                 </tr>
             </template>
         </v-data-table>
-        <v-layout justify-end>
+        <v-layout justify-end class="mt-3">
             <v-btn
                 dark
                 color="deep-purple darken-4"
