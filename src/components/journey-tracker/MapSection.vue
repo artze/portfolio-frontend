@@ -5,6 +5,7 @@
 <script>
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
+import 'leaflet-polylinedecorator'
 
 export default {
     props: ['selectedJourneyCoordArr'],
@@ -56,7 +57,7 @@ export default {
         },
         addCirclesAndPolyline() {
             this.clearMapMarkings()
-            L.polyline(this.selectedJourneyCoordArr, {color: 'blue'})
+            let polyline = L.polyline(this.selectedJourneyCoordArr, {color: 'blue'})
                 .setStyle({weight: 6})
                 .addTo(this.map)
             this.selectedJourneyCoordArr.forEach((coord) => {
@@ -69,6 +70,23 @@ export default {
                 })
                     .addTo(this.map)
             })
+            L.polylineDecorator(polyline, {
+                patterns: [
+                    {
+                        offset: 20,
+                        endOffset: 20,
+                        repeat: 60,
+                        symbol: L.Symbol.arrowHead({
+                            pixelSize: 8,
+                            pathOptions: {
+                                color: '#BDC4F6',
+                                fillOpacity: 1,
+                                weight: 0
+                            }
+                        })
+                    }
+                ]
+            }).addTo(this.map)
             this.map.fitBounds([[this.minLat, this.minLon], [this.maxLat, this.maxLon]])
         }
     },
