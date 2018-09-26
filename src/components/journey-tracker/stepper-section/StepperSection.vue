@@ -11,12 +11,14 @@
             <v-stepper-content step="1">
                 <device-selection
                     :currentStep="currentStep"
+                    :stepperReset="stepperReset"
                     @deviceSelected="userInput.device = $event"
                     @stepChanged="currentStep = $event"></device-selection>
             </v-stepper-content>
             <v-stepper-content step="2">
                 <date-selection
                     :currentStep="currentStep"
+                    :stepperReset="stepperReset"
                     @datesSelected="registerDates($event)"
                     @stepChanged="currentStep = $event"
                     @querySubmitted="getQueryResults"></date-selection>
@@ -24,7 +26,9 @@
             <v-stepper-content step="3">
                 <journey-list
                     :dateArrayForJourneyList="dateArrayForJourneyList"
-                    @journeySelected="registerSelectedJourney($event)"></journey-list>
+                    :stepperReset="stepperReset"
+                    @journeySelected="registerSelectedJourney($event)"
+                    @queryRestarted="restartQuery"></journey-list>
             </v-stepper-content>
         </v-stepper-items>
     </v-stepper>
@@ -51,7 +55,8 @@ export default {
                 endDate: ''
             },
             queryResults: [],
-            selectedJourneyCoordArr: ''
+            selectedJourneyCoordArr: '',
+            stepperReset: ['reset']
         }
     },
     computed: {
@@ -78,6 +83,13 @@ export default {
                     this.selectedJourneyCoordArr = this.queryResults[i][Object.keys(this.queryResults[i])[0]]
                 }
             }
+        },
+        restartQuery() {
+            this.currentStep = 1
+            this.userInput.device = ''
+            this.userInput.startDate = ''
+            this.userInput.endDate = ''
+            this.stepperReset = ['reset']
         }
     },
     watch: {

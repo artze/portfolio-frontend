@@ -10,17 +10,12 @@
                 </tr>
             </template>
         </v-data-table>
-        <!-- <v-list>
-            <template v-for="(date, index) in dateArrayForJourneyList"    >
-                <v-list-tile
-                    :key="index"
-                    @click="emitSelectedJourney(props.item.date)">
-                    <v-list-tile-content style="font=size: 10px;">
-                        {{ date | parseDateFilter }}
-                    </v-list-tile-content>
-                </v-list-tile>
-            </template>
-        </v-list> -->
+        <v-layout justify-end>
+            <v-btn
+                dark
+                color="deep-purple darken-4"
+                @click="restartQuery">Start Over</v-btn>
+        </v-layout>
     </div>
 </template>
 
@@ -28,7 +23,7 @@
 import { parseDateFilter } from '../../../mixins/mixins'
 
 export default {
-    props: ['dateArrayForJourneyList'],
+    props: ['dateArrayForJourneyList', 'stepperReset'],
     mixins: [parseDateFilter],
     data() {
         return {
@@ -47,6 +42,14 @@ export default {
             } else {
                 return false
             }
+        },
+        restartQuery() {
+            this.$emit('queryRestarted')
+        }
+    },
+    watch: {
+        stepperReset() {
+            this.selectedJourneyIndex = null
         }
     }
 }

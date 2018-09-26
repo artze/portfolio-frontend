@@ -21,7 +21,7 @@
 import axios from '../../../axios-custom'
 
 export default {
-    props: ['currentStep'],
+    props: ['currentStep', 'stepperReset'],
     data() {
         return {
             deviceArr: [],
@@ -51,6 +51,11 @@ export default {
                 .then((res) => {
                     this.deviceArr = res.data
                 })
+        }
+    },
+    watch: {
+        stepperReset() {
+            this.selectedDevice = ''
         }
     },
     mounted() {

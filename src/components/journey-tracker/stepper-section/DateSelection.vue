@@ -6,12 +6,14 @@
                 <datepicker
                     label="Start Date"
                     @dateSelected="selectedStartDate = $event"
+                    :dateReset="dateReset"
                     :errorMessages="startDateErrorMessage"></datepicker>
             </v-flex>
             <v-flex lg6 class="ml-3">
                 <datepicker
                     label="End Date"
                     @dateSelected="selectedEndDate = $event"
+                    :dateReset="dateReset"
                     :errorMessages="endDateErrorMessage"></datepicker>
             </v-flex>
         </v-layout>
@@ -31,13 +33,14 @@ export default {
     components: {
         'datepicker': Datepicker
     },
-    props: ['currentStep'],
+    props: ['currentStep', 'stepperReset'],
     data() {
         return {
             selectedStartDate: '',
             selectedEndDate: '',
             startDateErrorMessage: [],
-            endDateErrorMessage: []
+            endDateErrorMessage: [],
+            dateReset: ['reset']
         }
     },
     computed: {
@@ -51,6 +54,9 @@ export default {
         },
         selectedEndDate() {
             this.endDateErrorMessage = []
+        },
+        stepperReset() {
+            this.dateReset = ['reset']
         }
     },
     methods: {
