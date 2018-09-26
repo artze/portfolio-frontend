@@ -1,15 +1,26 @@
 <template>
     <div>
-        <v-layout id="landing-background" justify-center align-center>
-            <v-flex lg4 class="landing-content" >
-                <img src="../../assets/images/coloredsquares.jpg">
-            </v-flex>
-            <v-flex lg5 class="landing-content" >
-                <h1>artze</h1>
-                <h3>Fullstack Web Developer</h3>
-            </v-flex>
+        <v-layout column id="landing-background">
+            <v-layout justify-end>
+                <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
+                <v-btn flat class="link-btn">Contact</v-btn>
+            </v-layout>
+            <v-layout align-center justify-center>
+                <v-flex lg4 class="landing-content" >
+                    <img src="../../assets/images/coloredsquares.jpg">
+                </v-flex>
+                <v-flex lg5 class="landing-content" >
+                    <h1>artze</h1>
+                    <h3>Fullstack Web Developer</h3>
+                </v-flex>
+            </v-layout>
+            <v-layout justify-center align-end>
+                <v-btn icon large outline @click="scrollToProjectsSection">
+                    <v-icon x-large>expand_more</v-icon>
+                </v-btn>
+            </v-layout>
         </v-layout>
-        <div style="height: 100vh">
+        <div style="height: 100vh" ref="projectsSection">
             <v-layout justify-center>
                 <v-flex lg6>
                     <h2 style="text-align: center; margin-top: 3em; font-family: Raleway">
@@ -50,6 +61,13 @@
 
 <script>
 export default {
+    methods: {
+        scrollToProjectsSection() {
+            this.$refs.projectsSection.scrollIntoView({
+                behavior: 'smooth'
+            })
+        }
+    }
 }
 </script>
 
@@ -119,5 +137,10 @@ export default {
 .project-card-title-text:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.link-btn {
+    font-family: Raleway;
+    text-transform: none;
 }
 </style>
