@@ -1,5 +1,5 @@
 <template>
-<a :href="'https://en.wikipedia.org/?curid=' + result.pageid">
+<a :href="'https://en.wikipedia.org/?curid=' + result.pageid" target="_blank">
     <div class="result-card">
         <h4>{{result.title}}</h4>
         <p>{{result.extract}}</p>

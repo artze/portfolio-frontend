@@ -1,7 +1,7 @@
 <template>
     <v-container fluid fill-height :class="selectedTheme">
         <v-layout align-center justify-center>
-            <v-flex lg4 class="quote-box">
+            <v-flex xl4 lg6 class="quote-box">
                 <p class="quote-text quote" :class="selectedTheme">
                     <span id="quotemarks">“</span>
                     {{ quoteObj.quote.body }}
