@@ -11,11 +11,11 @@
                 </v-flex>
                 <v-flex lg5 class="landing-content" >
                     <h1>artze</h1>
-                    <h3>Fullstack Web Developer</h3>
+                    <h3>Fullstack Web Developer<span class="blink">.</span></h3>
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
-                <v-btn icon large outline @click="scrollToProjectsSection">
+                <v-btn icon large @click="scrollToProjectsSection">
                     <v-icon x-large>expand_more</v-icon>
                 </v-btn>
             </v-layout>
@@ -23,7 +23,7 @@
         <div style="height: 100vh" ref="projectsSection">
             <v-layout justify-center>
                 <v-flex lg6>
-                    <h2 style="text-align: center; margin-top: 3em; font-family: Raleway">
+                    <h2 class="section-header">
                         Projects section
                     </h2>
                 </v-flex>
@@ -72,24 +72,31 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 
 @keyframes fadeIntoView {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes slideFromRight {
-   0% {
-    transform: translateX(8%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(8%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 #landing-background {
@@ -111,18 +118,27 @@ export default {
 }
 
 .landing-content h1 {
-    font-family: Raleway;
-    font-size: 5em;
+    font-family: 'Questrial';
+    font-size: 6em;
+    font-weight: 400;
     text-align: left;
     animation: 1s ease-out 0s 1 slideFromRight;
 }
 
 .landing-content h3 {
-    font-family: Raleway;
+    font-family: 'VT323', monospace;
     font-weight: 200;
-    font-size: 2em;
+    font-size: 3em;
     text-align: left;
     animation: 1s ease-out 0s 1 slideFromRight;
+}
+
+.section-header {
+    text-align: center;
+    font-family: 'VT323';
+    font-weight: 200;
+    font-size: 2.2em;
+    margin-top: 1em;
 }
 
 .project-card {
@@ -130,8 +146,9 @@ export default {
 }
 
 .project-card-title-text {
-    font-family: Raleway;
-    font-weight: 500;
+    font-family: 'Questrial';
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 .project-card-title-text:hover {
@@ -140,7 +157,13 @@ export default {
 }
 
 .link-btn {
-    font-family: Raleway;
+    font-family: 'VT323';
+    font-size: 1.5em;
+    font-weight: 400;
     text-transform: none;
+}
+
+.blink {
+    animation: blink 1s linear infinite;
 }
 </style>
