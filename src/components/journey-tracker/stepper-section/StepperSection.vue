@@ -1,6 +1,6 @@
 <template>
-    <v-stepper v-model="currentStep">
-        <v-stepper-header>
+    <v-stepper v-model="currentStep" class="elevation-1">
+        <v-stepper-header class="elevation-0">
             <v-stepper-step :complete="currentStep > 1" step="1">Select a Device</v-stepper-step>
             <v-divider></v-divider>
             <v-stepper-step :complete="currentStep > 2" step="2">Select Date Range</v-stepper-step>
