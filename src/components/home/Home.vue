@@ -1,9 +1,10 @@
 <template>
     <div>
+        <!-- Landing section -->
         <v-layout column id="landing-background">
             <v-layout justify-end>
                 <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
-                <v-btn flat class="link-btn">Contact</v-btn>
+                <v-btn flat @click="scrollToContactSection" class="link-btn">Contact</v-btn>
             </v-layout>
             <v-layout align-center justify-center>
                 <v-flex lg4 class="landing-content" >
@@ -20,6 +21,8 @@
                 </v-btn>
             </v-layout>
         </v-layout>
+
+        <!-- Projects section -->
         <div style="height: 100vh" ref="projectsSection">
             <v-layout justify-center>
                 <v-flex lg6>
@@ -56,6 +59,26 @@
                 </v-flex>
             </v-layout>
         </div>
+
+        <!-- Contact section -->
+        <div style="height: 100vh;" ref="contactSection">
+            <v-layout column fill-height>
+                <v-layout justify-center>
+                    <v-flex lg6>
+                        <h2 class="section-header">
+                            Contact Me
+                        </h2>
+                    </v-flex>
+                </v-layout>
+                <v-layout justify-center align-center>
+                    <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank">
+                        <v-icon x-large>fab fa-linkedin</v-icon>
+                    </v-btn>
+                </v-layout>
+                <v-layout>
+                </v-layout>
+            </v-layout>
+        </div>
     </div>
 </template>
 
@@ -64,6 +87,11 @@ export default {
     methods: {
         scrollToProjectsSection() {
             this.$refs.projectsSection.scrollIntoView({
+                behavior: 'smooth'
+            })
+        },
+        scrollToContactSection() {
+            this.$refs.contactSection.scrollIntoView({
                 behavior: 'smooth'
             })
         }
