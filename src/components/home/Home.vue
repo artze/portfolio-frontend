@@ -17,7 +17,7 @@
             </v-layout>
             <v-layout justify-center align-end>
                 <v-btn icon large @click="scrollToProjectsSection">
-                    <v-icon x-large>expand_more</v-icon>
+                    <v-icon x-large class="scroll-icon">expand_more</v-icon>
                 </v-btn>
             </v-layout>
         </v-layout>
@@ -101,7 +101,7 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=VT323');
-@import url('https://fonts.googleapis.com/css?family=Questrial');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
 
 @keyframes fadeIntoView {
     0% {
@@ -146,17 +146,18 @@ export default {
 }
 
 .landing-content h1 {
-    font-family: 'Questrial';
+    font-family: 'Raleway';
     font-size: 6em;
-    font-weight: 400;
+    font-weight: 800;
     text-align: left;
+    line-height: 1.2em;
     animation: 1s ease-out 0s 1 slideFromRight;
 }
 
 .landing-content h3 {
     font-family: 'VT323', monospace;
     font-weight: 200;
-    font-size: 3em;
+    font-size: 2.7em;
     text-align: left;
     animation: 1s ease-out 0s 1 slideFromRight;
 }
@@ -174,8 +175,8 @@ export default {
 }
 
 .project-card-title-text {
-    font-family: 'Questrial';
-    font-size: 1.2em;
+    font-family: 'Raleway';
+    font-size: 1.1em;
     font-weight: 400;
 }
 
@@ -189,6 +190,18 @@ export default {
     font-size: 1.5em;
     font-weight: 400;
     text-transform: none;
+}
+
+.link-btn:hover {
+    color: #69ffdf;
+}
+
+.link-btn::before {
+    color: transparent;
+}
+
+.scroll-icon:hover {
+    color: #69ffdf;
 }
 
 .blink {
