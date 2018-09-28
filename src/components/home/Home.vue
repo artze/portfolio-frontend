@@ -16,8 +16,8 @@
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
-                <v-btn icon large @click="scrollToProjectsSection">
-                    <v-icon x-large class="scroll-icon">expand_more</v-icon>
+                <v-btn icon large class="scroll-btn-hover-effect" @click="scrollToProjectsSection">
+                    <v-icon x-large>expand_more</v-icon>
                 </v-btn>
             </v-layout>
         </v-layout>
@@ -200,7 +200,7 @@ export default {
     color: transparent;
 }
 
-.scroll-icon:hover {
+.scroll-btn-hover-effect:hover {
     color: #69ffdf;
 }
 
