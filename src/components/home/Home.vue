@@ -16,7 +16,7 @@
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
-                <v-btn icon large class="scroll-btn-hover-effect" @click="scrollToProjectsSection">
+                <v-btn icon large class="scroll-btn" @click="scrollToProjectsSection">
                     <v-icon x-large>expand_more</v-icon>
                 </v-btn>
             </v-layout>
@@ -64,7 +64,7 @@
             </v-flex>
             <v-flex lg1>
                 <v-layout justify-center align-end>
-                    <v-btn icon large class="scroll-btn-hover-effect" @click="scrollToContactSection">
+                    <v-btn icon large class="scroll-btn" @click="scrollToContactSection">
                         <v-icon x-large>expand_more</v-icon>
                     </v-btn>
                 </v-layout>
@@ -82,7 +82,7 @@
                     </v-flex>
                 </v-layout>
                 <v-layout justify-center align-center>
-                    <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank">
+                    <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
                         <v-icon x-large>fab fa-linkedin</v-icon>
                     </v-btn>
                 </v-layout>
@@ -211,11 +211,19 @@ export default {
     color: transparent;
 }
 
-.scroll-btn-hover-effect:hover {
+.scroll-btn:hover {
     color: #69ffdf;
 }
 
 .blink {
     animation: blink 1s linear infinite;
+}
+
+.contact-me-btn::before {
+    color: transparent;
+}
+
+.contact-me-btn:hover {
+    color: #69ffdf;
 }
 </style>
