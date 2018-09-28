@@ -16,49 +16,60 @@
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
-                <v-btn icon large class="scroll-btn-hover-effect" @click="scrollToProjectsSection">
+                <v-btn icon large class="scroll-btn" @click="scrollToProjectsSection">
                     <v-icon x-large>expand_more</v-icon>
                 </v-btn>
             </v-layout>
         </v-layout>
 
         <!-- Projects section -->
-        <div style="height: 100vh" ref="projectsSection">
-            <v-layout justify-center>
-                <v-flex lg6>
-                    <h2 class="section-header">
-                        Projects section
-                    </h2>
-                </v-flex>
-            </v-layout>
-            <v-layout justify-center class="mt-5">
-                <v-flex lg8>
-                    <v-layout justify-start wrap>
-                        <v-flex lg4>
-                            <v-card class="project-card">
-                                <v-card-title primary-title class="justify-center">
-                                    <router-link to="/quote-machine" tag="h3" class="project-card-title-text">Quote Machine</router-link>
-                                </v-card-title>
-                            </v-card>
-                        </v-flex>
-                        <v-flex lg4>
-                            <v-card class="project-card">
-                                <v-card-title primary-title class="justify-center">
-                                    <router-link to="/wiki-viewer" tag="h3" class="project-card-title-text">Wikipedia Viewer</router-link>
-                                </v-card-title>
-                            </v-card>
-                        </v-flex>
-                        <v-flex lg4>
-                            <v-card class="project-card">
-                                <v-card-title primary-title class="justify-center">
-                                    <router-link to="/journey-tracker" tag="h3" class="project-card-title-text">Journey Tracker</router-link>
-                                </v-card-title>
-                            </v-card>
-                        </v-flex>
-                    </v-layout>
-                </v-flex>
-            </v-layout>
-        </div>
+        <v-layout column style="height: 100vh" ref="projectsSection">
+            <v-flex lg1>
+                <v-layout justify-center>
+                    <v-flex lg8>
+                        <h2 class="section-header">
+                            Projects section
+                        </h2>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+            <v-flex lg10>
+                <v-layout justify-center>
+                    <v-flex lg8>
+                        <v-layout justify-start wrap class="mt-4">
+                            <v-flex lg4>
+                                <v-card class="project-card">
+                                    <v-card-title primary-title class="justify-center">
+                                        <router-link to="/quote-machine" tag="h3" class="project-card-title-text">Quote Machine</router-link>
+                                    </v-card-title>
+                                </v-card>
+                            </v-flex>
+                            <v-flex lg4>
+                                <v-card class="project-card">
+                                    <v-card-title primary-title class="justify-center">
+                                        <router-link to="/wiki-viewer" tag="h3" class="project-card-title-text">Wikipedia Viewer</router-link>
+                                    </v-card-title>
+                                </v-card>
+                            </v-flex>
+                            <v-flex lg4>
+                                <v-card class="project-card">
+                                    <v-card-title primary-title class="justify-center">
+                                        <router-link to="/journey-tracker" tag="h3" class="project-card-title-text">Journey Tracker</router-link>
+                                    </v-card-title>
+                                </v-card>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+            <v-flex lg1>
+                <v-layout justify-center align-end>
+                    <v-btn icon large class="scroll-btn" @click="scrollToContactSection">
+                        <v-icon x-large>expand_more</v-icon>
+                    </v-btn>
+                </v-layout>
+            </v-flex>
+        </v-layout>
 
         <!-- Contact section -->
         <div style="height: 100vh;" ref="contactSection">
@@ -71,7 +82,7 @@
                     </v-flex>
                 </v-layout>
                 <v-layout justify-center align-center>
-                    <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank">
+                    <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
                         <v-icon x-large>fab fa-linkedin</v-icon>
                     </v-btn>
                 </v-layout>
@@ -200,11 +211,19 @@ export default {
     color: transparent;
 }
 
-.scroll-btn-hover-effect:hover {
+.scroll-btn:hover {
     color: #69ffdf;
 }
 
 .blink {
     animation: blink 1s linear infinite;
+}
+
+.contact-me-btn::before {
+    color: transparent;
+}
+
+.contact-me-btn:hover {
+    color: #69ffdf;
 }
 </style>
