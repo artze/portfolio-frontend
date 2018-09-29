@@ -5,6 +5,7 @@ import Home from '../components/home/Home'
 import QuoteMachine from '../components/quote-machine/QuoteMachine'
 import WikiViewer from '../components/wiki-viewer/WikiViewer'
 import JourneyTracker from '../components/journey-tracker/JourneyTracker'
+import ChatApp from '../components/chat-app/ChatApp'
 
 Vue.use(Router)
 
@@ -25,6 +26,10 @@ export default new Router({
         {
             path: '/journey-tracker',
             component: JourneyTracker
+        },
+        {
+            path: '/chat-app',
+            component: ChatApp
         }
     ]
 })
