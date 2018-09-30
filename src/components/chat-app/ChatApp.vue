@@ -2,12 +2,16 @@
     <div>
         <app-header></app-header>
         <v-layout justify-center>
-            <v-flex lg8>
+            <v-flex lg6>
+                <v-layout class="message-box">
+                    <v-card>
+                        asdf
+                    </v-card>
+                </v-layout>
                 <v-text-field
                     label="Your Message"
                     v-model="currentMessage"
                     @keyup.enter="sendMessage"></v-text-field>
-                <p v-for="message in receivedMessages" :key="message.timeStamp">{{message.data}}</p>
             </v-flex>
         </v-layout>
     </div>
@@ -50,3 +54,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.message-box {
+    height: calc(100vh - 124px);
+    overflow: auto;
+}
+</style>
