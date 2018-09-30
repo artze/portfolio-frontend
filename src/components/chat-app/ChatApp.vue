@@ -5,8 +5,9 @@
             <v-flex lg6>
                 <v-layout column class="message-box">
                     <v-card
-                        class="received-msg-card mt-1"
-                        v-for="message in receivedMessages"
+                        class="mt-1"
+                        :class="checkOwnMessage(message)"
+                        v-for="message in messagesArr"
                         :key="message.timeStamp">
                         <v-card-text>
                             {{ message.data }}
@@ -34,7 +35,7 @@ export default {
         return {
             ws: '',
             currentMessage: '',
-            receivedMessages: []
+            messagesArr: []
         }
     },
     methods: {
@@ -47,12 +48,23 @@ export default {
             }
             this.ws = new WebSocket(host)
             this.ws.addEventListener('message', (msg) => {
-                this.receivedMessages.push(msg)
+                this.messagesArr.push(msg)
             })
         },
         sendMessage() {
             this.ws.send(this.currentMessage)
+            this.messagesArr.push({
+                self: true,
+                data: this.currentMessage,
+                timeStamp: new Date().getTime()
+            })
             this.currentMessage = ''
+        },
+        checkOwnMessage(message) {
+            return {
+                'received-msg-card': !message.self,
+                'sent-msg-card': message.self
+            }
         }
     },
     mounted() {
@@ -71,5 +83,12 @@ export default {
     max-width: 500px;
     width: fit-content;
     background-color: #f0f4c3;
+}
+
+.sent-msg-card {
+    max-width: 500px;
+    width: fit-content;
+    background-color: #e3f2fd;
+    margin-left: auto;
 }
 </style>
