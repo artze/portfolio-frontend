@@ -15,7 +15,9 @@
                     <v-text-field
                         label="Username"
                         color="red darken-3"
-                        v-model="username"></v-text-field>
+                        v-model="username"
+                        @keyup.enter="logIn"
+                        :error-messages="usernameFieldErrorMessages"></v-text-field>
                 </v-layout>
                 <v-layout justify-end>
                     <v-btn
@@ -33,13 +35,18 @@ export default {
     data() {
         return {
             dialog: true,
-            username: ''
+            username: '',
+            usernameFieldErrorMessages: []
         }
     },
     methods: {
         logIn() {
-            this.dialog = false
-            this.$emit('loggedIn', this.username)
+            if(!this.username) {
+                this.usernameFieldErrorMessages = 'Please enter a username'
+            } else {
+                this.dialog = false
+                this.$emit('loggedIn', this.username)
+            }
         }
     }
 }
