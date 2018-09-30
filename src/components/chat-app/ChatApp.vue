@@ -53,7 +53,7 @@ export default {
             if(process.env.NODE_ENV === 'development') {
                 host = 'ws://localhost:3000/api/chat-app'
             } else if(process.env.NODE_ENV === 'production') {
-                host = 'ws://artze.xyz/api/chat-app'
+                host = 'wss://artze.xyz/api/chat-app'
             }
             this.ws = new WebSocket(host)
             this.ws.addEventListener('message', (msg) => {
