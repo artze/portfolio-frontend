@@ -1,20 +1,25 @@
 <template>
-    <v-container fluid fill-height>
+    <div>
+        <app-header></app-header>
         <v-layout justify-center>
             <v-flex lg8>
-                <h3>Chat App</h3>
                 <v-text-field
                     label="Your Message"
                     v-model="currentMessage"
                     @keyup.enter="sendMessage"></v-text-field>
-                <p v-for="message in receivedMessages" :key="message">{{message}}</p>
+                <p v-for="message in receivedMessages" :key="message.timeStamp">{{message.data}}</p>
             </v-flex>
         </v-layout>
-    </v-container>
+    </div>
 </template>
 
 <script>
+import Header from './Header'
+
 export default {
+    components: {
+        'app-header': Header
+    },
     data() {
         return {
             ws: '',
@@ -32,7 +37,7 @@ export default {
             }
             this.ws = new WebSocket(host)
             this.ws.addEventListener('message', (msg) => {
-                this.receivedMessages.push(msg.data)
+                this.receivedMessages.push(msg)
             })
         },
         sendMessage() {
