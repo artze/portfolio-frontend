@@ -21,7 +21,9 @@
                     label="Your Message"
                     color="red darken-3"
                     v-model="currentMessage"
-                    @keyup.enter="sendMessage"></v-text-field>
+                    @keyup.enter="sendMessage"
+                    append-icon="send"
+                    :append-icon-cb="sendMessage"></v-text-field>
             </v-flex>
         </v-layout>
     </div>
