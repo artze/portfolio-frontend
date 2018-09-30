@@ -12,7 +12,8 @@
                         v-for="message in messagesArr"
                         :key="message.timeStamp">
                         <v-card-text>
-                            {{ message.data }}
+                            <span class="caption font-weight-bold" v-if="!message.self">{{ message.username }}</span><br v-if="!message.self">
+                            {{ message.messageText }}
                         </v-card-text>
                     </v-card>
                 </v-layout>
@@ -54,7 +55,12 @@ export default {
             }
             this.ws = new WebSocket(host)
             this.ws.addEventListener('message', (msg) => {
-                this.messagesArr.push(msg)
+                let messagePayload = {
+                    messageText: JSON.parse(msg.data).messageText,
+                    username: JSON.parse(msg.data).username,
+                    timeStamp: msg.timeStamp
+                }
+                this.messagesArr.push(messagePayload)
             })
         },
         sendMessage() {
@@ -64,7 +70,7 @@ export default {
             }))
             this.messagesArr.push({
                 self: true,
-                data: this.currentMessage,
+                messageText: this.currentMessage,
                 timeStamp: new Date().getTime()
             })
             this.currentMessage = ''
