@@ -3,13 +3,19 @@
         <app-header></app-header>
         <v-layout justify-center>
             <v-flex lg6>
-                <v-layout class="message-box">
-                    <v-card>
-                        asdf
+                <v-layout column class="message-box">
+                    <v-card
+                        class="received-msg-card mt-1"
+                        v-for="message in receivedMessages"
+                        :key="message.timeStamp">
+                        <v-card-text>
+                            {{ message.data }}
+                        </v-card-text>
                     </v-card>
                 </v-layout>
                 <v-text-field
                     label="Your Message"
+                    color="red darken-3"
                     v-model="currentMessage"
                     @keyup.enter="sendMessage"></v-text-field>
             </v-flex>
@@ -59,5 +65,11 @@ export default {
 .message-box {
     height: calc(100vh - 124px);
     overflow: auto;
+}
+
+.received-msg-card {
+    max-width: 500px;
+    width: fit-content;
+    background-color: #f0f4c3;
 }
 </style>
