@@ -23,7 +23,7 @@
                     v-model="currentMessage"
                     @keyup.enter="sendMessage"
                     append-icon="send"
-                    :append-icon-cb="sendMessage"></v-text-field>
+                    @click:append="sendMessage"></v-text-field>
             </v-flex>
         </v-layout>
     </div>
