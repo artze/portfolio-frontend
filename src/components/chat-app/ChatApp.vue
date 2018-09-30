@@ -1,6 +1,8 @@
 <template>
     <div>
         <app-header></app-header>
+        <log-in-dialog
+            @loggedIn="establishWebsocketConnection($event)"></log-in-dialog>
         <v-layout justify-center>
             <v-flex lg6>
                 <v-layout column class="message-box">
@@ -26,21 +28,25 @@
 
 <script>
 import Header from './Header'
+import LogInDialog from './LogInDialog'
 
 export default {
     components: {
-        'app-header': Header
+        'app-header': Header,
+        'log-in-dialog': LogInDialog
     },
     data() {
         return {
             ws: '',
             currentMessage: '',
-            messagesArr: []
+            messagesArr: [],
+            username: ''
         }
     },
     methods: {
-        establishWebsocketConnection() {
+        establishWebsocketConnection(event) {
             let host
+            this.username = event
             if(process.env.NODE_ENV === 'development') {
                 host = 'ws://localhost:3000/api/chat-app'
             } else if(process.env.NODE_ENV === 'production') {
@@ -52,7 +58,10 @@ export default {
             })
         },
         sendMessage() {
-            this.ws.send(this.currentMessage)
+            this.ws.send(JSON.stringify({
+                username: this.username,
+                messageText: this.currentMessage
+            }))
             this.messagesArr.push({
                 self: true,
                 data: this.currentMessage,
@@ -66,9 +75,6 @@ export default {
                 'sent-msg-card': message.self
             }
         }
-    },
-    mounted() {
-        this.establishWebsocketConnection()
     }
 }
 </script>
