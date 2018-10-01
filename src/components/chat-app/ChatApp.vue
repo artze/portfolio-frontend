@@ -8,10 +8,10 @@
                 <v-layout column class="message-box">
                     <v-card
                         class="mt-1"
-                        :class="checkOwnMessage(message)"
+                        :class="checkOwnMessageCardClass(message)"
                         v-for="message in messagesArr"
                         :key="message.timeStamp">
-                        <v-card-text>
+                        <v-card-text :class="checkOwnMessageCardTextClass(message)">
                             <span class="caption font-weight-bold" v-if="!message.self">{{ message.username }}</span><br v-if="!message.self">
                             {{ message.messageText }}
                         </v-card-text>
@@ -23,7 +23,7 @@
                     v-model="currentMessage"
                     @keyup.enter="sendMessage"
                     append-icon="send"
-                    :append-icon-cb="sendMessage"></v-text-field>
+                    @click:append="sendMessage"></v-text-field>
             </v-flex>
         </v-layout>
     </div>
@@ -77,10 +77,16 @@ export default {
             })
             this.currentMessage = ''
         },
-        checkOwnMessage(message) {
+        checkOwnMessageCardClass(message) {
             return {
                 'received-msg-card': !message.self,
                 'sent-msg-card': message.self
+            }
+        },
+        checkOwnMessageCardTextClass(message) {
+            return {
+                'received-msg-card-text': !message.self,
+                'sent-msg-card-text': message.self
             }
         }
     }
@@ -96,13 +102,19 @@ export default {
 .received-msg-card {
     max-width: 500px;
     width: fit-content;
-    background-color: #f0f4c3;
 }
 
 .sent-msg-card {
     max-width: 500px;
     width: fit-content;
-    background-color: #e3f2fd;
     margin-left: auto;
+}
+
+.received-msg-card-text {
+    background-color: #f0f4c3;
+}
+
+.sent-msg-card-text {
+    background-color: #e3f2fd;
 }
 </style>
