@@ -5,7 +5,7 @@
             @loggedIn="establishWebsocketConnection($event)"></log-in-dialog>
         <v-layout justify-center>
             <v-flex lg6>
-                <v-layout column class="message-box">
+                <v-layout column class="message-box" ref="messageBox">
                     <v-card
                         class="mt-1"
                         :class="checkOwnMessageCardClass(message)"
@@ -66,6 +66,9 @@ export default {
             })
         },
         sendMessage() {
+            if(!this.currentMessage) {
+                return
+            }
             this.ws.send(JSON.stringify({
                 username: this.username,
                 messageText: this.currentMessage
@@ -88,6 +91,13 @@ export default {
                 'received-msg-card-text': !message.self,
                 'sent-msg-card-text': message.self
             }
+        }
+    },
+    watch: {
+        messagesArr() {
+            this.$nextTick(() => {
+                this.$refs.messageBox.scrollTop = this.$refs.messageBox.scrollHeight
+            })
         }
     }
 }
