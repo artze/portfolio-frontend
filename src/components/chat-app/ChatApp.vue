@@ -66,6 +66,9 @@ export default {
             })
         },
         sendMessage() {
+            if(!this.currentMessage) {
+                return
+            }
             this.ws.send(JSON.stringify({
                 username: this.username,
                 messageText: this.currentMessage
