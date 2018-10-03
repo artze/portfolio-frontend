@@ -6,13 +6,17 @@
                 <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
                 <v-btn flat @click="scrollToContactSection" class="link-btn">Contact</v-btn>
             </v-layout>
-            <v-layout align-center justify-center>
-                <v-flex lg4 class="landing-content" >
+            <v-layout
+                align-center
+                :justify-center="$vuetify.breakpoint.mdAndUp"
+                :justify-space-between="$vuetify.breakpoint.smAndDown"
+                :column="$vuetify.breakpoint.smAndDown">
+                <v-flex xs6 sm6 lg4 class="landing-content">
                     <img src="../../assets/images/coloredsquares.jpg">
                 </v-flex>
-                <v-flex lg5 class="landing-content" >
-                    <h1>artze</h1>
-                    <h3>Fullstack Web Developer<span class="blink">.</span></h3>
+                <v-flex xs8 sm8 lg5 class="landing-content">
+                    <h1 class="landing-header-font">artze</h1>
+                    <h3 class="landing-description-font">Fullstack Web Developer<span class="blink">.</span></h3>
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
@@ -158,28 +162,59 @@ export default {
     animation: 2s ease-out 0s 1 fadeIntoView;
 }
 
-.landing-content img {
-    height: 200px;
-    width: 200px;
+@media only screen and (max-width : 960px) {
+    .landing-content img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width : 960px) {
+    .landing-content img {
+        height: 200px;
+        width: 200px;
+    }
 }
 
 .landing-content h1 {
     font-family: 'Raleway';
-    font-size: 6em;
     font-weight: 800;
-    text-align: left;
     line-height: 1.2em;
     animation: 1s ease-out 0s 1 slideFromRight;
+}
+
+@media only screen and (max-width : 960px) {
+    .landing-header-font {
+        font-size: 4em;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .landing-header-font {
+        font-size: 6em;
+        text-align: left;
+    }
 }
 
 .landing-content h3 {
     font-family: 'VT323', monospace;
     font-weight: 200;
-    font-size: 2.7em;
     text-align: left;
     animation: 1s ease-out 0s 1 slideFromRight;
 }
 
+@media only screen and (max-width : 960px) {
+    .landing-description-font {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width : 960px) {
+    .landing-description-font {
+        font-size: 2.7em;
+    }
+}
 .section-header {
     text-align: center;
     font-family: 'VT323';
