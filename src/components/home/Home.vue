@@ -125,6 +125,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=VT323');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
 
+/* Header Section */
 @keyframes fadeIntoView {
     0% {
         opacity: 0;
@@ -215,28 +216,6 @@ export default {
         font-size: 2.7em;
     }
 }
-.section-header {
-    text-align: center;
-    font-family: 'VT323';
-    font-weight: 200;
-    font-size: 2.2em;
-    margin-top: 1em;
-}
-
-.project-card {
-    margin: 0px 15px;
-}
-
-.project-card-title-text {
-    font-family: 'Raleway';
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-.project-card-title-text:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 .link-btn {
     font-family: 'VT323';
@@ -261,6 +240,32 @@ export default {
     animation: blink 1s linear infinite;
 }
 
+/* Project and Contact Sections */
+.section-header {
+    text-align: center;
+    font-family: 'VT323';
+    font-weight: 200;
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+
+/* Project Section */
+.project-card {
+    margin: 0px 15px;
+}
+
+.project-card-title-text {
+    font-family: 'Raleway';
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.project-card-title-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Contact Section */
 .contact-me-btn::before {
     color: transparent;
 }
