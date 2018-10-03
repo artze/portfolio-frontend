@@ -163,7 +163,14 @@ export default {
     animation: 2s ease-out 0s 1 fadeIntoView;
 }
 
-@media only screen and (max-width : 960px) {
+@media only screen and (max-width : 600px) {
+    .landing-content img {
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
     .landing-content img {
         height: 150px;
         width: 150px;
