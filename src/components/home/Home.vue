@@ -28,7 +28,7 @@
 
         <!-- Projects section -->
         <v-layout column style="height: 100vh" ref="projectsSection">
-            <v-flex lg1>
+            <v-flex xs1 sm1 md1 lg1>
                 <v-layout justify-center>
                     <v-flex lg8>
                         <h2 class="section-header">
@@ -37,32 +37,32 @@
                     </v-flex>
                 </v-layout>
             </v-flex>
-            <v-flex lg10>
+            <v-flex xs10 sm10 md10 lg10>
                 <v-layout justify-center>
-                    <v-flex lg8>
+                    <v-flex xs8 sm8 md8 lg8>
                         <v-layout justify-start wrap>
-                            <v-flex lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/quote-machine" tag="h3" class="project-card-title-text">Quote Machine</router-link>
                                     </v-card-title>
                                 </v-card>
                             </v-flex>
-                            <v-flex lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/wiki-viewer" tag="h3" class="project-card-title-text">Wikipedia Viewer</router-link>
                                     </v-card-title>
                                 </v-card>
                             </v-flex>
-                            <v-flex lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/journey-tracker" tag="h3" class="project-card-title-text">Journey Tracker</router-link>
                                     </v-card-title>
                                 </v-card>
                             </v-flex>
-                            <v-flex lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/chat-app" tag="h3" class="project-card-title-text">Chat App</router-link>
@@ -73,7 +73,7 @@
                     </v-flex>
                 </v-layout>
             </v-flex>
-            <v-flex lg1>
+            <v-flex xs1 sm1 md1 lg1>
                 <v-layout justify-center align-end>
                     <v-btn icon large class="scroll-btn" @click="scrollToContactSection">
                         <v-icon x-large>expand_more</v-icon>
@@ -125,6 +125,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=VT323');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
 
+/* Header Section */
 @keyframes fadeIntoView {
     0% {
         opacity: 0;
@@ -162,7 +163,14 @@ export default {
     animation: 2s ease-out 0s 1 fadeIntoView;
 }
 
-@media only screen and (max-width : 960px) {
+@media only screen and (max-width : 600px) {
+    .landing-content img {
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
     .landing-content img {
         height: 150px;
         width: 150px;
@@ -215,28 +223,6 @@ export default {
         font-size: 2.7em;
     }
 }
-.section-header {
-    text-align: center;
-    font-family: 'VT323';
-    font-weight: 200;
-    font-size: 2.2em;
-    margin-top: 1em;
-}
-
-.project-card {
-    margin: 0px 15px;
-}
-
-.project-card-title-text {
-    font-family: 'Raleway';
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-.project-card-title-text:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 .link-btn {
     font-family: 'VT323';
@@ -261,6 +247,32 @@ export default {
     animation: blink 1s linear infinite;
 }
 
+/* Project and Contact Sections */
+.section-header {
+    text-align: center;
+    font-family: 'VT323';
+    font-weight: 200;
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+
+/* Project Section */
+.project-card {
+    margin: 0px 15px;
+}
+
+.project-card-title-text {
+    font-family: 'Raleway';
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.project-card-title-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Contact Section */
 .contact-me-btn::before {
     color: transparent;
 }
