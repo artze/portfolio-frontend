@@ -28,7 +28,7 @@
 
         <!-- Projects section -->
         <v-layout column style="height: 100vh" ref="projectsSection">
-            <v-flex lg1>
+            <v-flex xs1 sm1 md1 lg1 style="border: 1px solid red;">
                 <v-layout justify-center>
                     <v-flex lg8>
                         <h2 class="section-header">
@@ -37,7 +37,7 @@
                     </v-flex>
                 </v-layout>
             </v-flex>
-            <v-flex lg10>
+            <v-flex xs10 sm10 md10 lg10 style="border: 1px solid red;">
                 <v-layout justify-center>
                     <v-flex xs8 sm8 md8 lg8>
                         <v-layout justify-start wrap>
@@ -73,7 +73,7 @@
                     </v-flex>
                 </v-layout>
             </v-flex>
-            <v-flex lg1>
+            <v-flex xs1 sm1 md1 lg1 style="border: 1px solid red;">
                 <v-layout justify-center align-end>
                     <v-btn icon large class="scroll-btn" @click="scrollToContactSection">
                         <v-icon x-large>expand_more</v-icon>
