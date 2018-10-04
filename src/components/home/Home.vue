@@ -39,30 +39,30 @@
             </v-flex>
             <v-flex lg10>
                 <v-layout justify-center>
-                    <v-flex lg8>
+                    <v-flex xs8 sm8 md8 lg8>
                         <v-layout justify-start wrap>
-                            <v-flex sm6 md4 lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/quote-machine" tag="h3" class="project-card-title-text">Quote Machine</router-link>
                                     </v-card-title>
                                 </v-card>
                             </v-flex>
-                            <v-flex sm6 md4 lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/wiki-viewer" tag="h3" class="project-card-title-text">Wikipedia Viewer</router-link>
                                     </v-card-title>
                                 </v-card>
                             </v-flex>
-                            <v-flex sm6 md4 lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/journey-tracker" tag="h3" class="project-card-title-text">Journey Tracker</router-link>
                                     </v-card-title>
                                 </v-card>
                             </v-flex>
-                            <v-flex sm6 md4 lg4>
+                            <v-flex xs12 sm6 md4 lg4>
                                 <v-card class="project-card mt-4">
                                     <v-card-title primary-title class="justify-center">
                                         <router-link to="/chat-app" tag="h3" class="project-card-title-text">Chat App</router-link>
