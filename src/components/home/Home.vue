@@ -38,41 +38,9 @@
                 </v-layout>
             </v-flex>
             <v-flex xs10 sm10 md10 lg10>
-                <v-layout justify-center>
-                    <v-flex xs8 sm8 md8 lg8>
-                        <v-layout justify-start wrap>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/quote-machine" tag="h3" class="project-card-title-text">Quote Machine</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/wiki-viewer" tag="h3" class="project-card-title-text">Wikipedia Viewer</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/journey-tracker" tag="h3" class="project-card-title-text">Journey Tracker</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/chat-app" tag="h3" class="project-card-title-text">Chat App</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>
-                </v-layout>
+                <project-cards-section></project-cards-section>
             </v-flex>
+
             <v-flex xs1 sm1 md1 lg1>
                 <v-layout justify-center align-end>
                     <v-btn icon large class="scroll-btn" @click="scrollToContactSection">
@@ -105,7 +73,12 @@
 </template>
 
 <script>
+import ProjectCardsSection from './ProjectCardsSection'
+
 export default {
+    components: {
+        'project-cards-section': ProjectCardsSection
+    },
     methods: {
         scrollToProjectsSection() {
             this.$refs.projectsSection.scrollIntoView({
@@ -254,22 +227,6 @@ export default {
     font-weight: 200;
     font-size: 2.2em;
     margin-top: 1em;
-}
-
-/* Project Section */
-.project-card {
-    margin: 0px 15px;
-}
-
-.project-card-title-text {
-    font-family: 'Raleway';
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-.project-card-title-text:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 /* Contact Section */
