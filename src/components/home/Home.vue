@@ -3,6 +3,7 @@
         <!-- Landing section -->
         <v-layout column id="landing-background">
             <v-layout justify-end>
+                <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
                 <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
                 <v-btn flat @click="scrollToContactSection" class="link-btn">Contact</v-btn>
             </v-layout>
@@ -20,10 +21,33 @@
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
-                <v-btn icon large class="scroll-btn" @click="scrollToProjectsSection">
+                <v-btn icon large class="scroll-btn" @click="scrollToAboutSection">
                     <v-icon x-large>expand_more</v-icon>
                 </v-btn>
             </v-layout>
+        </v-layout>
+
+        <!-- About section -->
+        <v-layout column style="height: 100vh" ref="aboutSection">
+            <v-flex xs1 sm1 md1 lg1>
+                <v-layout justify-center>
+                    <v-flex lg8>
+                        <h2 class="section-header">
+                            About
+                        </h2>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+            <v-flex xs10 sm10 md10 lg10>
+            </v-flex>
+
+            <v-flex xs1 sm1 md1 lg1>
+                <v-layout justify-center align-end>
+                    <v-btn icon large class="scroll-btn" @click="scrollToProjectsSection">
+                        <v-icon x-large>expand_more</v-icon>
+                    </v-btn>
+                </v-layout>
+            </v-flex>
         </v-layout>
 
         <!-- Projects section -->
@@ -80,6 +104,11 @@ export default {
         'project-cards-section': ProjectCardsSection
     },
     methods: {
+        scrollToAboutSection() {
+            this.$refs.aboutSection.scrollIntoView({
+                behavior: 'smooth'
+            })
+        },
         scrollToProjectsSection() {
             this.$refs.projectsSection.scrollIntoView({
                 behavior: 'smooth'
