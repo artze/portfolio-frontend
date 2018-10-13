@@ -33,12 +33,14 @@
                 <v-layout justify-center>
                     <v-flex lg8>
                         <h2 class="section-header">
-                            About
+                        
                         </h2>
                     </v-flex>
                 </v-layout>
             </v-flex>
+
             <v-flex xs10 sm10 md10 lg10>
+                <about-content></about-content>
             </v-flex>
 
             <v-flex xs1 sm1 md1 lg1>
@@ -61,6 +63,7 @@
                     </v-flex>
                 </v-layout>
             </v-flex>
+
             <v-flex xs10 sm10 md10 lg10>
                 <project-cards-section></project-cards-section>
             </v-flex>
@@ -97,10 +100,12 @@
 </template>
 
 <script>
+import AboutContent from './AboutContent'
 import ProjectCardsSection from './ProjectCardsSection'
 
 export default {
     components: {
+        'about-content': AboutContent,
         'project-cards-section': ProjectCardsSection
     },
     methods: {
