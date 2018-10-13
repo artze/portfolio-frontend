@@ -3,6 +3,7 @@
         <!-- Landing section -->
         <v-layout column id="landing-background">
             <v-layout justify-end>
+                <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
                 <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
                 <v-btn flat @click="scrollToContactSection" class="link-btn">Contact</v-btn>
             </v-layout>
@@ -20,10 +21,34 @@
                 </v-flex>
             </v-layout>
             <v-layout justify-center align-end>
-                <v-btn icon large class="scroll-btn" @click="scrollToProjectsSection">
+                <v-btn icon large class="scroll-btn" @click="scrollToAboutSection">
                     <v-icon x-large>expand_more</v-icon>
                 </v-btn>
             </v-layout>
+        </v-layout>
+
+        <!-- About section -->
+        <v-layout column style="height: 100vh" ref="aboutSection">
+            <v-flex xs1 sm1 md1 lg1>
+                <v-layout justify-center>
+                    <v-flex lg8>
+                        <h2 class="section-header">
+                        </h2>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+
+            <v-flex xs10 sm10 md10 lg10>
+                <about-content></about-content>
+            </v-flex>
+
+            <v-flex xs1 sm1 md1 lg1>
+                <v-layout justify-center align-end>
+                    <v-btn icon large class="scroll-btn" @click="scrollToProjectsSection">
+                        <v-icon x-large>expand_more</v-icon>
+                    </v-btn>
+                </v-layout>
+            </v-flex>
         </v-layout>
 
         <!-- Projects section -->
@@ -32,47 +57,16 @@
                 <v-layout justify-center>
                     <v-flex lg8>
                         <h2 class="section-header">
-                            Projects section
+                            Projects
                         </h2>
                     </v-flex>
                 </v-layout>
             </v-flex>
+
             <v-flex xs10 sm10 md10 lg10>
-                <v-layout justify-center>
-                    <v-flex xs8 sm8 md8 lg8>
-                        <v-layout justify-start wrap>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/quote-machine" tag="h3" class="project-card-title-text">Quote Machine</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/wiki-viewer" tag="h3" class="project-card-title-text">Wikipedia Viewer</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/journey-tracker" tag="h3" class="project-card-title-text">Journey Tracker</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm6 md4 lg4>
-                                <v-card class="project-card mt-4">
-                                    <v-card-title primary-title class="justify-center">
-                                        <router-link to="/chat-app" tag="h3" class="project-card-title-text">Chat App</router-link>
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                        </v-layout>
-                    </v-flex>
-                </v-layout>
+                <project-cards-section></project-cards-section>
             </v-flex>
+
             <v-flex xs1 sm1 md1 lg1>
                 <v-layout justify-center align-end>
                     <v-btn icon large class="scroll-btn" @click="scrollToContactSection">
@@ -105,8 +99,20 @@
 </template>
 
 <script>
+import AboutContent from './AboutContent'
+import ProjectCardsSection from './ProjectCardsSection'
+
 export default {
+    components: {
+        'about-content': AboutContent,
+        'project-cards-section': ProjectCardsSection
+    },
     methods: {
+        scrollToAboutSection() {
+            this.$refs.aboutSection.scrollIntoView({
+                behavior: 'smooth'
+            })
+        },
         scrollToProjectsSection() {
             this.$refs.projectsSection.scrollIntoView({
                 behavior: 'smooth'
@@ -254,22 +260,6 @@ export default {
     font-weight: 200;
     font-size: 2.2em;
     margin-top: 1em;
-}
-
-/* Project Section */
-.project-card {
-    margin: 0px 15px;
-}
-
-.project-card-title-text {
-    font-family: 'Raleway';
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-.project-card-title-text:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 /* Contact Section */
