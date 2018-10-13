@@ -33,7 +33,6 @@
                 <v-layout justify-center>
                     <v-flex lg8>
                         <h2 class="section-header">
-                        
                         </h2>
                     </v-flex>
                 </v-layout>
@@ -58,7 +57,7 @@
                 <v-layout justify-center>
                     <v-flex lg8>
                         <h2 class="section-header">
-                            Projects section
+                            Projects
                         </h2>
                     </v-flex>
                 </v-layout>
