@@ -51,6 +51,15 @@
                 </v-layout>
             </v-flex>
         </v-layout>
+        <v-layout justify-center>
+            <v-flex xs8 sm8 md8 lg8>
+                <v-layout>
+                    <p class="png-source mt-5">
+                        Icons made by <a href="http://www.freepik.com/" target="_blank">Freepik</a> from <a href="http://www.flaticon.com" target="_blank">Flaticon</a>
+                    </p>
+                </v-layout>
+            </v-flex>
+        </v-layout>
     </div>
 </template>
 
@@ -80,5 +89,15 @@
     font-family: 'Roboto';
     font-weight: 100;
     text-align: center;
+}
+
+.png-source {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 0.8em;
+}
+
+.png-source a {
+    color: #757575;
 }
 </style>
