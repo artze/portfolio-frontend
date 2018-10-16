@@ -57,7 +57,9 @@
 
 .project-card:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 0px 0.7px #69ffdf inset;
+    -webkit-box-shadow: 0px 0px 0px 1px #69ffdf inset;
+    -moz-box-shadow: 0px 0px 0px 1px #69ffdf inset;
+    box-shadow: 0px 0px 0px 1px #69ffdf inset;
 }
 
 .project-card-title-text {
