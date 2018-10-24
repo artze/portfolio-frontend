@@ -83,8 +83,8 @@
             <v-flex xs3 sm3 md3 lg3>
                 <v-layout fill-height justify-center class="footer">
                     <v-flex xs8 sm8 md8 lg8>
-                        <v-layout>
-                            <p class="png-source mt-5">
+                        <v-layout column fill-height justify-end>
+                            <p class="png-source">
                                 Icons made by <a href="http://www.freepik.com/" target="_blank">Freepik</a> from <a href="http://www.flaticon.com" target="_blank">Flaticon</a>
                             </p>
                         </v-layout>
