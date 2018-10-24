@@ -77,21 +77,27 @@
         </v-layout>
 
         <!-- Contact section -->
-        <div style="height: 100vh;" ref="contactSection">
-            <v-layout column fill-height>
+        <v-layout column style="height: 100vh;" ref="contactSection">
+            <v-flex xs1 sm1 md1 lg1>
                 <v-layout justify-center>
-                    <v-flex lg6>
+                    <v-flex lg8>
                         <h2 class="section-header">
                             Contact Me
                         </h2>
                     </v-flex>
                 </v-layout>
-                <v-layout justify-center align-center>
+            </v-flex>
+
+            <v-flex xs9 sm9 md9 lg9>
+                <v-layout fill-height justify-center align-center>
                     <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
                         <v-icon x-large>fab fa-linkedin</v-icon>
                     </v-btn>
                 </v-layout>
-                <v-layout justify-center>
+            </v-flex>
+
+            <v-flex xs2 sm2 md2 lg2>
+                <v-layout fill-height justify-center class="footer">
                     <v-flex xs8 sm8 md8 lg8>
                         <v-layout>
                             <p class="png-source mt-5">
@@ -100,8 +106,8 @@
                         </v-layout>
                     </v-flex>
                 </v-layout>
-            </v-layout>
-        </div>
+            </v-flex>
+        </v-layout>
     </div>
 </template>
 
@@ -281,10 +287,15 @@ export default {
 .png-source {
     font-family: 'Roboto';
     font-weight: 100;
-    font-size: 0.8em;
+    font-size: 0.65em;
+    color: #ffffff;
 }
 
 .png-source a {
-    color: #757575;
+    color: #a3a0a0;
+}
+
+.footer {
+    background-color: #000000;
 }
 </style>
