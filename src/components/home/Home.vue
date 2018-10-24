@@ -41,14 +41,6 @@
             <v-flex xs11 sm11 md11 lg11>
                 <about-content></about-content>
             </v-flex>
-
-            <!-- <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center align-end>
-                    <v-btn icon large class="scroll-btn" @click="scrollToProjectsSection">
-                        <v-icon x-large>expand_more</v-icon>
-                    </v-btn>
-                </v-layout>
-            </v-flex> -->
         </v-layout>
 
         <!-- Projects section -->
@@ -66,14 +58,6 @@
             <v-flex xs11 sm11 md11 lg11>
                 <project-cards-section></project-cards-section>
             </v-flex>
-
-            <!-- <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center align-end>
-                    <v-btn icon large class="scroll-btn" @click="scrollToContactSection">
-                        <v-icon x-large>expand_more</v-icon>
-                    </v-btn>
-                </v-layout>
-            </v-flex> -->
         </v-layout>
 
         <!-- Contact section -->
@@ -88,7 +72,7 @@
                 </v-layout>
             </v-flex>
 
-            <v-flex xs9 sm9 md9 lg9>
+            <v-flex xs8 sm8 md8 lg8>
                 <v-layout fill-height justify-center align-center>
                     <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
                         <v-icon x-large>fab fa-linkedin</v-icon>
@@ -96,7 +80,7 @@
                 </v-layout>
             </v-flex>
 
-            <v-flex xs2 sm2 md2 lg2>
+            <v-flex xs3 sm3 md3 lg3>
                 <v-layout fill-height justify-center class="footer">
                     <v-flex xs8 sm8 md8 lg8>
                         <v-layout>
