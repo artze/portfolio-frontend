@@ -73,10 +73,15 @@
             </v-flex>
 
             <v-flex xs8 sm8 md8 lg8>
-                <v-layout fill-height justify-center align-center>
-                    <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
-                        <v-icon x-large>fab fa-linkedin</v-icon>
-                    </v-btn>
+                <v-layout column fill-height justify-center align-center>
+                    <v-flex xs3 sm3 md3 lg3>
+                        <p class="contact-text">Get in touch. Tell me about your project.</p>
+                    </v-flex>
+                    <v-vlex xs9 sm9 md9 lg9>
+                        <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
+                            <v-icon x-large>fab fa-linkedin</v-icon>
+                        </v-btn>
+                    </v-vlex>
                 </v-layout>
             </v-flex>
 
@@ -277,6 +282,13 @@ export default {
 
 .png-source a {
     color: #a3a0a0;
+}
+
+.contact-text {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 1.5em;
+    color: #757575
 }
 
 .footer {
