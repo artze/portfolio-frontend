@@ -28,9 +28,16 @@
                 <v-layout fill-height justify-center class="footer">
                     <v-flex xs8 sm8 md8 lg8>
                         <v-layout column fill-height justify-end>
-                            <p class="png-source">
-                                Icons made by <a href="http://www.freepik.com/" target="_blank">Freepik</a> from <a href="http://www.flaticon.com" target="_blank">Flaticon</a>
-                            </p>
+                            <v-flex lg10>
+                                <v-layout justify-center>
+                                    <v-btn flat large class="link-btn large" to="/">Back to Home<span class="blink">.</span></v-btn>
+                                </v-layout>
+                            </v-flex>
+                            <v-flex lg2>
+                                <p class="png-source">
+                                    Icons made by <a href="http://www.freepik.com/" target="_blank">Freepik</a> from <a href="http://www.flaticon.com" target="_blank">Flaticon</a>
+                                </p>
+                            </v-flex>
                         </v-layout>
                     </v-flex>
                 </v-layout>
@@ -83,5 +90,36 @@
 
 .footer {
     background-color: #000000;
+}
+
+.link-btn {
+    color: #ffffff;
+    font-family: 'VT323';
+    font-size: 1.5em;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.link-btn.large {
+    height: 100px;
+    font-size: 3em;
+}
+
+.link-btn:hover {
+    color: #69ffdf;
+}
+
+.link-btn::before {
+    color: transparent;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: blink 1s linear infinite;
 }
 </style>
