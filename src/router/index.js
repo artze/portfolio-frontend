@@ -3,6 +3,8 @@ import Router from 'vue-router'
 
 import Home from '../components/home/Home'
 import Projects from '../components/home/projects/Projects'
+import Contact from '../components/home/contact/Contact'
+
 import QuoteMachine from '../components/quote-machine/QuoteMachine'
 import WikiViewer from '../components/wiki-viewer/WikiViewer'
 import JourneyTracker from '../components/journey-tracker/JourneyTracker'
@@ -19,6 +21,10 @@ export default new Router({
         {
             path: '/projects',
             component: Projects
+        },
+        {
+            path: '/contact',
+            component: Contact
         },
         {
             path: '/quote-machine',

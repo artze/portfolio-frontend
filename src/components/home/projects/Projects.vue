@@ -29,11 +29,21 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 .fade-enter-active, .fade-leave-active {
     transition: opacity 1s;
 }
 
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to {
     opacity: 0;
+}
+
+.section-header {
+    text-align: center;
+    font-family: 'VT323';
+    font-weight: 200;
+    font-size: 2.2em;
+    margin-top: 1em;
 }
 </style>
