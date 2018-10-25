@@ -4,8 +4,8 @@
         <v-layout column id="landing-background">
             <v-layout justify-end>
                 <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
-                <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
-                <v-btn flat @click="scrollToContactSection" class="link-btn">Contact</v-btn>
+                <v-btn flat to="/projects" class="link-btn">Projects</v-btn>
+                <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
             </v-layout>
             <v-layout
                 align-center
@@ -38,76 +38,26 @@
                 </v-layout>
             </v-flex>
 
-            <v-flex xs11 sm11 md11 lg11>
+            <v-flex xs9 sm9 md9 lg9>
                 <about-content></about-content>
             </v-flex>
-        </v-layout>
 
-        <!-- Projects section -->
-        <v-layout column style="height: 100vh" ref="projectsSection">
-            <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center>
-                    <v-flex lg8>
-                        <h2 class="section-header">
-                            Projects
-                        </h2>
-                    </v-flex>
-                </v-layout>
-            </v-flex>
-
-            <v-flex xs11 sm11 md11 lg11>
-                <project-cards-section></project-cards-section>
-            </v-flex>
-        </v-layout>
-
-        <!-- Contact section -->
-        <v-layout column style="height: 100vh;" ref="contactSection">
-            <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center>
-                    <v-flex lg8>
-                        <h2 class="section-header">
-                            Contact Me
-                        </h2>
-                    </v-flex>
-                </v-layout>
-            </v-flex>
-
-            <v-flex xs8 sm8 md8 lg8>
-                <v-layout column fill-height justify-center align-center>
-                    <v-flex xs3 sm3 md3 lg3>
-                        <p class="contact-text">Get in touch. Tell me about your project.</p>
-                    </v-flex>
-                    <v-vlex xs9 sm9 md9 lg9>
-                        <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
-                            <v-icon x-large>fab fa-linkedin</v-icon>
-                        </v-btn>
-                    </v-vlex>
-                </v-layout>
-            </v-flex>
-
-            <v-flex xs3 sm3 md3 lg3>
-                <v-layout fill-height justify-center class="footer">
-                    <v-flex xs8 sm8 md8 lg8>
-                        <v-layout column fill-height justify-end>
-                            <p class="png-source">
-                                Icons made by <a href="http://www.freepik.com/" target="_blank">Freepik</a> from <a href="http://www.flaticon.com" target="_blank">Flaticon</a>
-                            </p>
-                        </v-layout>
-                    </v-flex>
+            <v-flex xs2 sm2 md2 lg2>
+                <v-layout fill-height justify-end align-center>
+                    <v-btn flat large class="link-btn large" to="/projects">Next<span class="blink">.</span></v-btn>
                 </v-layout>
             </v-flex>
         </v-layout>
+
     </div>
 </template>
 
 <script>
 import AboutContent from './AboutContent'
-import ProjectCardsSection from './ProjectCardsSection'
 
 export default {
     components: {
-        'about-content': AboutContent,
-        'project-cards-section': ProjectCardsSection
+        'about-content': AboutContent
     },
     methods: {
         scrollToAboutSection() {
@@ -239,6 +189,11 @@ export default {
     text-transform: none;
 }
 
+.link-btn.large {
+    height: 100px;
+    font-size: 3em;
+}
+
 .link-btn:hover {
     color: #69ffdf;
 }
@@ -253,45 +208,5 @@ export default {
 
 .blink {
     animation: blink 1s linear infinite;
-}
-
-/* Project and Contact Sections */
-.section-header {
-    text-align: center;
-    font-family: 'VT323';
-    font-weight: 200;
-    font-size: 2.2em;
-    margin-top: 1em;
-}
-
-/* Contact Section */
-.contact-me-btn::before {
-    color: transparent;
-}
-
-.contact-me-btn:hover {
-    color: #69ffdf;
-}
-
-.png-source {
-    font-family: 'Roboto';
-    font-weight: 100;
-    font-size: 0.65em;
-    color: #ffffff;
-}
-
-.png-source a {
-    color: #a3a0a0;
-}
-
-.contact-text {
-    font-family: 'Roboto';
-    font-weight: 100;
-    font-size: 1.5em;
-    color: #757575
-}
-
-.footer {
-    background-color: #000000;
 }
 </style>
