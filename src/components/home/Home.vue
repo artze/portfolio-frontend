@@ -38,8 +38,14 @@
                 </v-layout>
             </v-flex>
 
-            <v-flex xs11 sm11 md11 lg11>
+            <v-flex xs9 sm9 md9 lg9>
                 <about-content></about-content>
+            </v-flex>
+
+            <v-flex xs2 sm2 md2 lg2>
+                <v-layout fill-height justify-end align-center>
+                    <v-btn flat large class="link-btn large" to="/projects">Next<span class="blink">.</span></v-btn>
+                </v-layout>
             </v-flex>
         </v-layout>
 
@@ -181,6 +187,11 @@ export default {
     font-size: 1.5em;
     font-weight: 400;
     text-transform: none;
+}
+
+.link-btn.large {
+    height: 100px;
+    font-size: 3em;
 }
 
 .link-btn:hover {
