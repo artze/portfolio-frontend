@@ -30,7 +30,7 @@
                         <v-layout column fill-height justify-end>
                             <v-flex lg10>
                                 <v-layout justify-center>
-                                    <v-btn flat large class="link-btn large" to="/">Back to Home<span class="blink">.</span></v-btn>
+                                    <v-btn flat dark large class="link-btn large" to="/">Back to Home<span class="blink">.</span></v-btn>
                                 </v-layout>
                             </v-flex>
                             <v-flex lg2>
@@ -93,7 +93,6 @@
 }
 
 .link-btn {
-    color: #ffffff;
     font-family: 'VT323';
     font-size: 1.5em;
     font-weight: 400;
