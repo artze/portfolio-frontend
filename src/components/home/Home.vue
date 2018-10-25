@@ -43,23 +43,6 @@
             </v-flex>
         </v-layout>
 
-        <!-- Projects section -->
-        <v-layout column style="height: 100vh" ref="projectsSection">
-            <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center>
-                    <v-flex lg8>
-                        <h2 class="section-header">
-                            Projects
-                        </h2>
-                    </v-flex>
-                </v-layout>
-            </v-flex>
-
-            <v-flex xs11 sm11 md11 lg11>
-                <project-cards-section></project-cards-section>
-            </v-flex>
-        </v-layout>
-
         <!-- Contact section -->
         <v-layout column style="height: 100vh;" ref="contactSection">
             <v-flex xs1 sm1 md1 lg1>
@@ -102,12 +85,10 @@
 
 <script>
 import AboutContent from './AboutContent'
-import ProjectCardsSection from './ProjectCardsSection'
 
 export default {
     components: {
-        'about-content': AboutContent,
-        'project-cards-section': ProjectCardsSection
+        'about-content': AboutContent
     },
     methods: {
         scrollToAboutSection() {
