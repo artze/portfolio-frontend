@@ -16,11 +16,11 @@
                     <v-flex xs3 sm3 md3 lg3>
                         <p class="contact-text">Get in touch. Tell me about your project.</p>
                     </v-flex>
-                    <v-vlex xs9 sm9 md9 lg9>
+                    <v-flex xs9 sm9 md9 lg9>
                         <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
                             <v-icon x-large>fab fa-linkedin</v-icon>
                         </v-btn>
-                    </v-vlex>
+                    </v-flex>
                 </v-layout>
             </v-flex>
 

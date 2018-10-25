@@ -11,8 +11,14 @@
                 </v-layout>
             </v-flex>
 
-            <v-flex xs11 sm11 md11 lg11>
+            <v-flex xs9 sm9 md9 lg9>
                 <project-cards-section></project-cards-section>
+            </v-flex>
+
+            <v-flex xs2 sm2 md2 lg2>
+                <v-layout fill-height justify-end align-center>
+                    <v-btn flat large class="link-btn large" to="/contact">Next<span class="blink">.</span></v-btn>
+                </v-layout>
             </v-flex>
         </v-layout>
     </transition>
@@ -45,5 +51,35 @@ export default {
     font-weight: 200;
     font-size: 2.2em;
     margin-top: 1em;
+}
+
+.link-btn {
+    font-family: 'VT323';
+    font-size: 1.5em;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.link-btn.large {
+    height: 100px;
+    font-size: 3em;
+}
+
+.link-btn:hover {
+    color: #69ffdf;
+}
+
+.link-btn::before {
+    color: transparent;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: blink 1s linear infinite;
 }
 </style>
