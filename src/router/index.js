@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '../components/home/Home'
-import Projects from '../components/home/projects/Projects'
-import Contact from '../components/home/contact/Contact'
+import Home from '@/components/home/Home'
+import Projects from '@/components/projects/Projects'
+import Contact from '@/components/contact/Contact'
 
-import QuoteMachine from '../components/quote-machine/QuoteMachine'
-import WikiViewer from '../components/wiki-viewer/WikiViewer'
-import JourneyTracker from '../components/journey-tracker/JourneyTracker'
-import ChatApp from '../components/chat-app/ChatApp'
+import QuoteMachine from '@/components/quote-machine/QuoteMachine'
+import WikiViewer from '@/components/wiki-viewer/WikiViewer'
+import JourneyTracker from '@/components/journey-tracker/JourneyTracker'
+import ChatApp from '@/components/chat-app/ChatApp'
 
-import ProductivityTools from '../components/productivity-tools/ProductivityTools'
+import ProductivityTools from '@/components/productivity-tools/ProductivityTools'
 
 Vue.use(Router)
 
