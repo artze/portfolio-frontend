@@ -42,16 +42,6 @@
                         </v-card-text>
                     </div>
                 </v-flex>
-                <v-flex xs12 sm6 md4 lg4>
-                    <router-link to="/projects/productivity-tools" tag="div" class="project-card mt-4">
-                        <v-card-title primary-title class="justify-center">
-                            <h3 class="project-card-title-text">Productivity Tools</h3>
-                        </v-card-title>
-                        <v-card-text class="project-card-caption">
-                            A suite of productivity tools.
-                        </v-card-text>
-                    </router-link>
-                </v-flex>
             </v-layout>
         </v-flex>
     </v-layout>

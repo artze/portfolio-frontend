@@ -4,14 +4,26 @@
             <v-layout justify-center>
                 <v-flex lg8>
                     <h2 class="section-header">
-                        Projects
+                        Work Projects
+                    </h2>
+                </v-flex>
+            </v-layout>
+        </v-flex>
+        <v-flex xs4 sm4 md4 lg4>
+            <work-project-cards></work-project-cards>
+        </v-flex>
+        <v-flex xs1 sm1 md1 lg1>
+            <v-layout justify-center>
+                <v-flex lg8>
+                    <h2 class="section-header">
+                        Hobby Projects
                     </h2>
                 </v-flex>
             </v-layout>
         </v-flex>
 
-        <v-flex xs9 sm9 md9 lg9>
-            <project-cards></project-cards>
+        <v-flex xs4 sm4 md4 lg4>
+            <hobby-project-cards></hobby-project-cards>
         </v-flex>
 
         <v-flex xs2 sm2 md2 lg2>
@@ -23,11 +35,13 @@
 </template>
 
 <script>
-import ProjectCards from './ProjectCards'
+import WorkProjectCards from './WorkProjectCards'
+import HobbyProjectCards from './HobbyProjectCards'
 
 export default {
     components: {
-        'project-cards': ProjectCards
+        'work-project-cards': WorkProjectCards,
+        'hobby-project-cards': HobbyProjectCards
     }
 }
 </script>
@@ -36,11 +50,10 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
 .section-header {
-    text-align: center;
+    text-align: left;
     font-family: 'VT323';
     font-weight: 200;
-    font-size: 2.2em;
-    margin-top: 1em;
+    font-size: 3em;
 }
 
 .link-btn {
