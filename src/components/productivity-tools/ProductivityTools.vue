@@ -6,7 +6,7 @@
                 <h2 class="main-header-text mt-4">Operational Productivity Tools</h2>
                 <h3 class="subheader-text">Background</h3>
                 <p class="content-text">
-                    One of the primary issues of operational processes at my work was the lack of a centralized, systematic way of handling data. Most data was managed with the use of Excel sheets which involves manual data manipulation work, is error-prone and is inconvenient to share among team-members. 
+                    One of the primary issues of operational processes at my work was the lack of a centralized, systematic way of handling data. Most data was managed with the use of Excel sheets which involves manual data manipulation work, is error-prone and is inconvenient to share among team-members.
                 </p>
                 <p class="content-text">
                     I have, on my own, built a suite of productivity tools from the ground up to address this problem. Up until now, the the tools cover the areas of Device Serial Number tracking, Return Merchandise Authorization (RMA) tracking, historical sales data and current sales performance monitoring.
@@ -19,7 +19,7 @@
                 <h2 class="header-text">Device Serial Number and RMA Tracking</h2>
                 <h3 class="subheader-text">Background</h3>
                 <p class="content-text">
-                    Our main products consists of various IoT hardware which contains software that are continually evolving. Effective troubleshooting will require tracing of containing software with a Device Serial Number. 
+                    Our main products consists of various IoT hardware which contains software that are continually evolving. Effective troubleshooting will require tracing of containing software with a Device Serial Number.
                 </p>
                 <h3 class="subheader-text">The Problem</h3>
                 <p class="content-text">
@@ -32,7 +32,7 @@
                     It is also possible that some of these software are upgraded post-manufacturing and these changes will need to be logged somewhere as well. To complete the tracing cycle and for the purposes of warranty, which device were shipped to which customer on which date will need to be recorded too. The hassle of dealing with these records on Excel sheets were simply overwhelming.
                 </p>
                 <p class="content-text">
-                    As with RMA, the issue was largely similar – they were recorded on a separate Excel sheet with no connection whatsoever with the serial number logs. 
+                    As with RMA, the issue was largely similar – they were recorded on a separate Excel sheet with no connection whatsoever with the serial number logs.
                 </p>
                 <h3 class="subheader-text">The Solution</h3>
                 <p class="content-text">

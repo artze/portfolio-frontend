@@ -3,44 +3,44 @@
         <v-flex xs8 sm8 md8 lg8>
             <v-layout justify-start wrap>
                 <v-flex xs12 sm6 md4 lg4>
-                    <router-link to="/journey-tracker" tag="div" class="project-card mt-4">
+                    <div class="project-card mt-4" @click="goToJourneyTracker">
                         <v-card-title primary-title class="justify-center">
                             <h3 class="project-card-title-text">Journey Tracker</h3>
                         </v-card-title>
                         <v-card-text class="project-card-caption">
                             A visualization tool to view tracked journeys.
                         </v-card-text>
-                    </router-link>
+                    </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
-                    <router-link to="/chat-app" tag="div" class="project-card mt-4">
+                    <div class="project-card mt-4" @click="goToChatApp">
                         <v-card-title primary-title class="justify-center">
                             <h3 class="project-card-title-text">Chat App</h3>
                         </v-card-title>
                         <v-card-text class="project-card-caption">
                             A super simple chat app created with Websockets.
                         </v-card-text>
-                    </router-link>
+                    </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
-                    <router-link to="/quote-machine" tag="div" class="project-card mt-4">
+                    <div class="project-card mt-4" @click="goToQuoteMachine">
                         <v-card-title primary-title class="justify-center">
                             <h3 class="project-card-title-text">Quote Machine</h3>
                         </v-card-title>
                         <v-card-text class="project-card-caption">
                             Generate random quotes from notable figures.
                         </v-card-text>
-                    </router-link>
+                    </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
-                    <router-link to="/wiki-viewer" tag="div" class="project-card mt-4">
+                    <div class="project-card mt-4" @click="goToWikiViewer">
                         <v-card-title primary-title class="justify-center">
                             <h3 class="project-card-title-text">Wikipedia Viewer</h3>
                         </v-card-title>
                         <v-card-text class="project-card-caption">
                             Search Wikipedia entries with this handy tool.
                         </v-card-text>
-                    </router-link>
+                    </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
                     <router-link to="/productivity-tools" tag="div" class="project-card mt-4">
@@ -56,6 +56,37 @@
         </v-flex>
     </v-layout>
 </template>
+
+<script>
+export default {
+    methods: {
+        goToJourneyTracker() {
+            let routeData = this.$router.resolve({
+                path: '/journey-tracker'
+            })
+            window.open(routeData.href, '_blank')
+        },
+        goToChatApp() {
+            let routeData = this.$router.resolve({
+                path: '/chat-app'
+            })
+            window.open(routeData.href, '_blank')
+        },
+        goToQuoteMachine() {
+            let routeData = this.$router.resolve({
+                path: '/quote-machine'
+            })
+            window.open(routeData.href, '_blank')
+        },
+        goToWikiViewer() {
+            let routeData = this.$router.resolve({
+                path: '/wiki-viewer'
+            })
+            window.open(routeData.href, '_blank')
+        }
+    }
+}
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
