@@ -1,5 +1,10 @@
 <template>
-    <v-layout justify-center style="height: 100vh">
+    <v-layout style="height: 100vh">
+        <v-flex xs2 sm2 md2 lg2>
+            <v-layout>
+                <v-btn flat large class="link-btn large" to="/projects">Back<span class="blink">.</span></v-btn>
+            </v-layout>
+        </v-flex>
         <v-flex xs8 sm8 md8 lg8>
             <!-- Title description -->
             <h2 class="main-header-text mt-4">Operational Productivity Tools</h2>
@@ -53,6 +58,7 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=VT323');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600,800');
 
 .main-header-text {
@@ -82,5 +88,36 @@
     font-weight: 400;
     margin-top: 0.5em;
     color: #3a3a3a;
+}
+
+.link-btn {
+    position: fixed;
+    font-family: 'VT323';
+    font-size: 1.5em;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.link-btn.large {
+    height: 100px;
+    font-size: 3em;
+}
+
+.link-btn:hover {
+    color: #69ffdf;
+}
+
+.link-btn::before {
+    color: transparent;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: blink 1s linear infinite;
 }
 </style>
