@@ -10,6 +10,8 @@ import WikiViewer from '../components/wiki-viewer/WikiViewer'
 import JourneyTracker from '../components/journey-tracker/JourneyTracker'
 import ChatApp from '../components/chat-app/ChatApp'
 
+import ProductivityTools from '../components/productivity-tools/ProductivityTools'
+
 Vue.use(Router)
 
 export default new Router({
@@ -41,6 +43,10 @@ export default new Router({
         {
             path: '/chat-app',
             component: ChatApp
+        },
+        {
+            path: '/productivity-tools',
+            component: ProductivityTools
         }
     ]
 })
