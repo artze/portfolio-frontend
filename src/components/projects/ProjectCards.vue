@@ -43,7 +43,7 @@
                     </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
-                    <router-link to="/productivity-tools" tag="div" class="project-card mt-4">
+                    <router-link to="/projects/productivity-tools" tag="div" class="project-card mt-4">
                         <v-card-title primary-title class="justify-center">
                             <h3 class="project-card-title-text">Productivity Tools</h3>
                         </v-card-title>

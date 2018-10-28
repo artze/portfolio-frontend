@@ -1,85 +1,15 @@
 <template>
     <transition name="fade">
-        <v-layout column style="height: 100vh" ref="projectsSection">
-            <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center>
-                    <v-flex lg8>
-                        <h2 class="section-header">
-                            Projects
-                        </h2>
-                    </v-flex>
-                </v-layout>
-            </v-flex>
-
-            <v-flex xs9 sm9 md9 lg9>
-                <project-cards-section></project-cards-section>
-            </v-flex>
-
-            <v-flex xs2 sm2 md2 lg2>
-                <v-layout fill-height justify-end align-center>
-                    <v-btn flat large class="link-btn large" to="/contact">Next<span class="blink">.</span></v-btn>
-                </v-layout>
-            </v-flex>
-        </v-layout>
+        <router-view></router-view>
     </transition>
 </template>
 
-<script>
-import ProjectCardsSection from './ProjectCardsSection'
-
-export default {
-    components: {
-        'project-cards-section': ProjectCardsSection
-    }
-}
-</script>
-
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=VT323');
-
-.fade-enter-active, .fade-leave-active {
-    transition: opacity 1s;
+.fade-enter-active {
+    transition: opacity 2s;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter {
     opacity: 0;
-}
-
-.section-header {
-    text-align: center;
-    font-family: 'VT323';
-    font-weight: 200;
-    font-size: 2.2em;
-    margin-top: 1em;
-}
-
-.link-btn {
-    font-family: 'VT323';
-    font-size: 1.5em;
-    font-weight: 400;
-    text-transform: none;
-}
-
-.link-btn.large {
-    height: 100px;
-    font-size: 3em;
-}
-
-.link-btn:hover {
-    color: #69ffdf;
-}
-
-.link-btn::before {
-    color: transparent;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-.blink {
-    animation: blink 1s linear infinite;
 }
 </style>

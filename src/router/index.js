@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/components/home/Home'
-import Projects from '@/components/projects/Projects'
-import Contact from '@/components/contact/Contact'
+import Home from '../components/home/Home'
+import Contact from '../components/contact/Contact'
 
-import QuoteMachine from '@/components/quote-machine/QuoteMachine'
-import WikiViewer from '@/components/wiki-viewer/WikiViewer'
-import JourneyTracker from '@/components/journey-tracker/JourneyTracker'
-import ChatApp from '@/components/chat-app/ChatApp'
+import QuoteMachine from '../components/quote-machine/QuoteMachine'
+import WikiViewer from '../components/wiki-viewer/WikiViewer'
+import JourneyTracker from '../components/journey-tracker/JourneyTracker'
+import ChatApp from '../components/chat-app/ChatApp'
 
-import ProductivityTools from '@/components/productivity-tools/ProductivityTools'
+import Projects from '../components/projects/Projects'
+import ProjectIndex from '../components/projects/ProjectIndex'
+import ProductivityTools from '../components/projects/productivity-tools/ProductivityTools'
 
 Vue.use(Router)
 
@@ -22,7 +23,18 @@ export default new Router({
         },
         {
             path: '/projects',
-            component: Projects
+            component: Projects,
+            redirect: '/projects/index',
+            children: [
+                {
+                    path: 'index',
+                    component: ProjectIndex
+                },
+                {
+                    path: 'productivity-tools',
+                    component: ProductivityTools
+                }
+            ]
         },
         {
             path: '/contact',
@@ -43,10 +55,6 @@ export default new Router({
         {
             path: '/chat-app',
             component: ChatApp
-        },
-        {
-            path: '/productivity-tools',
-            component: ProductivityTools
         }
     ]
 })
