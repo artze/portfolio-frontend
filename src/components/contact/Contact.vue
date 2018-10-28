@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <v-layout column style="height: 100vh;" ref="contactSection">
+        <v-layout column style="height: 100vh;">
             <v-flex xs3 sm3 md3 lg3>
                 <v-layout justify-center>
                     <v-flex lg8>
@@ -47,11 +47,11 @@
 </template>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-    transition: opacity 1s;
+.fade-enter-active {
+    transition: opacity 2s;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter {
     opacity: 0;
 }
 
