@@ -1,18 +1,10 @@
 <template>
     <v-layout column style="height: 100vh">
         <v-flex xs1 sm1 md1 lg1>
-            <v-layout justify-center>
-                <v-flex lg8>
-                    <h2 class="section-header">
-                        Work Projects
-                    </h2>
-                </v-flex>
-            </v-layout>
+            <!-- Blank to keep content centered vertically -->
         </v-flex>
-        <v-flex xs4 sm4 md4 lg4>
-            <work-project-cards></work-project-cards>
-        </v-flex>
-        <v-flex xs1 sm1 md1 lg1>
+
+        <v-flex xs9 sm9 md9 lg9>
             <v-layout justify-center>
                 <v-flex lg8>
                     <h2 class="section-header">
@@ -20,9 +12,6 @@
                     </h2>
                 </v-flex>
             </v-layout>
-        </v-flex>
-
-        <v-flex xs4 sm4 md4 lg4>
             <hobby-project-cards></hobby-project-cards>
         </v-flex>
 
@@ -52,8 +41,8 @@ export default {
 .section-header {
     text-align: left;
     font-family: 'VT323';
-    font-weight: 200;
-    font-size: 3em;
+    font-weight: 400;
+    font-size: 6em;
 }
 
 .link-btn {

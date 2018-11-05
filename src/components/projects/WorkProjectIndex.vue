@@ -17,7 +17,7 @@
 
         <v-flex xs2 sm2 md2 lg2>
             <v-layout fill-height justify-end align-center>
-                <v-btn flat large class="link-btn large" to="/contact">Next<span class="blink">.</span></v-btn>
+                <v-btn flat large class="link-btn large" to="/projects/hobby">Next<span class="blink">.</span></v-btn>
             </v-layout>
         </v-flex>
     </v-layout>
@@ -40,7 +40,7 @@ export default {
     text-align: left;
     font-family: 'VT323';
     font-weight: 400;
-    font-size: 7em;
+    font-size: 6em;
 }
 
 .link-btn {

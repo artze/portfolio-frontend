@@ -11,7 +11,7 @@ import ChatApp from '../components/chat-app/ChatApp'
 
 import Projects from '../components/projects/Projects'
 import WorkProjectIndex from '../components/projects/WorkProjectIndex'
-import ProjectIndex from '../components/projects/ProjectIndex'
+import HobbyProjectIndex from '../components/projects/HobbyProjectIndex'
 import ProductivityTools from '../components/projects/productivity-tools/ProductivityTools'
 
 Vue.use(Router)
@@ -25,15 +25,15 @@ export default new Router({
         {
             path: '/projects',
             component: Projects,
-            redirect: '/projects/index',
+            redirect: '/projects/work',
             children: [
                 {
                     path: 'work',
                     component: WorkProjectIndex
                 },
                 {
-                    path: 'index',
-                    component: ProjectIndex
+                    path: 'hobby',
+                    component: HobbyProjectIndex
                 },
                 {
                     path: 'productivity-tools',
