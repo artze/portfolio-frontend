@@ -44,7 +44,7 @@
 
             <v-flex xs2 sm2 md2 lg2>
                 <v-layout fill-height justify-end align-center>
-                    <v-btn flat large class="link-btn large" to="/projects">Next<span class="blink">.</span></v-btn>
+                    <v-btn flat large class="link-btn large" to="/projects/work">Next<span class="blink">.</span></v-btn>
                 </v-layout>
             </v-flex>
         </v-layout>

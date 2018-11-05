@@ -10,6 +10,7 @@ import JourneyTracker from '../components/journey-tracker/JourneyTracker'
 import ChatApp from '../components/chat-app/ChatApp'
 
 import Projects from '../components/projects/Projects'
+import WorkProjectIndex from '../components/projects/WorkProjectIndex'
 import ProjectIndex from '../components/projects/ProjectIndex'
 import ProductivityTools from '../components/projects/productivity-tools/ProductivityTools'
 
@@ -26,6 +27,10 @@ export default new Router({
             component: Projects,
             redirect: '/projects/index',
             children: [
+                {
+                    path: 'work',
+                    component: WorkProjectIndex
+                },
                 {
                     path: 'index',
                     component: ProjectIndex
