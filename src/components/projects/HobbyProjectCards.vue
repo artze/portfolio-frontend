@@ -1,45 +1,45 @@
 <template>
     <v-layout justify-center>
-        <v-flex xs8 sm8 md8 lg8>
+        <v-flex xs10 sm10 md10 lg10>
             <v-layout justify-start wrap>
                 <v-flex xs12 sm6 md4 lg4>
-                    <div class="project-card mt-4" @click="goToJourneyTracker">
-                        <v-card-title primary-title class="justify-center">
+                    <div class="project-card" @click="goToJourneyTracker">
+                        <div>
                             <h3 class="project-card-title-text">Journey Tracker</h3>
-                        </v-card-title>
-                        <v-card-text class="project-card-caption">
-                            A visualization tool to view tracked journeys.
-                        </v-card-text>
+                            <p class="project-card-text">
+                                A visualization tool to view tracked journeys.
+                            </p>
+                        </div>
                     </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
-                    <div class="project-card mt-4" @click="goToChatApp">
-                        <v-card-title primary-title class="justify-center">
+                    <div class="project-card" @click="goToChatApp">
+                        <div>
                             <h3 class="project-card-title-text">Chat App</h3>
-                        </v-card-title>
-                        <v-card-text class="project-card-caption">
-                            A super simple chat app created with Websockets.
-                        </v-card-text>
+                            <p class="project-card-text">
+                                A super simple chat app created with Websockets.
+                            </p>
+                        </div>
                     </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
-                    <div class="project-card mt-4" @click="goToQuoteMachine">
-                        <v-card-title primary-title class="justify-center">
+                    <div class="project-card" @click="goToQuoteMachine">
+                        <div>
                             <h3 class="project-card-title-text">Quote Machine</h3>
-                        </v-card-title>
-                        <v-card-text class="project-card-caption">
-                            Generate random quotes from notable figures.
-                        </v-card-text>
+                            <p class="project-card-text">
+                                Generate random quotes from notable figures.
+                            </p>
+                        </div>
                     </div>
                 </v-flex>
                 <v-flex xs12 sm6 md4 lg4>
-                    <div class="project-card mt-4" @click="goToWikiViewer">
-                        <v-card-title primary-title class="justify-center">
+                    <div class="project-card" @click="goToWikiViewer">
+                        <div>
                             <h3 class="project-card-title-text">Wikipedia Viewer</h3>
-                        </v-card-title>
-                        <v-card-text class="project-card-caption">
-                            Search Wikipedia entries with this handy tool.
-                        </v-card-text>
+                            <p class="project-card-text">
+                                Search Wikipedia entries with this handy tool.
+                            </p>
+                        </div>
                     </div>
                 </v-flex>
             </v-layout>
@@ -84,6 +84,10 @@ export default {
 /* Project Section */
 .project-card {
     margin: 0px 15px;
+    min-height: 12em;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
 }
 
 .project-card:hover {
@@ -95,14 +99,16 @@ export default {
 
 .project-card-title-text {
     font-family: 'Raleway';
-    font-size: 1.1em;
+    font-size: 1.7em;
     font-weight: 400;
 }
 
-.project-card-caption {
-    font-size: 0.95em;
-    color: #757575;
+.project-card-text {
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    font-weight: 200;
+    color: #3a3a3a;
     padding-top: 0.1em;
-    text-align: center;
+    text-align: left;
 }
 </style>

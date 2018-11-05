@@ -5,14 +5,20 @@
         </v-flex>
 
         <v-flex xs9 sm9 md9 lg9>
-            <v-layout justify-center>
-                <v-flex lg8>
-                    <h2 class="section-header">
-                        Hobby Projects
-                    </h2>
+            <v-layout column justify-center style="height: 100%;">
+                <v-flex xs1 sm1 md1 lg1>
+                    <v-layout justify-center>
+                        <v-flex xs10 sm10 md10 lg10>
+                            <h2 class="section-header">
+                                Hobby Projects
+                            </h2>
+                        </v-flex>
+                    </v-layout>
+                </v-flex>
+                <v-flex lg1>
+                    <hobby-project-cards></hobby-project-cards>
                 </v-flex>
             </v-layout>
-            <hobby-project-cards></hobby-project-cards>
         </v-flex>
 
         <v-flex xs2 sm2 md2 lg2>
@@ -24,12 +30,10 @@
 </template>
 
 <script>
-import WorkProjectCards from './WorkProjectCards'
 import HobbyProjectCards from './HobbyProjectCards'
 
 export default {
     components: {
-        'work-project-cards': WorkProjectCards,
         'hobby-project-cards': HobbyProjectCards
     }
 }

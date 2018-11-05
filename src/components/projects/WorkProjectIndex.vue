@@ -19,7 +19,6 @@
                     <work-project-cards></work-project-cards>
                 </v-flex>
             </v-layout>
-
         </v-flex>
 
         <v-flex xs2 sm2 md2 lg2>
