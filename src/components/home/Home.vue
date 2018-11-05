@@ -4,7 +4,7 @@
         <v-layout column id="landing-background">
             <v-layout justify-end>
                 <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
-                <v-btn flat to="/projects" class="link-btn">Projects</v-btn>
+                <v-btn flat to="/projects/work" class="link-btn">Projects</v-btn>
                 <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
             </v-layout>
             <v-layout
@@ -44,7 +44,7 @@
 
             <v-flex xs2 sm2 md2 lg2>
                 <v-layout fill-height justify-end align-center>
-                    <v-btn flat large class="link-btn large" to="/projects">Next<span class="blink">.</span></v-btn>
+                    <v-btn flat large class="link-btn large" to="/projects/work">Next<span class="blink">.</span></v-btn>
                 </v-layout>
             </v-flex>
         </v-layout>

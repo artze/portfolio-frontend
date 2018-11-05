@@ -1,29 +1,24 @@
 <template>
     <v-layout column style="height: 100vh">
         <v-flex xs1 sm1 md1 lg1>
-            <v-layout justify-center>
-                <v-flex lg8>
-                    <h2 class="section-header">
-                        Work Projects
-                    </h2>
-                </v-flex>
-            </v-layout>
-        </v-flex>
-        <v-flex xs4 sm4 md4 lg4>
-            <work-project-cards></work-project-cards>
-        </v-flex>
-        <v-flex xs1 sm1 md1 lg1>
-            <v-layout justify-center>
-                <v-flex lg8>
-                    <h2 class="section-header">
-                        Hobby Projects
-                    </h2>
-                </v-flex>
-            </v-layout>
+            <!-- Blank to keep content centered vertically -->
         </v-flex>
 
-        <v-flex xs4 sm4 md4 lg4>
-            <hobby-project-cards></hobby-project-cards>
+        <v-flex xs9 sm9 md9 lg9>
+            <v-layout column justify-center style="height: 100%;">
+                <v-flex xs1 sm1 md1 lg1>
+                    <v-layout justify-center>
+                        <v-flex xs10 sm10 md10 lg10>
+                            <h2 class="section-header">
+                                Hobby Projects
+                            </h2>
+                        </v-flex>
+                    </v-layout>
+                </v-flex>
+                <v-flex lg1>
+                    <hobby-project-cards></hobby-project-cards>
+                </v-flex>
+            </v-layout>
         </v-flex>
 
         <v-flex xs2 sm2 md2 lg2>
@@ -35,12 +30,10 @@
 </template>
 
 <script>
-import WorkProjectCards from './WorkProjectCards'
 import HobbyProjectCards from './HobbyProjectCards'
 
 export default {
     components: {
-        'work-project-cards': WorkProjectCards,
         'hobby-project-cards': HobbyProjectCards
     }
 }
@@ -52,8 +45,8 @@ export default {
 .section-header {
     text-align: left;
     font-family: 'VT323';
-    font-weight: 200;
-    font-size: 3em;
+    font-weight: 400;
+    font-size: 6em;
 }
 
 .link-btn {
