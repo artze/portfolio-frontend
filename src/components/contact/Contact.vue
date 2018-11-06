@@ -4,9 +4,9 @@
             <v-flex xs3 sm3 md3 lg3>
                 <v-layout justify-center>
                     <v-flex lg8>
-                        <h2 class="contact-header">
+                        <!-- <h2 class="contact-header">
                             Get in touch...
-                        </h2>
+                        </h2> -->
                     </v-flex>
                 </v-layout>
             </v-flex>
@@ -14,12 +14,19 @@
             <v-flex xs7 sm7 md7 lg7>
                 <v-layout column fill-height justify-center align-center>
                     <v-flex xs3 sm3 md3 lg3>
-                        <p class="contact-text">Tell me about your project. Contact me on LinkedIn</p>
+                        <p class="contact-text">
+                            Contact me on LinkedIn
+                        </p>
+                        <p style="text-align: center;">
+                            <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
+                                <v-icon x-large>fab fa-linkedin</v-icon>
+                            </v-btn>
+                        </p>
                     </v-flex>
-                    <v-flex xs9 sm9 md9 lg9>
-                        <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
+                    <v-flex xs4 sm4 md4 lg4>
+                        <!-- <v-btn icon href="https://www.linkedin.com/in/arthur-wong/" target="_blank" class="contact-me-btn">
                             <v-icon x-large>fab fa-linkedin</v-icon>
-                        </v-btn>
+                        </v-btn> -->
                     </v-flex>
                 </v-layout>
             </v-flex>

@@ -64,16 +64,6 @@ export default {
             this.$refs.aboutSection.scrollIntoView({
                 behavior: 'smooth'
             })
-        },
-        scrollToProjectsSection() {
-            this.$refs.projectsSection.scrollIntoView({
-                behavior: 'smooth'
-            })
-        },
-        scrollToContactSection() {
-            this.$refs.contactSection.scrollIntoView({
-                behavior: 'smooth'
-            })
         }
     }
 }
