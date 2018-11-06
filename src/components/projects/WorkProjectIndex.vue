@@ -22,8 +22,17 @@
         </v-flex>
 
         <v-flex xs2 sm2 md2 lg2>
-            <v-layout fill-height justify-end align-center>
-                <v-btn flat large class="link-btn large" to="/projects/hobby">Next<span class="blink">.</span></v-btn>
+            <v-layout fill-height align-center>
+                <v-flex xs6 sm6 md6 lg6>
+                    <v-layout justify-start>
+                        <v-btn flat large class="link-btn large" to="/">Prev</v-btn>
+                    </v-layout>
+                </v-flex>
+                <v-flex xs6 sm6 md6 lg6>
+                    <v-layout justify-end>
+                        <v-btn flat large class="link-btn large" to="/projects/hobby">Next<span class="blink">.</span></v-btn>
+                    </v-layout>
+                </v-flex>
             </v-layout>
         </v-flex>
     </v-layout>
