@@ -38,13 +38,13 @@
     display: flex;
     align-items: center;
     padding: 30px;
+    transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
 }
 
 .project-card:hover {
     cursor: pointer;
-    -webkit-box-shadow: 0px 0px 0px 1px #69ffdf inset;
-    -moz-box-shadow: 0px 0px 0px 1px #69ffdf inset;
-    box-shadow: 0px 0px 0px 1px #69ffdf inset;
+    box-shadow: 1em 1em 0 0 #69ffdf, 0 0 0 1px #69ffdf inset;
+    transform: translate(-2px, -2px);
 }
 
 .project-card > div {
