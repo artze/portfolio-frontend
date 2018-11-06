@@ -47,6 +47,10 @@
     box-shadow: 0px 0px 0px 1px #69ffdf inset;
 }
 
+.project-card > div {
+    height: 9em;
+}
+
 .project-card-title-text {
     font-family: 'Raleway';
     font-size: 2em;
