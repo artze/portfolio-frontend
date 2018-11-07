@@ -1,10 +1,10 @@
 <template>
     <v-layout column style="height: 100vh">
-        <v-flex xs1 sm1 md1 lg1>
+        <v-flex xs2 sm2 md1 lg1>
             <!-- Blank to keep content centered vertically -->
         </v-flex>
 
-        <v-flex xs9 sm9 md9 lg9>
+        <v-flex xs8 sm8 md9 lg9>
             <v-layout column justify-center style="height: 100%;">
                 <v-flex xs1 sm1 md1 lg1>
                     <v-layout justify-center>
@@ -15,7 +15,7 @@
                         </v-flex>
                     </v-layout>
                 </v-flex>
-                <v-flex lg1>
+                <v-flex xs1 sm1 md1 lg1>
                     <work-project-cards></work-project-cards>
                 </v-flex>
             </v-layout>
@@ -58,6 +58,18 @@ export default {
     font-size: 6em;
 }
 
+@media only screen and (max-width : 600px) {
+    .section-header {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    .section-header {
+        font-size: 4.2em;
+    }
+}
+
 .link-btn {
     font-family: 'VT323';
     font-size: 1.5em;
@@ -68,6 +80,12 @@ export default {
 .link-btn.large {
     height: 100px;
     font-size: 3em;
+}
+
+@media only screen and (max-width : 600px) {
+    .link-btn.large {
+        font-size: 2em;
+    }
 }
 
 .link-btn:hover {
