@@ -1,7 +1,7 @@
 <template>
     <v-layout style="height: 100vh">
         <v-flex xs2 sm2 md2 lg2>
-            <v-layout>
+            <v-layout class="back-btn-section">
                 <v-btn flat large class="link-btn large" to="/projects">Back<span class="blink">.</span></v-btn>
             </v-layout>
         </v-flex>
@@ -90,8 +90,11 @@
     color: #3a3a3a;
 }
 
-.link-btn {
+.back-btn-section {
     position: fixed;
+}
+
+.link-btn {
     font-family: 'VT323';
     font-size: 1.5em;
     font-weight: 400;

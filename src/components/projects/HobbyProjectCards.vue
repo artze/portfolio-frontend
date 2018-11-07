@@ -115,4 +115,42 @@ export default {
     padding-top: 0.1em;
     text-align: left;
 }
+
+@media only screen and (max-width : 600px) {
+    .project-card {
+        margin: 15px 0px;
+        min-height: 7em;
+    }
+
+    .project-card > div {
+        height: 5em;
+    }
+
+    .project-card-title-text {
+        font-size: 1.4em;
+    }
+
+    .project-card-text {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    .project-card {
+        margin: 0px 15px;
+        min-height: 12em;
+    }
+
+    .project-card > div {
+        height: 7em;
+    }
+
+    .project-card-title-text {
+        font-size: 1.7em;
+    }
+
+    .project-card-text {
+        font-size: 1.3em;
+    }
+}
 </style>
