@@ -1,17 +1,14 @@
 <template>
     <transition name="fade">
         <v-layout column style="height: 100vh" ref="aboutSection">
-            <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center>
-                    <v-flex lg8>
-                        <h2 class="section-header">
-                        </h2>
-                    </v-flex>
-                </v-layout>
+            <v-flex xs2 sm2 md1 lg1>
+                <!-- Blank to keep content centered vertically -->
             </v-flex>
 
             <v-flex xs9 sm9 md9 lg9>
-                <about-content></about-content>
+                <v-layout column justify-center style="height: 100%;">
+                    <about-content></about-content>
+                </v-layout>
             </v-flex>
 
             <v-flex xs2 sm2 md2 lg2>
