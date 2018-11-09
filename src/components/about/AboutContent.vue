@@ -10,7 +10,7 @@
                 </p>
             </v-flex>
         </v-layout>
-        <v-layout justify-center class="mt-5">
+        <v-layout justify-center>
             <v-flex xs8 sm8 md8 lg8>
                 <v-layout>
                     <v-flex xs4 sm4 md4 lg4>
@@ -60,7 +60,7 @@
 .about-header {
     font-family: 'VT323', monospace;
     font-weight: 200;
-    font-size: 5em;
+    font-size: 3em;
 }
 
 .about-text {
@@ -68,10 +68,13 @@
     font-weight: 100;
     font-size: 1.4em;
     color: #757575;
-    margin-bottom: 3.7em;
+    margin-bottom: 2.5em;
 }
 
 .about-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     height: 70px;
     width: 70px;
     margin-bottom: 2.5em;
@@ -81,5 +84,57 @@
     font-family: 'Roboto';
     font-weight: 100;
     text-align: center;
+}
+
+@media only screen and (max-width : 600px) {
+    .about-header {
+        font-size: 2em;
+    }
+
+    .about-text {
+        font-size: 0.9em;
+    }
+
+    .about-img {
+        height: 40px;
+        width: 40px;
+        margin-bottom: 2em;
+    }
+
+    .bullet-point {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    .about-header {
+        font-size: 2.8em;
+    }
+
+    .about-text {
+        font-size: 1.2em;
+    }
+
+    .about-img {
+        height: 50px;
+        width: 50px;
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (min-width : 1904px) {
+    .about-header {
+        font-family: 'VT323', monospace;
+        font-weight: 200;
+        font-size: 5em;
+    }
+
+    .about-text {
+        font-family: 'Roboto';
+        font-weight: 100;
+        font-size: 1.4em;
+        color: #757575;
+        margin-bottom: 3.7em;
+    }
 }
 </style>
