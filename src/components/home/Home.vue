@@ -21,7 +21,7 @@
                 </v-flex>
             </v-layout>
             <v-layout justify-end align-end>
-                <v-btn flat large class="link-btn large" to="/about">Next<span class="blink">.</span></v-btn>
+                <v-btn flat large class="link-btn large fade-in" to="/about">Next<span class="blink">.</span></v-btn>
             </v-layout>
         </v-layout>
     </div>
@@ -140,6 +140,10 @@
 .link-btn.large {
     height: 100px;
     font-size: 3em;
+}
+
+.link-btn.large.fade-in {
+    animation: 2s ease-out 0s 1 fadeIntoView, 1s ease-out 0s 1 slideFromRight;
 }
 
 .link-btn:hover {

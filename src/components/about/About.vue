@@ -1,33 +1,35 @@
 <template>
-    <v-layout column style="height: 100vh" ref="aboutSection">
-        <v-flex xs1 sm1 md1 lg1>
-            <v-layout justify-center>
-                <v-flex lg8>
-                    <h2 class="section-header">
-                    </h2>
-                </v-flex>
-            </v-layout>
-        </v-flex>
+    <transition name="fade">
+        <v-layout column style="height: 100vh" ref="aboutSection">
+            <v-flex xs1 sm1 md1 lg1>
+                <v-layout justify-center>
+                    <v-flex lg8>
+                        <h2 class="section-header">
+                        </h2>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
 
-        <v-flex xs9 sm9 md9 lg9>
-            <about-content></about-content>
-        </v-flex>
+            <v-flex xs9 sm9 md9 lg9>
+                <about-content></about-content>
+            </v-flex>
 
-        <v-flex xs2 sm2 md2 lg2>
-            <v-layout fill-height align-end>
-                <v-flex xs6 sm6 md6 lg6>
-                    <v-layout justify-start>
-                        <v-btn flat large class="link-btn large" to="/">Prev</v-btn>
-                    </v-layout>
-                </v-flex>
-                <v-flex xs6 sm6 md6 lg6>
-                    <v-layout justify-end>
-                        <v-btn flat large class="link-btn large" to="/projects/work">Next<span class="blink">.</span></v-btn>
-                    </v-layout>
-                </v-flex>
-            </v-layout>
-        </v-flex>
-    </v-layout>
+            <v-flex xs2 sm2 md2 lg2>
+                <v-layout fill-height align-end>
+                    <v-flex xs6 sm6 md6 lg6>
+                        <v-layout justify-start>
+                            <v-btn flat large class="link-btn large" to="/">Prev</v-btn>
+                        </v-layout>
+                    </v-flex>
+                    <v-flex xs6 sm6 md6 lg6>
+                        <v-layout justify-end>
+                            <v-btn flat large class="link-btn large" to="/projects/work">Next<span class="blink">.</span></v-btn>
+                        </v-layout>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+        </v-layout>
+    </transition>
 </template>
 
 <script>
@@ -41,6 +43,14 @@ export default {
 </script>
 
 <style scoped>
+.fade-enter-active {
+    transition: opacity 2s;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
 .link-btn {
     font-family: 'VT323';
     font-size: 1.5em;
