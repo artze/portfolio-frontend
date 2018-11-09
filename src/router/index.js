@@ -14,7 +14,6 @@ import WikiViewer from '../components/wiki-viewer/WikiViewer'
 import JourneyTracker from '../components/journey-tracker/JourneyTracker'
 import ChatApp from '../components/chat-app/ChatApp'
 
-
 Vue.use(Router)
 
 export default new Router({
