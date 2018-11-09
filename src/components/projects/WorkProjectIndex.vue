@@ -22,10 +22,10 @@
         </v-flex>
 
         <v-flex xs2 sm2 md2 lg2>
-            <v-layout fill-height align-center>
+            <v-layout fill-height align-end>
                 <v-flex xs6 sm6 md6 lg6>
                     <v-layout justify-start>
-                        <v-btn flat large class="link-btn large" to="/">Prev</v-btn>
+                        <v-btn flat large class="link-btn large" to="/about">Prev</v-btn>
                     </v-layout>
                 </v-flex>
                 <v-flex xs6 sm6 md6 lg6>

@@ -3,7 +3,7 @@
         <!-- Landing section -->
         <v-layout column id="landing-background">
             <v-layout justify-end>
-                <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
+                <v-btn flat to="/about" class="link-btn">About</v-btn>
                 <v-btn flat to="/projects/work" class="link-btn">Projects</v-btn>
                 <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
             </v-layout>
@@ -20,54 +20,12 @@
                     <h3 class="landing-description-font">Fullstack Web Developer<span class="blink">.</span></h3>
                 </v-flex>
             </v-layout>
-            <v-layout justify-center align-end>
-                <v-btn icon large class="scroll-btn" @click="scrollToAboutSection">
-                    <v-icon x-large>expand_more</v-icon>
-                </v-btn>
+            <v-layout justify-end align-end>
+                <v-btn flat large class="link-btn large fade-in" to="/about">Next<span class="blink">.</span></v-btn>
             </v-layout>
         </v-layout>
-
-        <!-- About section -->
-        <v-layout column style="height: 100vh" ref="aboutSection">
-            <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-center>
-                    <v-flex lg8>
-                        <h2 class="section-header">
-                        </h2>
-                    </v-flex>
-                </v-layout>
-            </v-flex>
-
-            <v-flex xs9 sm9 md9 lg9>
-                <about-content></about-content>
-            </v-flex>
-
-            <v-flex xs2 sm2 md2 lg2>
-                <v-layout fill-height justify-end align-center>
-                    <v-btn flat large class="link-btn large" to="/projects/work">Next<span class="blink">.</span></v-btn>
-                </v-layout>
-            </v-flex>
-        </v-layout>
-
     </div>
 </template>
-
-<script>
-import AboutContent from './AboutContent'
-
-export default {
-    components: {
-        'about-content': AboutContent
-    },
-    methods: {
-        scrollToAboutSection() {
-            this.$refs.aboutSection.scrollIntoView({
-                behavior: 'smooth'
-            })
-        }
-    }
-}
-</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=VT323');
@@ -184,16 +142,16 @@ export default {
     font-size: 3em;
 }
 
+.link-btn.large.fade-in {
+    animation: 2s ease-out 0s 1 fadeIntoView, 1s ease-out 0s 1 slideFromRight;
+}
+
 .link-btn:hover {
     color: #69ffdf;
 }
 
 .link-btn::before {
     color: transparent;
-}
-
-.scroll-btn:hover {
-    color: #69ffdf;
 }
 
 .blink {

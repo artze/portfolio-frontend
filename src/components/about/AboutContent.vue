@@ -60,14 +60,15 @@
 .about-header {
     font-family: 'VT323', monospace;
     font-weight: 200;
-    font-size: 3em;
+    font-size: 5em;
 }
 
 .about-text {
     font-family: 'Roboto';
     font-weight: 100;
-    font-size: 1.2em;
-    color: #757575
+    font-size: 1.4em;
+    color: #757575;
+    margin-bottom: 3.7em;
 }
 
 .about-img {

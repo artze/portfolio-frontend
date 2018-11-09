@@ -2,17 +2,17 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '../components/home/Home'
+import About from '../components/about/About'
+import Projects from '../components/projects/Projects'
+import WorkProjectIndex from '../components/projects/WorkProjectIndex'
+import HobbyProjectIndex from '../components/projects/HobbyProjectIndex'
+import ProductivityTools from '../components/projects/productivity-tools/ProductivityTools'
 import Contact from '../components/contact/Contact'
 
 import QuoteMachine from '../components/quote-machine/QuoteMachine'
 import WikiViewer from '../components/wiki-viewer/WikiViewer'
 import JourneyTracker from '../components/journey-tracker/JourneyTracker'
 import ChatApp from '../components/chat-app/ChatApp'
-
-import Projects from '../components/projects/Projects'
-import WorkProjectIndex from '../components/projects/WorkProjectIndex'
-import HobbyProjectIndex from '../components/projects/HobbyProjectIndex'
-import ProductivityTools from '../components/projects/productivity-tools/ProductivityTools'
 
 Vue.use(Router)
 
@@ -21,6 +21,10 @@ export default new Router({
         {
             path: '/',
             component: Home
+        },
+        {
+            path: '/about',
+            component: About
         },
         {
             path: '/projects',
