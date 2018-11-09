@@ -3,7 +3,7 @@
         <!-- Landing section -->
         <v-layout column id="landing-background">
             <v-layout justify-end>
-                <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
+                <v-btn flat to="/about" class="link-btn">About</v-btn>
                 <v-btn flat to="/projects/work" class="link-btn">Projects</v-btn>
                 <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
             </v-layout>
