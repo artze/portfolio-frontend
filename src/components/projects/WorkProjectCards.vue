@@ -14,7 +14,7 @@
                 </v-flex>
 
                 <v-flex xs12 sm12 md6 lg6>
-                    <router-link to="/projects/productivity-tools" tag="div" class="project-card">
+                    <router-link to="/projects/microservices" tag="div" class="project-card">
                         <div>
                             <h3 class="project-card-title-text">Microservices</h3>
                             <p class="project-card-text">

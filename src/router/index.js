@@ -7,6 +7,7 @@ import Projects from '../components/projects/Projects'
 import WorkProjectIndex from '../components/projects/WorkProjectIndex'
 import HobbyProjectIndex from '../components/projects/HobbyProjectIndex'
 import ProductivityTools from '../components/projects/productivity-tools/ProductivityTools'
+import Microservices from '../components/projects/microservices/Microservices'
 import Contact from '../components/contact/Contact'
 
 import QuoteMachine from '../components/quote-machine/QuoteMachine'
@@ -42,6 +43,10 @@ export default new Router({
                 {
                     path: 'productivity-tools',
                     component: ProductivityTools
+                },
+                {
+                    path: 'microservices',
+                    component: Microservices
                 }
             ]
         },
