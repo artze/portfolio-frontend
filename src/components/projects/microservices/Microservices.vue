@@ -28,7 +28,7 @@
                 We chose OpenNats Streaming as our message broker because of its high throughput and simplicity. To get this up and running we set up a cluster of message broker servers with Docker and a monitoring tool to examine message traffic.
             </p>
             <p class="content-text">
-                Within the Rules Engine, we decided to go with Vert.x to take advantage of its event-driven architecture and the ease of managing concurrent threads. Vert.x Verticles were deployed within the Rules Engine, and event-driven communication between the Verticles was set up. 
+                Within the Rules Engine, we decided to go with Vert.x to take advantage of its event-driven architecture and the ease of managing concurrent threads. Vert.x Verticles were deployed within the Rules Engine, and event-driven communication between the Verticles was set up.
             </p>
             <p class="content-text">
                 The existing applications – Device Server and Device Management Platform were subsequently modified to interface with the Messaging Bus. With these features in place, we gave the system a stress test, and explored various options of scaling.
