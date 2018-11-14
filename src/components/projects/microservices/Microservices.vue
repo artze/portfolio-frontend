@@ -1,5 +1,5 @@
 <template>
-    <v-layout style="height: 100vh">
+    <v-layout>
         <v-flex xs2 sm2 md2 lg2>
             <v-layout class="back-btn-section">
                 <v-btn flat large class="link-btn large" to="/projects">Back<span class="blink">.</span></v-btn>
