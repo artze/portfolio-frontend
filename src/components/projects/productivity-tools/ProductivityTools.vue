@@ -8,6 +8,9 @@
         <v-flex xs8 sm8 md8 lg8>
             <!-- Title description -->
             <h2 class="main-header-text mt-4">Operational Productivity Tools</h2>
+            <video autoplay loop>
+                <source src="../../../assets/videos/productivity-tool.mp4" type="video/mp4">
+            </video>
             <h3 class="subheader-text">Background</h3>
             <p class="content-text">
                 One of the primary issues of operational processes at my work was the lack of a centralized, systematic way of handling data. Most data was managed with the use of Excel sheets which involves manual data manipulation work, is error-prone and is inconvenient to share among team-members.
@@ -60,6 +63,11 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=VT323');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600,800');
+
+video {
+    width: 900px;
+    height: 451px;
+}
 
 .main-header-text {
     font-family: 'Raleway';
