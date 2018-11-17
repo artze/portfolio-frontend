@@ -65,6 +65,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:600,800');
 
 video {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     width: 900px;
     height: 451px;
 }

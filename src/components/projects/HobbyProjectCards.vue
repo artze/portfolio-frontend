@@ -19,6 +19,9 @@
                             <p class="project-card-text">
                                 A super simple chat app created with Websockets.
                             </p>
+                            <p style="font-size: 0.8em;">
+                                <i>Try it out with multiple browsers/tabs!</i>
+                            </p>
                         </div>
                     </div>
                 </v-flex>
