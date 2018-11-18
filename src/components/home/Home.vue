@@ -4,8 +4,8 @@
         <v-layout column id="landing-background">
             <v-flex xs1 sm1 md1 lg1>
                 <v-layout justify-end>
-                    <v-btn flat to="/about" class="link-btn">About</v-btn>
-                    <v-btn flat to="/projects/work" class="link-btn">Projects</v-btn>
+                    <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
+                    <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
                     <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
                 </v-layout>
             </v-flex>
@@ -29,10 +29,14 @@
         </v-layout>
 
         <!-- About section -->
-        <about></about>
+        <div ref="aboutSection">
+            <about></about>
+        </div>
 
         <!-- Projects section -->
-        <projects></projects>
+        <div ref="projectsSection">
+            <projects></projects>
+        </div>
     </div>
 </template>
 
@@ -44,6 +48,18 @@ export default {
     components: {
         'about': About,
         'projects': Projects
+    },
+    methods: {
+        scrollToAboutSection() {
+            this.$refs.aboutSection.scrollIntoView({
+                behavior: 'smooth'
+            })
+        },
+        scrollToProjectsSection() {
+            this.$refs.projectsSection.scrollIntoView({
+                behavior: 'smooth'
+            })
+        },
     }
 }
 </script>
