@@ -1,10 +1,5 @@
 <template>
-    <v-layout>
-        <v-flex xs2 sm2 md2 lg2>
-            <v-layout class="back-btn-section">
-                <v-btn flat large class="link-btn large" to="/projects">Back<span class="blink">.</span></v-btn>
-            </v-layout>
-        </v-flex>
+    <v-layout justify-center>
         <v-flex xs8 sm8 md8 lg8>
             <!-- Title description -->
             <h2 class="main-header-text mt-4">Operational Productivity Tools</h2>

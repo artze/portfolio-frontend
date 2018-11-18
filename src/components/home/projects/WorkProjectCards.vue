@@ -22,9 +22,9 @@
                             Myself
                         </p>
                         <v-layout justify-center>
-                            <router-link to="/projects/productivity-tools" tag="div" class="project-card-link">
+                            <div @click="goToProductivityToolsPage" class="project-card-link">
                                 Read More
-                            </router-link>
+                            </div>
                         </v-layout>
                     </div>
                 </v-flex>
@@ -49,9 +49,9 @@
                             3 Developers including myself
                         </p>
                         <v-layout justify-center>
-                            <router-link to="/projects/productivity-tools" tag="div" class="project-card-link">
+                            <div @click="goToMicroservicesPage" class="project-card-link">
                                 Read More
-                            </router-link>
+                            </div>
                         </v-layout>
                     </div>
                 </v-flex>
@@ -59,6 +59,26 @@
         </v-flex>
     </v-layout>
 </template>
+
+<script>
+export default {
+    methods: {
+        goToProductivityToolsPage() {
+            let routeData = this.$router.resolve({
+                path: '/projects/productivity-tools'
+            })
+            window.open(routeData.href, '_blank')
+        },
+        goToMicroservicesPage() {
+            let routeData = this.$router.resolve({
+                path: '/projects/microservices'
+            })
+            window.open(routeData.href, '_blank')
+        }
+    }
+}
+</script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
