@@ -59,7 +59,7 @@ export default {
             this.$refs.projectsSection.scrollIntoView({
                 behavior: 'smooth'
             })
-        },
+        }
     }
 }
 </script>
