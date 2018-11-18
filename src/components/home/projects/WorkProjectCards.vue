@@ -3,25 +3,57 @@
         <v-flex xs10 sm10 md10 lg10>
             <v-layout justify-start wrap>
                 <v-flex xs12 sm12 md6 lg6>
-                    <router-link to="/projects/productivity-tools" tag="div" class="project-card">
-                        <div>
-                            <h3 class="project-card-title-text">Productivity Tools</h3>
-                            <p class="project-card-text">
-                                A suite of Web Applications designed to streamline operational processes in my company.
-                            </p>
-                        </div>
-                    </router-link>
+                    <div class="project-card">
+                        <h3 class="project-card-title-text">Productivity Tools</h3>
+                        <p class="project-card-text">
+                            A suite of Web Applications designed to streamline operational processes in my company.
+                        </p>
+                        <hr>
+                        <p class="project-card-text points">
+                            <span class="bold">Tech Stack:</span>
+                            MySql, Nodejs, Vuejs
+                        </p>
+                        <p class="project-card-text points">
+                            <span class="bold">Role:</span>
+                            Designed solution and develop product
+                        </p>
+                        <p class="project-card-text points">
+                            <span class="bold">Team:</span>
+                            Myself
+                        </p>
+                        <v-layout justify-center>
+                            <router-link to="/projects/productivity-tools" tag="div" class="project-card-link">
+                                Read More
+                            </router-link>
+                        </v-layout>
+                    </div>
                 </v-flex>
 
                 <v-flex xs12 sm12 md6 lg6>
-                    <router-link to="/projects/microservices" tag="div" class="project-card">
-                        <div>
-                            <h3 class="project-card-title-text">Microservices</h3>
-                            <p class="project-card-text">
-                                Introduce microservices and OpenNATS messaging bus for of an IoT platform.
-                            </p>
-                        </div>
-                    </router-link>
+                    <div class="project-card">
+                        <h3 class="project-card-title-text">IoT Platform</h3>
+                        <p class="project-card-text">
+                            A platform that allows users to manage, maintain, and get live data from IoT devices.
+                        </p>
+                        <hr>
+                        <p class="project-card-text points">
+                            <span class="bold">Tech Stack:</span>
+                            MySql, Couchbase, OpenNATS, Java, Spring, Vaadin
+                        </p>
+                        <p class="project-card-text points">
+                            <span class="bold">Role:</span>
+                            Software Developer
+                        </p>
+                        <p class="project-card-text points">
+                            <span class="bold">Team:</span>
+                            3 Developers including myself
+                        </p>
+                        <v-layout justify-center>
+                            <router-link to="/projects/productivity-tools" tag="div" class="project-card-link">
+                                Read More
+                            </router-link>
+                        </v-layout>
+                    </div>
                 </v-flex>
             </v-layout>
         </v-flex>
@@ -33,22 +65,18 @@
 
 /* Project Section */
 .project-card {
+    box-shadow: 0 0 0 1px #bdbdbd;
     margin: 0px 15px;
-    min-height: 15em;
-    display: flex;
-    align-items: center;
+    min-height: 28em;
     padding: 30px;
     transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
 }
 
-.project-card:hover {
-    cursor: pointer;
-    box-shadow: 1em 1em 0 0 #69ffdf, 0 0 0 1px #69ffdf inset;
-    transform: translate(-2px, -2px);
-}
-
-.project-card > div {
-    height: 9em;
+.project-card hr {
+    height: 1px;
+    background-color: #b3b3b3;
+    border: none;
+    margin: 1.5em 0;
 }
 
 .project-card-title-text {
@@ -66,14 +94,32 @@
     text-align: left;
 }
 
+.project-card-text.points {
+    font-size: 1.2em;
+}
+
+.project-card-text.points .bold {
+    font-weight: 500;
+}
+
+.project-card-link {
+    box-shadow: 0 0 0 1px #757575;
+    margin-top: 1em;
+    padding: 15px 20px;
+    transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
+    font-weight: 500;
+}
+
+.project-card-link:hover {
+    cursor: pointer;
+    box-shadow: 0.5em 0.5em 0 0 #69ffdf, 0 0 0 1px #69ffdf inset;
+    transform: translate(-2px, -2px);
+}
+
 @media only screen and (max-width : 600px) {
     .project-card {
         margin: 15px 0px;
         min-height: 10em;
-    }
-
-    .project-card > div {
-        height: 7em;
     }
 
     .project-card-title-text {
@@ -89,10 +135,6 @@
     .project-card {
         margin: 15px 0px;
         min-height: 14em;
-    }
-
-    .project-card > div {
-        height: 7em;
     }
 
     .project-card-title-text {
