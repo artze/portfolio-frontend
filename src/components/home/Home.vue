@@ -27,8 +27,21 @@
                 </v-layout>
             </v-flex>
         </v-layout>
+
+        <!-- About section -->
+        <about></about>
     </div>
 </template>
+
+<script>
+import About from './about/About'
+export default {
+    components: {
+        'about': About
+    }
+}
+</script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=VT323');
