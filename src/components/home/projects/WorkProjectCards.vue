@@ -66,7 +66,7 @@
 /* Project Section */
 .project-card {
     box-shadow: 0 0 0 1px #bdbdbd;
-    margin: 0px 15px;
+    margin: 10px 15px 10px 15px;
     min-height: 28em;
     padding: 30px;
     transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
