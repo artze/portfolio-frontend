@@ -84,7 +84,7 @@ export default {
 
 /* Project Section */
 .project-card {
-    box-shadow: 0 0 0 1px #bdbdbd;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 10px 15px 10px 15px;
     min-height: 28em;
     padding: 30px;
