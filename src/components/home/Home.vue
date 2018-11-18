@@ -2,27 +2,30 @@
     <div>
         <!-- Landing section -->
         <v-layout column id="landing-background">
-            <v-layout justify-end>
-                <v-btn flat to="/about" class="link-btn">About</v-btn>
-                <v-btn flat to="/projects/work" class="link-btn">Projects</v-btn>
-                <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
-            </v-layout>
-            <v-layout
-                align-center
-                :justify-center="$vuetify.breakpoint.mdAndUp"
-                :justify-space-between="$vuetify.breakpoint.smAndDown"
-                :column="$vuetify.breakpoint.smAndDown">
-                <v-flex xs6 sm6 lg4 class="landing-content">
-                    <img src="../../assets/images/coloredsquares.jpg">
-                </v-flex>
-                <v-flex xs8 sm8 lg5 class="landing-content">
-                    <h1 class="landing-header-font">artze</h1>
-                    <h3 class="landing-description-font">Fullstack Web Developer<span class="blink">.</span></h3>
-                </v-flex>
-            </v-layout>
-            <v-layout justify-end align-end>
-                <v-btn flat large class="link-btn large fade-in" to="/about">Next<span class="blink">.</span></v-btn>
-            </v-layout>
+            <v-flex xs1 sm1 md1 lg1>
+                <v-layout justify-end>
+                    <v-btn flat to="/about" class="link-btn">About</v-btn>
+                    <v-btn flat to="/projects/work" class="link-btn">Projects</v-btn>
+                    <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
+                </v-layout>
+            </v-flex>
+
+            <v-flex xs11 sm11 md11 lg11>
+                <v-layout
+                    style="height: 100%;"
+                    align-center
+                    :justify-center="$vuetify.breakpoint.mdAndUp"
+                    :justify-space-between="$vuetify.breakpoint.smAndDown"
+                    :column="$vuetify.breakpoint.smAndDown">
+                    <v-flex xs6 sm6 lg4 class="landing-content">
+                        <img src="../../assets/images/coloredsquares.jpg">
+                    </v-flex>
+                    <v-flex xs8 sm8 lg5 class="landing-content">
+                        <h1 class="landing-header-font">artze</h1>
+                        <h3 class="landing-description-font">Fullstack Web Developer<span class="blink">.</span></h3>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
         </v-layout>
     </div>
 </template>
@@ -135,15 +138,6 @@
     font-size: 1.5em;
     font-weight: 400;
     text-transform: none;
-}
-
-.link-btn.large {
-    height: 100px;
-    font-size: 3em;
-}
-
-.link-btn.large.fade-in {
-    animation: 2s ease-out 0s 1 fadeIntoView, 1s ease-out 0s 1 slideFromRight;
 }
 
 .link-btn:hover {
