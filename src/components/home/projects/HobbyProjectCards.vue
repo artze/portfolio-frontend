@@ -15,7 +15,7 @@
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Role:</span>
-                            Designed solution and develop product.
+                            Developer
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Team:</span>
@@ -38,15 +38,15 @@
                         <hr>
                         <p class="project-card-text points">
                             <span class="bold">Tech Stack:</span>
-                            MySql, Couchbase, OpenNATS, Java, Spring, Vaadin
+                            MySql, Nodejs, Vuejs
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Role:</span>
-                            Software Developer
+                            Developer
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Team:</span>
-                            3 Developers including myself
+                            Myself
                         </p>
                         <v-layout justify-center>
                             <div @click="goToChatApp" class="project-card-link">
@@ -64,15 +64,15 @@
                         <hr>
                         <p class="project-card-text points">
                             <span class="bold">Tech Stack:</span>
-                            MySql, Couchbase, OpenNATS, Java, Spring, Vaadin
+                            Vuejs
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Role:</span>
-                            Software Developer
+                            Developer
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Team:</span>
-                            3 Developers including myself
+                            Myself
                         </p>
                         <v-layout justify-center>
                             <div @click="goToQuoteMachine" class="project-card-link">
@@ -90,15 +90,15 @@
                         <hr>
                         <p class="project-card-text points">
                             <span class="bold">Tech Stack:</span>
-                            MySql, Couchbase, OpenNATS, Java, Spring, Vaadin
+                            Vuejs
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Role:</span>
-                            Software Developer
+                            Developer
                         </p>
                         <p class="project-card-text points">
                             <span class="bold">Team:</span>
-                            3 Developers including myself
+                            Myself
                         </p>
                         <v-layout justify-center>
                             <div @click="goToWikiViewer" class="project-card-link">
