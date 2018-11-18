@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
 
 /* Project Section */
 .project-card {
@@ -122,17 +122,20 @@ export default {
 }
 
 .project-card-link {
-    box-shadow: 0 0 0 1px #757575;
+    box-shadow: 0 0 0 2px #1e4cff;
     margin-top: 1em;
-    padding: 15px 20px;
+    padding: 10px 20px;
     transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
-    font-weight: 500;
+    font-family: 'Raleway';
+    font-weight: 600;
+    color: #1e4cff;
 }
 
 .project-card-link:hover {
     cursor: pointer;
     box-shadow: 0.5em 0.5em 0 0 #69ffdf, 0 0 0 1px #69ffdf inset;
     transform: translate(-2px, -2px);
+    color: #000000;
 }
 
 @media only screen and (max-width : 600px) {
