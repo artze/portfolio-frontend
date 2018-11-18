@@ -67,6 +67,21 @@
 img.system-diagram {
     display: block;
     margin: 5em auto;
+    width: 830px;
+    height: 462px;
+}
+
+@media only screen and (max-width : 600px) {
+    img.system-diagram {
+        display: none;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    img.system-diagram {
+        width: 500px;
+        height: 278px;
+    }
 }
 
 .back-btn-section {
