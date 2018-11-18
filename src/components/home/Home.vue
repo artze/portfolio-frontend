@@ -30,18 +30,23 @@
 
         <!-- About section -->
         <about></about>
+
+        <!-- Projects section -->
+        <projects></projects>
     </div>
 </template>
 
 <script>
 import About from './about/About'
+import Projects from './projects/Projects'
+
 export default {
     components: {
-        'about': About
+        'about': About,
+        'projects': Projects
     }
 }
 </script>
-
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=VT323');
