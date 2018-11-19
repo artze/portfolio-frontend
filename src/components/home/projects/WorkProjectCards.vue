@@ -1,59 +1,70 @@
 <template>
     <v-layout justify-center>
-        <v-flex xs10 sm10 md10 lg10>
-            <v-layout justify-start wrap>
-                <v-flex xs12 sm12 md6 lg6>
-                    <div class="project-card">
-                        <h3 class="project-card-title-text">Productivity Tools</h3>
-                        <p class="project-card-text">
-                            A suite of Web Applications designed to streamline operational processes in my company.
-                        </p>
-                        <hr>
-                        <p class="project-card-text points">
-                            <span class="bold">Tech Stack:</span>
-                            MySql, Nodejs, Vuejs
-                        </p>
-                        <p class="project-card-text points">
-                            <span class="bold">Role:</span>
-                            Designed solution and develop product
-                        </p>
-                        <p class="project-card-text points">
-                            <span class="bold">Team:</span>
-                            Myself
-                        </p>
-                        <v-layout justify-center>
-                            <div @click="goToProductivityToolsPage" class="project-card-link">
-                                Read More
-                            </div>
-                        </v-layout>
-                    </div>
+        <v-flex xs8 sm8 md8 lg8>
+            <v-layout class="project-card-layout-section">
+                <v-flex xs12 sm12 md5 lg5>
+                    <v-layout fill-height align-center>
+                        <div class="project-card">
+                            <h3 class="project-card-title-text">Productivity Tools</h3>
+                            <p class="project-card-text">
+                                A suite of Web Applications designed to streamline operational processes in my company.
+                            </p>
+                            <hr>
+                            <p class="project-card-text points">
+                                <span class="bold">Tech Stack:</span>
+                                MySql, Nodejs, Vuejs
+                            </p>
+                            <p class="project-card-text points">
+                                <span class="bold">Role:</span>
+                                Designed solution and develop product
+                            </p>
+                            <p class="project-card-text points">
+                                <span class="bold">Team:</span>
+                                Myself
+                            </p>
+                            <v-layout justify-center>
+                                <div @click="goToProductivityToolsPage" class="project-card-link">
+                                    Read More
+                                </div>
+                            </v-layout>
+                        </div>
+                    </v-layout>
                 </v-flex>
-
-                <v-flex xs12 sm12 md6 lg6>
-                    <div class="project-card">
-                        <h3 class="project-card-title-text">IoT Platform</h3>
-                        <p class="project-card-text">
-                            A platform that allows users to manage, maintain, and get live data from IoT devices.
-                        </p>
-                        <hr>
-                        <p class="project-card-text points">
-                            <span class="bold">Tech Stack:</span>
-                            MySql, Couchbase, OpenNATS, Java, Spring, Vaadin
-                        </p>
-                        <p class="project-card-text points">
-                            <span class="bold">Role:</span>
-                            Software Developer
-                        </p>
-                        <p class="project-card-text points">
-                            <span class="bold">Team:</span>
-                            3 Developers including myself
-                        </p>
-                        <v-layout justify-center>
-                            <div @click="goToMicroservicesPage" class="project-card-link">
-                                Read More
-                            </div>
-                        </v-layout>
-                    </div>
+                <v-flex xs12 sm12 md7 lg7>
+                    <img src="http://www.alexbailon.com/images/restart-front.png">
+                </v-flex>
+            </v-layout>
+            <v-layout class="project-card-layout-section">
+                <v-flex xs12 sm12 md5 lg5>
+                    <v-layout fill-height align-center>
+                        <div class="project-card">
+                            <h3 class="project-card-title-text">IoT Platform</h3>
+                            <p class="project-card-text">
+                                A platform that allows users to manage, maintain, and get live data from IoT devices.
+                            </p>
+                            <hr>
+                            <p class="project-card-text points">
+                                <span class="bold">Tech Stack:</span>
+                                MySql, Couchbase, OpenNATS, Java, Spring, Vaadin
+                            </p>
+                            <p class="project-card-text points">
+                                <span class="bold">Role:</span>
+                                Software Developer
+                            </p>
+                            <p class="project-card-text points">
+                                <span class="bold">Team:</span>
+                                3 Developers including myself
+                            </p>
+                            <v-layout justify-center>
+                                <div @click="goToMicroservicesPage" class="project-card-link">
+                                    Read More
+                                </div>
+                            </v-layout>
+                        </div>
+                    </v-layout>
+                </v-flex>
+                <v-flex xs12 sm12 md7 lg7>
+                    <img src="http://www.alexbailon.com/images/restart-front.png">
                 </v-flex>
             </v-layout>
         </v-flex>
@@ -82,10 +93,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
 
-/* Project Section */
+.project-card-layout-section {
+    margin-top: 100px;
+}
+
 .project-card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 10px 15px 10px 15px;
     min-height: 28em;
     padding: 30px;
     transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
