@@ -34,7 +34,7 @@
                     <img class="project-img" src="../../../assets/images/SalesStats.png">
                 </v-flex>
             </v-layout>
-            <v-layout class="project-card-layout-section">
+            <v-layout class="project-card-layout-section" justify-space-between>
                 <v-flex xs12 sm12 md4 lg4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
@@ -64,7 +64,7 @@
                     </v-layout>
                 </v-flex>
                 <v-flex xs12 sm12 md7 lg7>
-                    <img src="http://www.alexbailon.com/images/restart-front.png">
+                    <img class="project-img" src="../../../assets/images/d2s.png">
                 </v-flex>
             </v-layout>
         </v-flex>
@@ -95,6 +95,7 @@ export default {
 
 .project-img {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 800px;
 }
 
 .project-card-layout-section {

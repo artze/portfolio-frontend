@@ -7,7 +7,7 @@
             <p class="content-text">
                 We wanted to implement a feature that allows a notification (email, sms etc.) to be sent instantly when a parameter measured by a Router/Tracker fulfills a user-defined condition. A Rules Engine microservice was introduced to check incoming data (from Router/Tracker) against user-defined conditions and triggers a notification service if necessary.
             </p>
-            <img class="system-diagram" src="../../../assets/images/d2s.svg">
+            <img class="system-diagram" src="../../../assets/images/d2s_ms_diagram.svg">
             <p class="content-text">
                 The diagram above is a general overview of how our system is designed:
                 <ol>
