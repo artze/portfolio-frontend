@@ -30,7 +30,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md7 lg7>
+                <v-flex xs12 sm12 md8 lg8>
                     <img class="project-img" src="../../../assets/images/SalesStats.png">
                 </v-flex>
             </v-layout>
@@ -63,7 +63,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md7 lg7>
+                <v-flex xs12 sm12 md8 lg8>
                     <img class="project-img" src="../../../assets/images/d2s.png">
                 </v-flex>
             </v-layout>
@@ -94,7 +94,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
 
 .project-img {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
     width: 800px;
 }
 
