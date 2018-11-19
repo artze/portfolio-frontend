@@ -25,4 +25,28 @@
 .contact-text a {
     color: #c52318;
 }
+
+@media only screen and (max-width : 600px) {
+    .contact-section {
+        height: 200px;
+        margin-top: 150px;
+    }
+
+    .contact-text {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    .contact-section {
+        height: 300px;
+        margin-top: 200px;
+    }
+
+    .contact-text {
+        font-size: 2.5em;
+        font-weight: 500;
+    }
+}
 </style>
