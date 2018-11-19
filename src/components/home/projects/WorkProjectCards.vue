@@ -1,8 +1,8 @@
 <template>
     <v-layout justify-center>
-        <v-flex xs8 sm8 md8 lg8>
-            <v-layout class="project-card-layout-section">
-                <v-flex xs12 sm12 md5 lg5>
+        <v-flex xs10 sm10 md10 lg10>
+            <v-layout class="project-card-layout-section" justify-space-between>
+                <v-flex xs12 sm12 md4 lg4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">Productivity Tools</h3>
@@ -31,11 +31,11 @@
                     </v-layout>
                 </v-flex>
                 <v-flex xs12 sm12 md7 lg7>
-                    <img src="http://www.alexbailon.com/images/restart-front.png">
+                    <img class="project-img" src="../../../assets/images/SalesStats.png">
                 </v-flex>
             </v-layout>
             <v-layout class="project-card-layout-section">
-                <v-flex xs12 sm12 md5 lg5>
+                <v-flex xs12 sm12 md4 lg4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">IoT Platform</h3>
@@ -92,6 +92,10 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
+
+.project-img {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
 
 .project-card-layout-section {
     margin-top: 100px;
