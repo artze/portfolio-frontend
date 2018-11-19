@@ -23,7 +23,7 @@
                                 Myself
                             </p>
                             <v-layout justify-center>
-                                <div @click="goToProductivityToolsPage" class="project-card-link">
+                                <div @click="goToProductivityToolsPage" class="project-card-link-btn">
                                     Read More
                                 </div>
                             </v-layout>
@@ -56,7 +56,7 @@
                                 3 Developers including myself
                             </p>
                             <v-layout justify-center>
-                                <div @click="goToMicroservicesPage" class="project-card-link">
+                                <div @click="goToMicroservicesPage" class="project-card-link-btn">
                                     Read More
                                 </div>
                             </v-layout>
@@ -89,7 +89,7 @@
                                 Myself
                             </p>
                             <v-layout justify-center>
-                                <div @click="goToJourneyTracker" class="project-card-link">
+                                <div @click="goToJourneyTracker" class="project-card-link-btn">
                                     Go to App
                                 </div>
                             </v-layout>
@@ -122,7 +122,7 @@
                                 Myself
                             </p>
                             <v-layout justify-center>
-                                <div @click="goToChatApp" class="project-card-link">
+                                <div @click="goToChatApp" class="project-card-link-btn">
                                     Go to App
                                 </div>
                             </v-layout>
@@ -155,7 +155,7 @@
                                 Myself
                             </p>
                             <v-layout justify-center>
-                                <div @click="goToQuoteMachine" class="project-card-link">
+                                <div @click="goToQuoteMachine" class="project-card-link-btn">
                                     Go to App
                                 </div>
                             </v-layout>
@@ -188,7 +188,7 @@
                                 Myself
                             </p>
                             <v-layout justify-center>
-                                <div @click="goToWikiViewer" class="project-card-link">
+                                <div @click="goToWikiViewer" class="project-card-link-btn">
                                     Go to App
                                 </div>
                             </v-layout>
@@ -294,17 +294,17 @@ export default {
     font-weight: 500;
 }
 
-.project-card-link {
-    box-shadow: 0 0 0 2px #1e4cff;
+.project-card-link-btn {
+    box-shadow: 0 0 0 2px #c52318;
     margin-top: 1em;
     padding: 10px 20px;
     transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
-    font-family: 'Raleway';
-    font-weight: 600;
-    color: #1e4cff;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #c52318;
 }
 
-.project-card-link:hover {
+.project-card-link-btn:hover {
     cursor: pointer;
     box-shadow: 0.5em 0.5em 0 0 #69ffdf, 0 0 0 1px #69ffdf inset;
     transform: translate(-2px, -2px);
