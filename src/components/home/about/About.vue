@@ -1,19 +1,21 @@
 <template>
-    <v-layout column style="height: 100vh;">
-        <v-flex xs12 sm12 md12 lg12>
-            <v-layout column justify-center style="height: 100%;">
-                <about-content></about-content>
-            </v-layout>
+    <v-layout justify-center align-center fill-height class="about-section">
+        <v-flex xs8 sm8 md8 lg8>
+            <p class="about-text">
+                I began my career managing finance &amp; operations, and transitioned into software development to address various operational inefficiencies. I am now a full-time software developer building and maintaining an IoT device platform, with a diverse skill-set and cross-functional work experience.
+            </p>
         </v-flex>
     </v-layout>
 </template>
 
-<script>
-import AboutContent from './AboutContent'
-
-export default {
-    components: {
-        'about-content': AboutContent
-    }
+<style scoped>
+.about-section {
+    height: 800px;
 }
-</script>
+
+.about-text {
+    font-family: 'Roboto';
+    font-size: 2.5em;
+    font-weight: 300;
+}
+</style>
