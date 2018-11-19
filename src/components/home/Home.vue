@@ -6,7 +6,7 @@
                 <v-layout justify-end>
                     <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
                     <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
-                    <v-btn flat to="/contact" class="link-btn">Contact</v-btn>
+                    <v-btn flat @click="scrollToContactSection" class="link-btn">Contact</v-btn>
                 </v-layout>
             </v-flex>
 
@@ -34,8 +34,13 @@
         </div>
 
         <!-- Projects section -->
-        <div ref="projectsSection">
+        <div ref="projectsSection" style="border: 1px solid red;">
             <projects></projects>
+        </div>
+
+        <!-- Contact section -->
+        <div ref="contactSection">
+            <contact></contact>
         </div>
     </div>
 </template>
@@ -43,20 +48,29 @@
 <script>
 import About from './about/About'
 import Projects from './projects/Projects'
+import Contact from './contact/Contact'
 
 export default {
     components: {
         'about': About,
-        'projects': Projects
+        'projects': Projects,
+        'contact': Contact
     },
     methods: {
         scrollToAboutSection() {
             this.$refs.aboutSection.scrollIntoView({
-                behavior: 'smooth'
+                behavior: 'smooth',
+                block: 'center'
             })
         },
         scrollToProjectsSection() {
             this.$refs.projectsSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        },
+        scrollToContactSection() {
+            this.$refs.contactSection.scrollIntoView({
                 behavior: 'smooth'
             })
         }
