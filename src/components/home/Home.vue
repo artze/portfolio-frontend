@@ -14,6 +14,18 @@
                 <v-layout
                     style="height: 100%;"
                     align-center
+                    justify-center>
+                    <v-flex xs8 sm8 lg8 class="landing-content">
+                        <h1>Hi, I am <span style="color: #c52318;">Arthur</span></h1>
+                        <h1>Software Developer based in Germany<span class="blink">.</span></h1>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+
+            <!-- <v-flex xs11 sm11 md11 lg11>
+                <v-layout
+                    style="height: 100%;"
+                    align-center
                     :justify-center="$vuetify.breakpoint.mdAndUp"
                     :justify-space-between="$vuetify.breakpoint.smAndDown"
                     :column="$vuetify.breakpoint.smAndDown">
@@ -22,10 +34,10 @@
                     </v-flex>
                     <v-flex xs8 sm8 lg5 class="landing-content">
                         <h1 class="landing-header-font">artze</h1>
-                        <h3 class="landing-description-font">Fullstack Web Developer<span class="blink">.</span></h3>
+                        <h3 class="landing-description-font">Software Developer<span class="blink">.</span></h3>
                     </v-flex>
                 </v-layout>
-            </v-flex>
+            </v-flex> -->
         </v-layout>
 
         <!-- About section -->
@@ -80,7 +92,7 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=VT323');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
 
 /* Header Section */
 @keyframes fadeIntoView {
@@ -115,8 +127,6 @@ export default {
 }
 
 .landing-content {
-    text-align: right;
-    padding: 0em 1.5em;
     animation: 2s ease-out 0s 1 fadeIntoView;
 }
 
@@ -144,6 +154,7 @@ export default {
 .landing-content h1 {
     font-family: 'Raleway';
     font-weight: 800;
+    font-size: 4em;
     line-height: 1.2em;
     animation: 1s ease-out 0s 1 slideFromRight;
 }
@@ -182,14 +193,17 @@ export default {
 }
 
 .link-btn {
-    font-family: 'VT323';
-    font-size: 1.5em;
-    font-weight: 400;
-    text-transform: none;
+    min-width: 100px;
+    font-family: 'Raleway';
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #c52318;
+    border-bottom: 2px solid #c52318;
 }
 
 .link-btn:hover {
     color: #69ffdf;
+    border-bottom: 2px solid #69ffdf;
 }
 
 .link-btn::before {
