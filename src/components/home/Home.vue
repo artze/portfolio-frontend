@@ -34,7 +34,7 @@
         </div>
 
         <!-- Projects section -->
-        <div ref="projectsSection" style="border: 1px solid red;">
+        <div ref="projectsSection">
             <projects></projects>
         </div>
 

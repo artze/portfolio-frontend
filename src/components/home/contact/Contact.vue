@@ -2,7 +2,7 @@
     <v-layout justify-center align-end fill-height class="contact-section">
         <v-flex xs10 sm10 md10 lg10>
             <p class="contact-text">
-                Contact me on Linkedin
+                Contact me on <a href="https://www.linkedin.com/in/arthur-wong/">Linkedin</a>
             </p>
         </v-flex>
     </v-layout>
