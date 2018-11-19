@@ -30,7 +30,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md8 lg8>
+                <v-flex md8 lg8 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/ProductivityToolScreenShot.png">
                 </v-flex>
             </v-layout>
@@ -63,7 +63,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md8 lg8>
+                <v-flex md8 lg8 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/d2sScreenShot.png">
                 </v-flex>
             </v-layout>
@@ -96,7 +96,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md8 lg8>
+                <v-flex md8 lg8 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/JourneyTrackerScreenShot.png">
                 </v-flex>
             </v-layout>
@@ -129,7 +129,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md8 lg8>
+                <v-flex md8 lg8 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/ChatAppScreenShot.png">
                 </v-flex>
             </v-layout>
@@ -162,7 +162,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md8 lg8>
+                <v-flex md8 lg8 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/QuoteMachineScreenShot.png">
                 </v-flex>
             </v-layout>
@@ -195,7 +195,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex xs12 sm12 md8 lg8>
+                <v-flex md8 lg8 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/WikiViewerScreenShot.png">
                 </v-flex>
             </v-layout>
@@ -259,6 +259,7 @@ export default {
 }
 
 .project-card {
+    width: 100%;
     min-height: 28em;
     padding: 30px;
     transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
