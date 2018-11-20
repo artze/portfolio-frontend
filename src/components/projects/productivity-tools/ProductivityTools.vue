@@ -1,10 +1,5 @@
 <template>
-    <v-layout>
-        <v-flex xs2 sm2 md2 lg2>
-            <v-layout class="back-btn-section">
-                <v-btn flat large class="link-btn large" to="/projects">Back<span class="blink">.</span></v-btn>
-            </v-layout>
-        </v-flex>
+    <v-layout justify-center>
         <v-flex xs8 sm8 md8 lg8>
             <!-- Title description -->
             <h2 class="main-header-text mt-4">Operational Productivity Tools</h2>
@@ -73,6 +68,33 @@ video {
     height: 451px;
 }
 
+img {
+    width: 688px;
+    height: 480px;
+}
+
+@media only screen and (max-width : 600px) {
+    video {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    video {
+        width: 500px;
+        height: 250px;
+    }
+
+    img {
+        width: 500px;
+        height: 348px;
+    }
+}
+
 .main-header-text {
     font-family: 'Raleway';
     font-weight: 600;
@@ -94,45 +116,10 @@ video {
 }
 
 .content-text {
-    text-align: justify;
     font-family: 'Roboto';
     font-size: 1.2em;
     font-weight: 400;
     margin-top: 0.5em;
     color: #3a3a3a;
-}
-
-.back-btn-section {
-    position: fixed;
-}
-
-.link-btn {
-    font-family: 'VT323';
-    font-size: 1.5em;
-    font-weight: 400;
-    text-transform: none;
-}
-
-.link-btn.large {
-    height: 100px;
-    font-size: 3em;
-}
-
-.link-btn:hover {
-    color: #69ffdf;
-}
-
-.link-btn::before {
-    color: transparent;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-.blink {
-    animation: blink 1s linear infinite;
 }
 </style>

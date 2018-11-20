@@ -1,10 +1,5 @@
 <template>
-    <v-layout>
-        <v-flex xs2 sm2 md2 lg2>
-            <v-layout class="back-btn-section">
-                <v-btn flat large class="link-btn large" to="/projects">Back<span class="blink">.</span></v-btn>
-            </v-layout>
-        </v-flex>
+    <v-layout justify-center>
         <v-flex xs8 sm8 md8 lg8>
             <!-- Title description -->
             <h2 class="main-header-text mt-4">Microservices for a Device Management Platform</h2>
@@ -12,7 +7,7 @@
             <p class="content-text">
                 We wanted to implement a feature that allows a notification (email, sms etc.) to be sent instantly when a parameter measured by a Router/Tracker fulfills a user-defined condition. A Rules Engine microservice was introduced to check incoming data (from Router/Tracker) against user-defined conditions and triggers a notification service if necessary.
             </p>
-            <img class="system-diagram" src="../../../assets/images/d2s.svg">
+            <img class="system-diagram" src="../../../assets/images/d2s_ms_diagram.svg">
             <p class="content-text">
                 The diagram above is a general overview of how our system is designed:
                 <ol>
@@ -62,7 +57,6 @@
 }
 
 .content-text {
-    text-align: justify;
     font-family: 'Roboto';
     font-size: 1.2em;
     font-weight: 400;
@@ -73,6 +67,21 @@
 img.system-diagram {
     display: block;
     margin: 5em auto;
+    width: 830px;
+    height: 462px;
+}
+
+@media only screen and (max-width : 600px) {
+    img.system-diagram {
+        display: none;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    img.system-diagram {
+        width: 500px;
+        height: 278px;
+    }
 }
 
 .back-btn-section {
