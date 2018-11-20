@@ -10,7 +10,7 @@
 
 <style scoped>
 .about-section {
-    height: 800px;
+    height: 100vh;
 }
 
 .about-text {
@@ -20,10 +20,6 @@
 }
 
 @media only screen and (max-width : 600px) {
-    .about-section {
-        height: 600px;
-    }
-
     .about-text {
         font-size: 1.5em;
         font-weight: 300;
@@ -31,10 +27,6 @@
 }
 
 @media only screen and (min-width : 600px) and (max-width : 960px) {
-    .about-section {
-        height: 600px;
-    }
-
     .about-text {
         font-size: 1.5em;
         font-weight: 300;
