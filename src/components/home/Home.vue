@@ -22,22 +22,6 @@
                 </v-layout>
             </v-flex>
 
-            <!-- <v-flex xs11 sm11 md11 lg11>
-                <v-layout
-                    style="height: 100%;"
-                    align-center
-                    :justify-center="$vuetify.breakpoint.mdAndUp"
-                    :justify-space-between="$vuetify.breakpoint.smAndDown"
-                    :column="$vuetify.breakpoint.smAndDown">
-                    <v-flex xs6 sm6 lg4 class="landing-content">
-                        <img src="../../assets/images/coloredsquares.jpg">
-                    </v-flex>
-                    <v-flex xs8 sm8 lg5 class="landing-content">
-                        <h1 class="landing-header-font">artze</h1>
-                        <h3 class="landing-description-font">Software Developer<span class="blink">.</span></h3>
-                    </v-flex>
-                </v-layout>
-            </v-flex> -->
         </v-layout>
 
         <!-- About section -->
@@ -147,39 +131,6 @@ export default {
 @media only screen and (min-width : 600px) and (max-width : 960px) {
     .landing-content h1 {
         font-size: 3em;
-    }
-}
-
-@media only screen and (max-width : 960px) {
-    .landing-header-font {
-        font-size: 4em;
-        text-align: center;
-    }
-}
-
-@media only screen and (min-width: 960px) {
-    .landing-header-font {
-        font-size: 6em;
-        text-align: left;
-    }
-}
-
-.landing-content h3 {
-    font-family: 'VT323', monospace;
-    font-weight: 200;
-    text-align: left;
-    animation: 1s ease-out 0s 1 slideFromRight;
-}
-
-@media only screen and (max-width : 960px) {
-    .landing-description-font {
-        font-size: 2em;
-    }
-}
-
-@media only screen and (min-width : 960px) {
-    .landing-description-font {
-        font-size: 2.7em;
     }
 }
 
