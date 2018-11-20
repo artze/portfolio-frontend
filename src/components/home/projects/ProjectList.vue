@@ -108,6 +108,9 @@
                             <p class="project-card-text">
                                 A super simple chat app built with websockets
                             </p>
+                            <p style="font-size: 0.9em; font-style: italic;">
+                                Try it with multiple browsers/tabs!
+                            </p>
                             <hr>
                             <p class="project-card-text points">
                                 <span class="bold">Tech Stack:</span>
@@ -139,7 +142,7 @@
                         <div class="project-card">
                             <h3 class="project-card-title-text">Quote Machine</h3>
                             <p class="project-card-text">
-                                Generate random quotes from notable figures.
+                                A random quote generator I built while learning Vuejs.
                             </p>
                             <hr>
                             <p class="project-card-text points">
@@ -172,7 +175,7 @@
                         <div class="project-card">
                             <h3 class="project-card-title-text">Wikipedia Viewer</h3>
                             <p class="project-card-text">
-                                Search Wikipedia entries with this handy tool.
+                                A handy tool to search Wikipedia entries.
                             </p>
                             <hr>
                             <p class="project-card-text points">
