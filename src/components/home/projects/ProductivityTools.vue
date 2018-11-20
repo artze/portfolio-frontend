@@ -8,13 +8,13 @@
             </video>
             <h3 class="subheader-text">Background</h3>
             <p class="content-text">
-                One of the primary issues of operational processes at my work was the lack of a centralized, systematic way of handling data. Most data was managed with the use of Excel sheets which involves manual data manipulation work, is error-prone and is inconvenient to share among team-members.
+                One of the primary issues with operations at my work was the lack of a centralized, systematic way of handling data. Most data was managed with the use of Excel sheets which involves manual data manipulation work, is error-prone and is inconvenient to share among team-members.
             </p>
             <p class="content-text">
                 I have, on my own, built a suite of productivity tools from the ground up to address this problem. Up until now, the the tools cover the areas of Device Serial Number tracking, Return Merchandise Authorization (RMA) tracking, historical sales data and current sales performance monitoring.
             </p>
             <p class="content-text">
-                The application consists of two parts: a Single Page Vuejs Application, and a backend Nodejs application supported by MySql as database.
+                The application consists of two parts: a Single Page Vuejs Application, and a backend Nodejs API application supported by MySql as database.
             </p>
 
             <!-- Device Serial Number & RMA App -->
