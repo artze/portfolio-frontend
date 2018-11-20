@@ -2,13 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '../components/home/Home'
-import About from '../components/about/About'
-import Projects from '../components/projects/Projects'
-import WorkProjectIndex from '../components/projects/WorkProjectIndex'
-import HobbyProjectIndex from '../components/projects/HobbyProjectIndex'
-import ProductivityTools from '../components/projects/productivity-tools/ProductivityTools'
-import Microservices from '../components/projects/microservices/Microservices'
-import Contact from '../components/contact/Contact'
+import ProductivityTools from '../components/home/projects/ProductivityTools'
+import IotPlatform from '../components/home/projects/IotPlatform'
 
 import QuoteMachine from '../components/quote-machine/QuoteMachine'
 import WikiViewer from '../components/wiki-viewer/WikiViewer'
@@ -24,35 +19,12 @@ export default new Router({
             component: Home
         },
         {
-            path: '/about',
-            component: About
+            path: '/productivity-tools',
+            component: ProductivityTools
         },
         {
-            path: '/projects',
-            component: Projects,
-            redirect: '/projects/work',
-            children: [
-                {
-                    path: 'work',
-                    component: WorkProjectIndex
-                },
-                {
-                    path: 'hobby',
-                    component: HobbyProjectIndex
-                },
-                {
-                    path: 'productivity-tools',
-                    component: ProductivityTools
-                },
-                {
-                    path: 'microservices',
-                    component: Microservices
-                }
-            ]
-        },
-        {
-            path: '/contact',
-            component: Contact
+            path: '/iot-platform',
+            component: IotPlatform
         },
         {
             path: '/quote-machine',

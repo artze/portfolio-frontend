@@ -211,13 +211,13 @@ export default {
     methods: {
         goToProductivityToolsPage() {
             let routeData = this.$router.resolve({
-                path: '/projects/productivity-tools'
+                path: '/productivity-tools'
             })
             window.open(routeData.href, '_blank')
         },
         goToMicroservicesPage() {
             let routeData = this.$router.resolve({
-                path: '/projects/microservices'
+                path: '/iot-platform'
             })
             window.open(routeData.href, '_blank')
         },
