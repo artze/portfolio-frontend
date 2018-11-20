@@ -2,7 +2,7 @@
     <v-layout justify-center>
         <v-flex xs10 sm10 md10 lg10>
             <v-layout class="project-card-layout-section" justify-space-between>
-                <v-flex xs12 sm12 md4 lg4>
+                <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">Productivity Tools</h3>
@@ -30,12 +30,12 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex md8 lg8 hidden-sm-and-down>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/ProductivityToolScreenShot.png">
                 </v-flex>
             </v-layout>
             <v-layout class="project-card-layout-section" justify-space-between>
-                <v-flex xs12 sm12 md4 lg4>
+                <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">IoT Platform</h3>
@@ -63,12 +63,12 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex md8 lg8 hidden-sm-and-down>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/d2sScreenShot.png">
                 </v-flex>
             </v-layout>
             <v-layout class="project-card-layout-section" justify-space-between>
-                <v-flex xs12 sm12 md4 lg4>
+                <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">Journey Tracker</h3>
@@ -96,12 +96,12 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex md8 lg8 hidden-sm-and-down>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/JourneyTrackerScreenShot.png">
                 </v-flex>
             </v-layout>
             <v-layout class="project-card-layout-section" justify-space-between>
-                <v-flex xs12 sm12 md4 lg4>
+                <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">Chat App</h3>
@@ -129,12 +129,12 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex md8 lg8 hidden-sm-and-down>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/ChatAppScreenShot.png">
                 </v-flex>
             </v-layout>
             <v-layout class="project-card-layout-section" justify-space-between>
-                <v-flex xs12 sm12 md4 lg4>
+                <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">Quote Machine</h3>
@@ -162,12 +162,12 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex md8 lg8 hidden-sm-and-down>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/QuoteMachineScreenShot.png">
                 </v-flex>
             </v-layout>
             <v-layout class="project-card-layout-section" justify-space-between>
-                <v-flex xs12 sm12 md4 lg4>
+                <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
                             <h3 class="project-card-title-text">Wikipedia Viewer</h3>
@@ -195,7 +195,7 @@
                         </div>
                     </v-layout>
                 </v-flex>
-                <v-flex md8 lg8 hidden-sm-and-down>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/WikiViewerScreenShot.png">
                 </v-flex>
             </v-layout>
@@ -250,6 +250,9 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
 
 .project-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
     width: 800px;
 }
