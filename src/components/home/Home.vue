@@ -3,10 +3,10 @@
         <!-- Landing section -->
         <v-layout column id="landing-background">
             <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-end>
-                    <v-btn flat @click="scrollToAboutSection" class="link-btn">About</v-btn>
-                    <v-btn flat @click="scrollToProjectsSection" class="link-btn">Projects</v-btn>
-                    <v-btn flat @click="scrollToContactSection" class="link-btn">Contact</v-btn>
+                <v-layout justify-end class="link-btn-section">
+                    <div @click="scrollToAboutSection" class="link-btn">About</div>
+                    <div @click="scrollToProjectsSection" class="link-btn">Projects</div>
+                    <div @click="scrollToContactSection" class="link-btn">Contact</div>
                 </v-layout>
             </v-flex>
 
@@ -130,33 +130,24 @@ export default {
     animation: 2s ease-out 0s 1 fadeIntoView;
 }
 
-@media only screen and (max-width : 600px) {
-    .landing-content img {
-        height: 110px;
-        width: 110px;
-    }
-}
-
-@media only screen and (min-width : 600px) and (max-width : 960px) {
-    .landing-content img {
-        height: 150px;
-        width: 150px;
-    }
-}
-
-@media only screen and (min-width : 960px) {
-    .landing-content img {
-        height: 200px;
-        width: 200px;
-    }
-}
-
 .landing-content h1 {
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 4em;
     line-height: 1.2em;
     animation: 1s ease-out 0s 1 slideFromRight;
+}
+
+@media only screen and (max-width : 600px) {
+    .landing-content h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    .landing-content h1 {
+        font-size: 3em;
+    }
 }
 
 @media only screen and (max-width : 960px) {
@@ -192,23 +183,33 @@ export default {
     }
 }
 
+.link-btn-section {
+    margin-right: 1em;
+}
+
 .link-btn {
-    min-width: 100px;
-    font-family: 'Raleway';
-    font-size: 1.2em;
+    min-width: 150px;
+    text-align: center;
+    margin-top: 1em;
+    margin-right: 0.5em;
+    padding: 10px 20px;
+    transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
+    font-family: 'Roboto';
+    font-size: 1.5em;
     font-weight: 600;
     color: #c52318;
-    border-bottom: 2px solid #c52318;
 }
 
 .link-btn:hover {
-    color: #69ffdf;
-    border-bottom: 2px solid #69ffdf;
+    cursor: pointer;
+    box-shadow: 0.5em 0.5em 0 0 #69ffdf, 0 0 0 1px #69ffdf inset;
+    transform: translate(-2px, -2px);
+    color: #000000;
 }
 
-.link-btn::before {
+/* .link-btn::before {
     color: transparent;
-}
+} */
 
 .blink {
     animation: blink 1s linear infinite;
