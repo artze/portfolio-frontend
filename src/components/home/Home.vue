@@ -75,7 +75,6 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=VT323');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
 
 /* Header Section */
