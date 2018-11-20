@@ -3,7 +3,7 @@
         <!-- Landing section -->
         <v-layout column id="landing-background">
             <v-flex xs1 sm1 md1 lg1>
-                <v-layout justify-end class="link-btn-section">
+                <v-layout :justify-end="$vuetify.breakpoint.smAndUp" :justify-center="$vuetify.breakpoint.xsOnly" class="link-btn-section">
                     <div @click="scrollToAboutSection" class="link-btn">About</div>
                     <div @click="scrollToProjectsSection" class="link-btn">Projects</div>
                     <div @click="scrollToContactSection" class="link-btn">Contact</div>
@@ -207,9 +207,22 @@ export default {
     color: #000000;
 }
 
-/* .link-btn::before {
-    color: transparent;
-} */
+@media only screen and (max-width : 600px) {
+    .link-btn-section {
+        margin-right: 0;
+    }
+    .link-btn {
+        min-width: 100px;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    .link-btn {
+        min-width: 100px;
+        font-size: 1em;
+    }
+}
 
 .blink {
     animation: blink 1s linear infinite;
