@@ -10,6 +10,8 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
+
 .contact-section {
     height: 300px;
     margin-top: 200px;
@@ -17,9 +19,10 @@
 }
 
 .contact-text {
-    font-family: 'Roboto';
+    font-family: 'Raleway';
+    font-weight: 800;
     font-size: 3.5em;
-    font-weight: 500;
+    line-height: 1.2em;
 }
 
 .contact-text a {
@@ -34,7 +37,6 @@
 
     .contact-text {
         font-size: 1.5em;
-        font-weight: 500;
     }
 }
 
@@ -46,7 +48,6 @@
 
     .contact-text {
         font-size: 2.5em;
-        font-weight: 500;
     }
 }
 </style>
