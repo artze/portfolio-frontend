@@ -16,11 +16,7 @@
                             </p>
                             <p class="project-card-text points">
                                 <span class="bold">Role:</span>
-                                Designed solution and develop product
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Team:</span>
-                                Myself
+                                Design solution and develop Frontend and Backend of product
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToProductivityToolsPage" class="project-card-link-btn">
@@ -49,11 +45,7 @@
                             </p>
                             <p class="project-card-text points">
                                 <span class="bold">Role:</span>
-                                Software Developer
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Team:</span>
-                                3 Developers including myself
+                                Fullstack Developer
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToMicroservicesPage" class="project-card-link-btn">
@@ -82,11 +74,7 @@
                             </p>
                             <p class="project-card-text points">
                                 <span class="bold">Role:</span>
-                                Developer
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Team:</span>
-                                Myself
+                                Fullstack Developer
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToJourneyTracker" class="project-card-link-btn">
@@ -118,11 +106,7 @@
                             </p>
                             <p class="project-card-text points">
                                 <span class="bold">Role:</span>
-                                Developer
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Team:</span>
-                                Myself
+                                Fullstack Developer
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToChatApp" class="project-card-link-btn">
@@ -153,10 +137,6 @@
                                 <span class="bold">Role:</span>
                                 Developer
                             </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Team:</span>
-                                Myself
-                            </p>
                             <v-layout justify-center>
                                 <div @click="goToQuoteMachine" class="project-card-link-btn">
                                     Go to App
@@ -185,10 +165,6 @@
                             <p class="project-card-text points">
                                 <span class="bold">Role:</span>
                                 Developer
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Team:</span>
-                                Myself
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToWikiViewer" class="project-card-link-btn">
