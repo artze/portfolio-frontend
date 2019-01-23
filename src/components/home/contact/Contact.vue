@@ -21,8 +21,9 @@
 .contact-text {
     font-family: 'Raleway';
     font-weight: 800;
-    font-size: 3.5em;
+    font-size: 3em;
     line-height: 1.2em;
+    padding-bottom: 0.5em;
 }
 
 .contact-text a {
