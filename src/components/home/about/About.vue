@@ -2,7 +2,7 @@
     <v-layout justify-center align-center fill-height class="about-section">
         <v-flex xs8 sm8 md8 lg8>
             <p class="about-text">
-                I began my career managing finance &amp; operations, and transitioned into software development to address various operational inefficiencies. I am now a full-time developer building and maintaining an IoT platform, with a diverse skill-set and cross-functional work experience.
+                I started off managing finance &amp; operations, and transitioned into software development to address various operational inefficiencies. I am now a full-time developer building and maintaining an IoT platform, with a diverse skill-set and cross-functional work experience.
             </p>
         </v-flex>
     </v-layout>
