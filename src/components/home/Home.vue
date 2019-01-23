@@ -121,7 +121,13 @@ export default {
     animation: 1s ease-out 0s 1 slideFromRight;
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 400px) {
+    .landing-content h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (min-width : 400px) and (max-width : 600px) {
     .landing-content h1 {
         font-size: 2em;
     }
