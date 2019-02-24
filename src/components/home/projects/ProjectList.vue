@@ -92,9 +92,38 @@
                 <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
+                            <h3 class="project-card-title-text">Camera to Email</h3>
+                            <p class="project-card-text">
+                                Snap a picture. Get it in your email in pdf format.
+                            </p>
+                            <hr>
+                            <p class="project-card-text points">
+                                <span class="bold">Tech Stack:</span>
+                                Reactjs, Nodejs
+                            </p>
+                            <p class="project-card-text points">
+                                <span class="bold">Role:</span>
+                                Fullstack Developer
+                            </p>
+                            <v-layout justify-center>
+                                <div @click="goToCamToMail" class="project-card-link-btn">
+                                    Go to App
+                                </div>
+                            </v-layout>
+                        </div>
+                    </v-layout>
+                </v-flex>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
+                    <img class="project-img" src="../../../assets/images/cam-to-mail.png">
+                </v-flex>
+            </v-layout>
+            <v-layout class="project-card-layout-section" justify-space-between>
+                <v-flex xs12 sm12 md4 lg4 xl4>
+                    <v-layout fill-height align-center>
+                        <div class="project-card">
                             <h3 class="project-card-title-text">Chat App</h3>
                             <p class="project-card-text">
-                                A super simple chat app built with websockets
+                                A super simple chat app built with websockets.
                             </p>
                             <p style="font-size: 0.9em; font-style: italic;">
                                 Try it with multiple browsers/tabs!
@@ -202,6 +231,9 @@ export default {
                 path: '/journey-tracker'
             })
             window.open(routeData.href, '_blank')
+        },
+        goToCamToMail() {
+            window.open('https://artze.xyz/cam-to-mail', '_blank')
         },
         goToChatApp() {
             let routeData = this.$router.resolve({
