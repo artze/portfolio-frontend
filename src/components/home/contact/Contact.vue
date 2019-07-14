@@ -2,6 +2,7 @@
     <v-layout justify-center align-end fill-height class="contact-section">
         <v-flex xs10 sm10 md10 lg10>
             <p class="contact-text">
+                My <a href="https://journal.artze.xyz" target="_blank">Code Journal</a><br>
                 You can find my work on <a href="https://github.com/artze" target="_blank">Github</a><br>
                 Contact me on <a href="https://www.linkedin.com/in/arthur-wong/" target="_blank">Linkedin</a>
             </p>
