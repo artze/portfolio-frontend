@@ -1,6 +1,6 @@
 <template>
     <v-layout justify-center>
-        <v-flex xs8 sm8 md8 lg8>
+        <v-flex xs8 sm8 md8 lg6>
             <!-- Title description -->
             <h2 class="main-header-text mt-4">Microservices for a Device Management Platform</h2>
             <h3 class="subheader-text">Background</h3>
@@ -33,8 +33,14 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=VT323');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600,800');
+
+img.system-diagram {
+    display: block;
+    margin: 5em auto;
+    width: 830px;
+    height: 462px;
+}
 
 .main-header-text {
     font-family: 'Raleway';
@@ -45,76 +51,70 @@
 .header-text {
     font-family: 'Raleway';
     font-weight: 600;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-top: 2em;
 }
 
 .subheader-text {
     font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-weight: 500;
     margin-top: 1.5em;
 }
 
 .content-text {
-    font-family: 'Roboto';
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1.4em;
+    font-weight: 300;
     margin-top: 0.5em;
     color: #3a3a3a;
 }
 
-img.system-diagram {
-    display: block;
-    margin: 5em auto;
-    width: 830px;
-    height: 462px;
-}
-
 @media only screen and (max-width : 600px) {
-    img.system-diagram {
+    video {
         display: none;
+    }
+
+    img {
+        display: none;
+    }
+
+    .main-header-text {
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 2em;
+    }
+
+    .header-text {
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 1.4em;
+        margin-top: 2em;
+    }
+
+    .subheader-text {
+        font-family: 'Raleway';
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-top: 1.5em;
+    }
+
+    .content-text {
+        font-size: 1.2em;
+        font-weight: 300;
+        margin-top: 0.5em;
+        color: #3a3a3a;
     }
 }
 
 @media only screen and (min-width : 600px) and (max-width : 960px) {
-    img.system-diagram {
+    video {
         width: 500px;
-        height: 278px;
+        height: 250px;
     }
-}
 
-.back-btn-section {
-    position: fixed;
-}
-
-.link-btn {
-    font-family: 'VT323';
-    font-size: 1.5em;
-    font-weight: 400;
-    text-transform: none;
-}
-
-.link-btn.large {
-    height: 100px;
-    font-size: 3em;
-}
-
-.link-btn:hover {
-    color: #69ffdf;
-}
-
-.link-btn::before {
-    color: transparent;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
+    img {
+        width: 500px;
+        height: 348px;
     }
-}
-
-.blink {
-    animation: blink 1s linear infinite;
 }
 </style>
