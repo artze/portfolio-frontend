@@ -87,7 +87,7 @@
                             <hr>
                             <p class="project-card-text points">
                                 <span class="bold">Tech Stack:</span>
-                                Reactjs, Nodejs
+                                Nodejs, Reactjs
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToCamToMail" class="project-card-link-btn">
