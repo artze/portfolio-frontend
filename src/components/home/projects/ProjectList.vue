@@ -14,10 +14,6 @@
                                 <span class="bold">Tech Stack:</span>
                                 MySql, Nodejs, Vuejs
                             </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Role:</span>
-                                Design solution and develop Frontend and Backend of product
-                            </p>
                             <v-layout justify-center>
                                 <div @click="goToProductivityToolsPage" class="project-card-link-btn">
                                     Read More
@@ -42,10 +38,6 @@
                             <p class="project-card-text points">
                                 <span class="bold">Tech Stack:</span>
                                 MySql, Couchbase, OpenNATS, Java, Spring, Vaadin
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Role:</span>
-                                Fullstack Developer
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToMicroservicesPage" class="project-card-link-btn">
@@ -72,10 +64,6 @@
                                 <span class="bold">Tech Stack:</span>
                                 MySql, Nodejs, Vuejs
                             </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Role:</span>
-                                Fullstack Developer
-                            </p>
                             <v-layout justify-center>
                                 <div @click="goToJourneyTracker" class="project-card-link-btn">
                                     Go to App
@@ -100,10 +88,6 @@
                             <p class="project-card-text points">
                                 <span class="bold">Tech Stack:</span>
                                 Reactjs, Nodejs
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Role:</span>
-                                Fullstack Developer
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToCamToMail" class="project-card-link-btn">
@@ -133,10 +117,6 @@
                                 <span class="bold">Tech Stack:</span>
                                 Nodejs, Vuejs
                             </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Role:</span>
-                                Fullstack Developer
-                            </p>
                             <v-layout justify-center>
                                 <div @click="goToChatApp" class="project-card-link-btn">
                                     Go to App
@@ -162,10 +142,6 @@
                                 <span class="bold">Tech Stack:</span>
                                 Vuejs
                             </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Role:</span>
-                                Developer
-                            </p>
                             <v-layout justify-center>
                                 <div @click="goToQuoteMachine" class="project-card-link-btn">
                                     Go to App
@@ -190,10 +166,6 @@
                             <p class="project-card-text points">
                                 <span class="bold">Tech Stack:</span>
                                 Vuejs
-                            </p>
-                            <p class="project-card-text points">
-                                <span class="bold">Role:</span>
-                                Developer
                             </p>
                             <v-layout justify-center>
                                 <div @click="goToWikiViewer" class="project-card-link-btn">
