@@ -17,7 +17,7 @@
                     justify-center>
                     <v-flex xs8 sm8 lg8 class="landing-content">
                         <h1>Hi, I am <span style="color: #c52318;">Arthur</span></h1>
-                        <h1>Software Developer based in Germany<span class="blink">.</span></h1>
+                        <h1>A Fullstack Software Developer<span class="blink">.</span></h1>
                     </v-flex>
                 </v-layout>
             </v-flex>
