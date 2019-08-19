@@ -105,6 +105,31 @@
                 <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
+                            <h3 class="project-card-title-text">Expensify</h3>
+                            <p class="project-card-text">
+                                A tool to help organize your expenses.
+                            </p>
+                            <hr>
+                            <p class="project-card-text points">
+                                <span class="bold">Tech Stack:</span>
+                                Firebase, Reactjs
+                            </p>
+                            <v-layout justify-center>
+                                <div @click="goToExpensify" class="project-card-link-btn">
+                                    Go to App
+                                </div>
+                            </v-layout>
+                        </div>
+                    </v-layout>
+                </v-flex>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
+                    <img class="project-img" src="../../../assets/images/Expensify.png">
+                </v-flex>
+            </v-layout>
+            <v-layout class="project-card-layout-section" justify-space-between>
+                <v-flex xs12 sm12 md4 lg4 xl4>
+                    <v-layout fill-height align-center>
+                        <div class="project-card">
                             <h3 class="project-card-title-text">Chat App</h3>
                             <p class="project-card-text">
                                 A super simple chat app built with websockets.
@@ -206,6 +231,9 @@ export default {
         },
         goToCamToMail() {
             window.open('https://artze.xyz/cam-to-mail', '_blank')
+        },
+        goToExpensify() {
+            window.open('https://artze.xyz/expensify', '_blank')
         },
         goToChatApp() {
             let routeData = this.$router.resolve({
