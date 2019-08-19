@@ -160,7 +160,7 @@
                         <div class="project-card">
                             <h3 class="project-card-title-text">Quote Machine</h3>
                             <p class="project-card-text">
-                                A random quote generator I built while learning Vuejs.
+                                A random quote generator.
                             </p>
                             <hr>
                             <p class="project-card-text points">
