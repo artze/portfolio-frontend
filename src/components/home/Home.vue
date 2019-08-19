@@ -17,7 +17,7 @@
                     justify-center>
                     <v-flex xs8 sm8 lg8 class="landing-content">
                         <h1>Hi, I am <span style="color: #c52318;">Arthur</span></h1>
-                        <h1>A Fullstack Software Developer<span class="blink">.</span></h1>
+                        <h1 class="subheader">A Fullstack Software Developer<span class="blink">.</span></h1>
                     </v-flex>
                 </v-layout>
             </v-flex>
@@ -124,6 +124,10 @@ export default {
 @media only screen and (max-width : 400px) {
     .landing-content h1 {
         font-size: 1.8em;
+    }
+
+    .landing-content h1.subheader {
+        font-size: 1.4em;
     }
 }
 
