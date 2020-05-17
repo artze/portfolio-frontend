@@ -55,6 +55,31 @@
                 <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
+                            <h3 class="project-card-title-text">Kaleidoscope</h3>
+                            <p class="project-card-text">
+                                Experiment with p5js.
+                            </p>
+                            <hr>
+                            <p class="project-card-text points">
+                                <span class="bold">Tech Stack:</span>
+                                p5
+                            </p>
+                            <v-layout justify-center>
+                                <div @click="goToKaleidoscope" class="project-card-link-btn">
+                                    Go to App
+                                </div>
+                            </v-layout>
+                        </div>
+                    </v-layout>
+                </v-flex>
+                <v-flex md8 lg8 xl7 hidden-sm-and-down>
+                    <!-- <img class="project-img" src="../../../assets/images/JourneyTrackerScreenShot.png"> -->
+                </v-flex>
+            </v-layout>
+            <v-layout class="project-card-layout-section" justify-space-between>
+                <v-flex xs12 sm12 md4 lg4 xl4>
+                    <v-layout fill-height align-center>
+                        <div class="project-card">
                             <h3 class="project-card-title-text">Journey Tracker</h3>
                             <p class="project-card-text">
                                 A visualization tool to view tracked journeys.
@@ -220,6 +245,12 @@ export default {
         goToMicroservicesPage() {
             let routeData = this.$router.resolve({
                 path: '/iot-platform'
+            })
+            window.open(routeData.href, '_blank')
+        },
+        goToKaleidoscope() {
+            let routeData = this.$router.resolve({
+                path: '/kaleidoscope'
             })
             window.open(routeData.href, '_blank')
         },

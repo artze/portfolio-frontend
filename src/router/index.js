@@ -9,6 +9,7 @@ import QuoteMachine from '../components/quote-machine/QuoteMachine'
 import WikiViewer from '../components/wiki-viewer/WikiViewer'
 import JourneyTracker from '../components/journey-tracker/JourneyTracker'
 import ChatApp from '../components/chat-app/ChatApp'
+import Kaleidoscope from '../components/kaleidoscope/Kaleidoscope'
 
 Vue.use(Router)
 
@@ -41,6 +42,10 @@ export default new Router({
         {
             path: '/chat-app',
             component: ChatApp
+        },
+        {
+            path: '/kaleidoscope',
+            component: Kaleidoscope
         }
     ]
 })
