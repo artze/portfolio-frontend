@@ -1,6 +1,7 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center>
+
             <div id="canvas"></div>
         </v-layout>
     </v-container>
