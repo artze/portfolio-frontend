@@ -101,7 +101,7 @@
                     <img class="project-img" src="../../../assets/images/JourneyTrackerScreenShot.png">
                 </v-flex>
             </v-layout>
-            <v-layout class="project-card-layout-section" justify-space-between>
+            <!-- <v-layout class="project-card-layout-section" justify-space-between>
                 <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
@@ -125,8 +125,8 @@
                 <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/cam-to-mail.png">
                 </v-flex>
-            </v-layout>
-            <v-layout class="project-card-layout-section" justify-space-between>
+            </v-layout> -->
+            <!-- <v-layout class="project-card-layout-section" justify-space-between>
                 <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
                         <div class="project-card">
@@ -150,7 +150,7 @@
                 <v-flex md8 lg8 xl7 hidden-sm-and-down>
                     <img class="project-img" src="../../../assets/images/Expensify.png">
                 </v-flex>
-            </v-layout>
+            </v-layout> -->
             <v-layout class="project-card-layout-section" justify-space-between>
                 <v-flex xs12 sm12 md4 lg4 xl4>
                     <v-layout fill-height align-center>
